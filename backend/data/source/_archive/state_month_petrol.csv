@@ -1,0 +1,2521 @@
+state,year,month,petrol_price,price_low,price_high,method,reliability
+Andaman and Nicobar Islands,2021,1,73.7,67.43,79.97,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2021,2,77.12,70.21,84.03,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2021,3,79.06,71.27,86.85,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2021,4,78.55,70.84,86.26,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2021,5,80.15,72.19,88.12,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2021,6,83.79,75.33,92.26,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2021,7,87.76,79.07,96.46,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2021,8,88.33,79.67,96.98,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2021,9,87.89,79.41,96.38,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2021,10,91.53,82.81,100.25,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2021,11,90.78,82.2,99.37,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2021,12,83.07,78.47,87.68,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2022,1,82.83,77.99,87.68,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2022,2,82.83,77.99,87.68,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2022,3,83.79,78.98,88.6,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2022,4,91.2,86.63,95.77,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2022,5,89.08,84.45,93.72,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2022,6,83.97,79.17,88.77,Modelled: Delhi monthly x 0.8682,low
+Andaman and Nicobar Islands,2022,7,83.97,81.38,86.57,Modelled: Delhi monthly x 0.8682,medium
+Andaman and Nicobar Islands,2022,8,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2022,9,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2022,10,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2022,11,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2022,12,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2023,1,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2023,2,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2023,3,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2023,4,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2023,5,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2023,6,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2023,7,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2023,8,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2023,9,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2023,10,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2023,11,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2023,12,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2024,1,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2024,2,83.97,82.82,85.13,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2024,3,83.02,81.92,84.12,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2024,4,82.24,81.19,83.29,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2024,5,82.24,81.19,83.29,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2024,6,82.24,81.19,83.29,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2024,7,82.24,81.59,82.88,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2024,8,82.24,81.59,82.88,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2024,9,82.24,81.59,82.88,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2024,10,82.24,81.59,82.89,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2024,11,82.28,81.63,82.93,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2024,12,82.28,81.63,82.93,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2025,1,82.28,81.63,82.93,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2025,2,82.28,81.63,82.93,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2025,3,82.28,81.63,82.93,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2025,4,82.28,81.63,82.93,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2025,5,82.28,81.63,82.93,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2025,6,82.28,81.63,82.93,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2025,7,82.28,81.63,82.93,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2025,8,82.28,81.63,82.93,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2025,9,82.28,81.63,82.93,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2025,10,82.28,81.63,82.93,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2025,11,82.28,81.63,82.93,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2025,12,82.28,81.63,82.93,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2026,1,82.28,81.6,82.96,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2026,2,82.28,81.6,82.96,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2026,3,82.28,81.6,82.96,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2026,4,82.28,81.6,82.96,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2026,5,84.75,84.34,85.17,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2026,6,88.66,88.46,88.86,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2026,7,88.66,88.46,88.86,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2026,8,88.66,88.46,88.86,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2026,9,88.66,88.46,88.86,Modelled: Delhi monthly x 0.8682,high
+Andaman and Nicobar Islands,2026,10,88.66,88.46,88.86,Modelled: Delhi monthly x 0.8682,high
+Andhra Pradesh,2021,1,97.68,89.38,105.99,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2021,2,102.21,93.05,111.37,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2021,3,104.79,94.46,115.11,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2021,4,104.11,93.89,114.33,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2021,5,106.23,95.68,116.79,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2021,6,111.06,99.84,122.28,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2021,7,116.32,104.8,127.85,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2021,8,117.07,105.6,128.54,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2021,9,116.5,105.25,127.74,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2021,10,121.32,109.76,132.87,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2021,11,120.32,108.95,131.7,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2021,12,110.11,104.0,116.21,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2022,1,109.79,103.37,116.21,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2022,2,109.79,103.37,116.21,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2022,3,111.05,104.67,117.44,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2022,4,120.88,114.83,126.94,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2022,5,118.07,111.93,124.21,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2022,6,111.3,104.93,117.66,Modelled: Delhi monthly x 1.1507,low
+Andhra Pradesh,2022,7,111.3,107.85,114.74,Modelled: Delhi monthly x 1.1507,medium
+Andhra Pradesh,2022,8,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2022,9,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2022,10,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2022,11,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2022,12,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2023,1,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2023,2,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2023,3,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2023,4,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2023,5,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2023,6,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2023,7,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2023,8,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2023,9,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2023,10,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2023,11,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2023,12,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2024,1,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2024,2,111.3,109.77,112.83,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2024,3,110.03,108.58,111.49,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2024,4,108.99,107.6,110.39,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2024,5,108.99,107.6,110.39,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2024,6,108.99,107.6,110.39,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2024,7,108.99,108.13,109.86,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2024,8,108.99,108.13,109.86,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2024,9,108.99,108.13,109.86,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2024,10,109.0,108.14,109.86,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2024,11,109.05,108.19,109.91,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2024,12,109.05,108.19,109.91,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2025,1,109.05,108.19,109.91,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2025,2,109.05,108.19,109.91,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2025,3,109.05,108.19,109.91,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2025,4,109.05,108.19,109.91,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2025,5,109.05,108.19,109.91,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2025,6,109.05,108.19,109.91,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2025,7,109.05,108.19,109.91,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2025,8,109.05,108.19,109.91,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2025,9,109.05,108.19,109.91,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2025,10,109.05,108.19,109.91,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2025,11,109.05,108.19,109.91,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2025,12,109.05,108.19,109.91,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2026,1,109.05,108.15,109.95,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2026,2,109.05,108.15,109.95,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2026,3,109.05,108.15,109.95,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2026,4,109.05,108.15,109.95,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2026,5,112.33,111.78,112.89,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2026,6,117.51,117.04,117.98,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2026,7,117.51,117.04,117.98,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2026,8,117.51,117.04,117.98,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2026,9,117.51,117.04,117.98,Modelled: Delhi monthly x 1.1507,high
+Andhra Pradesh,2026,10,117.51,117.04,117.98,Modelled: Delhi monthly x 1.1507,high
+Arunachal Pradesh,2021,1,81.43,74.51,88.36,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2021,2,85.21,77.57,92.84,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2021,3,87.35,78.75,95.96,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2021,4,86.79,78.27,95.31,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2021,5,88.56,79.76,97.36,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2021,6,92.58,83.23,101.94,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2021,7,96.97,87.36,106.58,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2021,8,97.59,88.03,107.16,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2021,9,97.11,87.74,106.49,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2021,10,101.13,91.5,110.76,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2021,11,100.31,90.82,109.79,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2021,12,91.79,86.7,96.88,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2022,1,91.52,86.17,96.88,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2022,2,91.52,86.17,96.88,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2022,3,92.58,87.26,97.9,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2022,4,100.77,95.72,105.82,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2022,5,98.43,93.3,103.55,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2022,6,92.78,87.48,98.08,Modelled: Delhi monthly x 0.9593,low
+Arunachal Pradesh,2022,7,92.78,89.91,95.65,Modelled: Delhi monthly x 0.9593,medium
+Arunachal Pradesh,2022,8,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2022,9,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2022,10,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2022,11,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2022,12,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2023,1,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2023,2,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2023,3,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2023,4,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2023,5,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2023,6,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2023,7,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2023,8,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2023,9,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2023,10,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2023,11,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2023,12,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2024,1,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2024,2,92.78,91.45,94.11,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2024,3,91.73,90.42,93.04,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2024,4,90.86,89.56,92.16,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2024,5,90.86,89.56,92.16,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2024,6,90.86,89.56,92.16,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2024,7,90.86,89.56,92.16,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2024,8,90.86,89.56,92.16,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2024,9,90.86,89.56,92.16,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2024,10,90.86,89.56,92.16,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2024,11,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2024,12,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2025,1,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2025,2,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2025,3,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2025,4,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2025,5,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2025,6,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2025,7,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2025,8,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2025,9,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2025,10,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2025,11,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2025,12,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2026,1,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2026,2,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2026,3,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2026,4,90.91,89.61,92.21,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2026,5,93.65,92.31,94.98,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2026,6,97.96,96.56,99.36,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2026,7,97.96,96.56,99.36,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2026,8,97.96,96.56,99.36,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2026,9,97.96,96.56,99.36,Modelled: Delhi monthly x 0.9593,high
+Arunachal Pradesh,2026,10,97.96,96.56,99.36,Modelled: Delhi monthly x 0.9593,high
+Assam,2021,1,87.89,80.42,95.37,Modelled: Delhi monthly x 1.0354,low
+Assam,2021,2,91.97,83.72,100.21,Modelled: Delhi monthly x 1.0354,low
+Assam,2021,3,94.28,84.99,103.57,Modelled: Delhi monthly x 1.0354,low
+Assam,2021,4,93.67,84.47,102.87,Modelled: Delhi monthly x 1.0354,low
+Assam,2021,5,95.58,86.09,105.08,Modelled: Delhi monthly x 1.0354,low
+Assam,2021,6,99.93,89.83,110.02,Modelled: Delhi monthly x 1.0354,low
+Assam,2021,7,104.66,94.29,115.04,Modelled: Delhi monthly x 1.0354,low
+Assam,2021,8,105.33,95.01,115.65,Modelled: Delhi monthly x 1.0354,low
+Assam,2021,9,104.82,94.7,114.93,Modelled: Delhi monthly x 1.0354,low
+Assam,2021,10,109.15,98.76,119.55,Modelled: Delhi monthly x 1.0354,low
+Assam,2021,11,108.26,98.03,118.5,Modelled: Delhi monthly x 1.0354,low
+Assam,2021,12,99.07,93.58,104.56,Modelled: Delhi monthly x 1.0354,low
+Assam,2022,1,98.78,93.0,104.56,Modelled: Delhi monthly x 1.0354,low
+Assam,2022,2,98.78,93.0,104.56,Modelled: Delhi monthly x 1.0354,low
+Assam,2022,3,99.92,94.18,105.66,Modelled: Delhi monthly x 1.0354,low
+Assam,2022,4,108.76,103.32,114.21,Modelled: Delhi monthly x 1.0354,low
+Assam,2022,5,106.23,100.71,111.76,Modelled: Delhi monthly x 1.0354,low
+Assam,2022,6,100.14,94.42,105.86,Modelled: Delhi monthly x 1.0354,low
+Assam,2022,7,100.14,97.04,103.24,Modelled: Delhi monthly x 1.0354,medium
+Assam,2022,8,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2022,9,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2022,10,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2022,11,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2022,12,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2023,1,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2023,2,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2023,3,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2023,4,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2023,5,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2023,6,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2023,7,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2023,8,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2023,9,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2023,10,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2023,11,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2023,12,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2024,1,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2024,2,100.14,98.76,101.52,Modelled: Delhi monthly x 1.0354,high
+Assam,2024,3,99.0,97.7,100.31,Modelled: Delhi monthly x 1.0354,high
+Assam,2024,4,98.07,96.82,99.32,Modelled: Delhi monthly x 1.0354,high
+Assam,2024,5,98.07,96.82,99.32,Modelled: Delhi monthly x 1.0354,high
+Assam,2024,6,98.07,96.82,99.32,Modelled: Delhi monthly x 1.0354,high
+Assam,2024,7,98.07,97.21,98.93,Modelled: Delhi monthly x 1.0354,high
+Assam,2024,8,98.07,97.21,98.93,Modelled: Delhi monthly x 1.0354,high
+Assam,2024,9,98.07,97.21,98.93,Modelled: Delhi monthly x 1.0354,high
+Assam,2024,10,98.07,97.21,98.93,Modelled: Delhi monthly x 1.0354,high
+Assam,2024,11,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2024,12,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2025,1,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2025,2,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2025,3,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2025,4,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2025,5,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2025,6,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2025,7,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2025,8,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2025,9,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2025,10,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2025,11,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2025,12,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2026,1,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2026,2,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2026,3,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2026,4,98.12,97.26,98.98,Modelled: Delhi monthly x 1.0354,high
+Assam,2026,5,101.07,100.19,101.96,Modelled: Delhi monthly x 1.0354,high
+Assam,2026,6,105.73,104.8,106.66,Modelled: Delhi monthly x 1.0354,high
+Assam,2026,7,105.73,104.8,106.66,Modelled: Delhi monthly x 1.0354,high
+Assam,2026,8,105.73,104.8,106.66,Modelled: Delhi monthly x 1.0354,high
+Assam,2026,9,105.73,104.8,106.66,Modelled: Delhi monthly x 1.0354,high
+Assam,2026,10,105.73,104.8,106.66,Modelled: Delhi monthly x 1.0354,high
+Bihar,2021,1,94.24,86.23,102.26,Modelled: Delhi monthly x 1.1102,low
+Bihar,2021,2,98.61,89.77,107.45,Modelled: Delhi monthly x 1.1102,low
+Bihar,2021,3,101.09,91.13,111.05,Modelled: Delhi monthly x 1.1102,low
+Bihar,2021,4,100.44,90.58,110.31,Modelled: Delhi monthly x 1.1102,low
+Bihar,2021,5,102.49,92.31,112.67,Modelled: Delhi monthly x 1.1102,low
+Bihar,2021,6,107.15,96.32,117.98,Modelled: Delhi monthly x 1.1102,low
+Bihar,2021,7,112.23,101.1,123.35,Modelled: Delhi monthly x 1.1102,low
+Bihar,2021,8,112.94,101.88,124.01,Modelled: Delhi monthly x 1.1102,low
+Bihar,2021,9,112.39,101.54,123.24,Modelled: Delhi monthly x 1.1102,low
+Bihar,2021,10,117.04,105.89,128.19,Modelled: Delhi monthly x 1.1102,low
+Bihar,2021,11,116.08,105.11,127.06,Modelled: Delhi monthly x 1.1102,low
+Bihar,2021,12,106.23,100.34,112.12,Modelled: Delhi monthly x 1.1102,low
+Bihar,2022,1,105.92,99.73,112.12,Modelled: Delhi monthly x 1.1102,low
+Bihar,2022,2,105.92,99.73,112.12,Modelled: Delhi monthly x 1.1102,low
+Bihar,2022,3,107.14,100.99,113.3,Modelled: Delhi monthly x 1.1102,low
+Bihar,2022,4,116.62,110.78,122.46,Modelled: Delhi monthly x 1.1102,low
+Bihar,2022,5,113.91,107.98,119.84,Modelled: Delhi monthly x 1.1102,low
+Bihar,2022,6,107.38,101.24,113.51,Modelled: Delhi monthly x 1.1102,low
+Bihar,2022,7,107.38,104.06,110.7,Modelled: Delhi monthly x 1.1102,medium
+Bihar,2022,8,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2022,9,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2022,10,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2022,11,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2022,12,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2023,1,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2023,2,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2023,3,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2023,4,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2023,5,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2023,6,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2023,7,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2023,8,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2023,9,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2023,10,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2023,11,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2023,12,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2024,1,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2024,2,107.38,105.9,108.85,Modelled: Delhi monthly x 1.1102,high
+Bihar,2024,3,106.16,104.75,107.56,Modelled: Delhi monthly x 1.1102,high
+Bihar,2024,4,105.15,103.81,106.5,Modelled: Delhi monthly x 1.1102,high
+Bihar,2024,5,105.15,103.81,106.5,Modelled: Delhi monthly x 1.1102,high
+Bihar,2024,6,105.15,103.81,106.5,Modelled: Delhi monthly x 1.1102,high
+Bihar,2024,7,105.15,104.1,106.21,Modelled: Delhi monthly x 1.1102,high
+Bihar,2024,8,105.15,104.1,106.21,Modelled: Delhi monthly x 1.1102,high
+Bihar,2024,9,105.15,104.1,106.21,Modelled: Delhi monthly x 1.1102,high
+Bihar,2024,10,105.16,104.1,106.22,Modelled: Delhi monthly x 1.1102,high
+Bihar,2024,11,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2024,12,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2025,1,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2025,2,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2025,3,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2025,4,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2025,5,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2025,6,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2025,7,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2025,8,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2025,9,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2025,10,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2025,11,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2025,12,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2026,1,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2026,2,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2026,3,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2026,4,105.21,104.15,106.27,Modelled: Delhi monthly x 1.1102,high
+Bihar,2026,5,108.38,107.28,109.47,Modelled: Delhi monthly x 1.1102,high
+Bihar,2026,6,113.37,112.23,114.51,Modelled: Delhi monthly x 1.1102,high
+Bihar,2026,7,113.37,112.23,114.51,Modelled: Delhi monthly x 1.1102,high
+Bihar,2026,8,113.37,112.23,114.51,Modelled: Delhi monthly x 1.1102,high
+Bihar,2026,9,113.37,112.23,114.51,Modelled: Delhi monthly x 1.1102,high
+Bihar,2026,10,113.37,112.23,114.51,Modelled: Delhi monthly x 1.1102,high
+Chandigarh,2021,1,84.41,77.23,91.59,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2021,2,88.32,80.41,96.23,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2021,3,90.54,81.63,99.46,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2021,4,89.96,81.13,98.8,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2021,5,91.8,82.68,100.92,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2021,6,95.97,86.27,105.66,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2021,7,100.51,90.55,110.48,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2021,8,101.16,91.25,111.07,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2021,9,100.66,90.95,110.38,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2021,10,104.83,94.84,114.81,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2021,11,103.97,94.14,113.8,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2021,12,95.14,89.87,100.42,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2022,1,94.87,89.32,100.42,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2022,2,94.87,89.32,100.42,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2022,3,95.96,90.45,101.48,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2022,4,104.45,99.22,109.69,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2022,5,102.02,96.71,107.33,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2022,6,96.17,90.67,101.67,Modelled: Delhi monthly x 0.9943,low
+Chandigarh,2022,7,96.17,93.2,99.14,Modelled: Delhi monthly x 0.9943,medium
+Chandigarh,2022,8,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2022,9,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2022,10,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2022,11,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2022,12,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2023,1,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2023,2,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2023,3,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2023,4,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2023,5,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2023,6,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2023,7,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2023,8,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2023,9,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2023,10,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2023,11,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2023,12,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2024,1,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2024,2,96.17,94.85,97.49,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2024,3,95.08,93.82,96.34,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2024,4,94.18,92.98,95.38,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2024,5,94.18,92.98,95.38,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2024,6,94.18,92.98,95.38,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2024,7,94.18,93.44,94.93,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2024,8,94.18,93.44,94.93,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2024,9,94.18,93.44,94.93,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2024,10,94.19,93.44,94.93,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2024,11,94.23,93.49,94.97,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2024,12,94.23,93.49,94.97,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2025,1,94.23,93.49,94.97,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2025,2,94.23,93.49,94.97,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2025,3,94.23,93.49,94.97,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2025,4,94.23,93.49,94.97,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2025,5,94.23,93.49,94.97,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2025,6,94.23,93.49,94.97,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2025,7,94.23,93.49,94.97,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2025,8,94.23,93.49,94.97,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2025,9,94.23,93.49,94.97,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2025,10,94.23,93.49,94.97,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2025,11,94.23,93.49,94.97,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2025,12,94.23,93.49,94.97,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2026,1,94.23,93.45,95.01,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2026,2,94.23,93.45,95.01,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2026,3,94.23,93.45,95.01,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2026,4,94.23,93.45,95.01,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2026,5,97.07,96.59,97.54,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2026,6,101.54,101.47,101.61,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2026,7,101.54,101.47,101.61,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2026,8,101.54,101.47,101.61,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2026,9,101.54,101.47,101.61,Modelled: Delhi monthly x 0.9943,high
+Chandigarh,2026,10,101.54,101.47,101.61,Modelled: Delhi monthly x 0.9943,high
+Chhattisgarh,2021,1,90.03,82.37,97.68,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2021,2,94.2,85.76,102.64,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2021,3,96.57,87.06,106.09,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2021,4,95.95,86.53,105.37,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2021,5,97.91,88.18,107.63,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2021,6,102.36,92.01,112.7,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2021,7,107.21,96.58,117.83,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2021,8,107.89,97.32,118.47,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2021,9,107.36,97.0,117.73,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2021,10,111.81,101.16,122.46,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2021,11,110.89,100.41,121.38,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2021,12,101.48,95.85,107.1,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2022,1,101.18,95.27,107.1,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2022,2,101.18,95.27,107.1,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2022,3,102.35,96.47,108.23,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2022,4,111.41,105.83,116.99,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2022,5,108.82,103.15,114.48,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2022,6,102.57,96.71,108.44,Modelled: Delhi monthly x 1.0605,low
+Chhattisgarh,2022,7,102.57,99.4,105.74,Modelled: Delhi monthly x 1.0605,medium
+Chhattisgarh,2022,8,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2022,9,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2022,10,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2022,11,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2022,12,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2023,1,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2023,2,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2023,3,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2023,4,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2023,5,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2023,6,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2023,7,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2023,8,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2023,9,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2023,10,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2023,11,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2023,12,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2024,1,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2024,2,102.57,101.16,103.98,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2024,3,101.41,100.07,102.75,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2024,4,100.45,99.17,101.74,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2024,5,100.45,99.17,101.74,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2024,6,100.45,99.17,101.74,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2024,7,100.45,99.66,101.25,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2024,8,100.45,99.66,101.25,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2024,9,100.45,99.66,101.25,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2024,10,100.46,99.66,101.25,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2024,11,100.51,99.71,101.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2024,12,100.51,99.71,101.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2025,1,100.51,99.71,101.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2025,2,100.51,99.71,101.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2025,3,100.51,99.71,101.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2025,4,100.51,99.71,101.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2025,5,100.51,99.71,101.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2025,6,100.51,99.71,101.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2025,7,100.51,99.71,101.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2025,8,100.51,99.71,101.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2025,9,100.51,99.71,101.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2025,10,100.51,99.71,101.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2025,11,100.51,99.71,101.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2025,12,100.51,99.71,101.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2026,1,100.51,99.67,101.34,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2026,2,100.51,99.67,101.34,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2026,3,100.51,99.67,101.34,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2026,4,100.51,99.67,101.34,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2026,5,103.53,103.02,104.04,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2026,6,108.3,108.3,108.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2026,7,108.3,108.3,108.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2026,8,108.3,108.3,108.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2026,9,108.3,108.3,108.3,Modelled: Delhi monthly x 1.0605,high
+Chhattisgarh,2026,10,108.3,108.3,108.3,Modelled: Delhi monthly x 1.0605,high
+Dadra and Nagar Haveli and Daman and Diu,2021,1,82.66,75.63,89.69,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2021,2,86.49,78.74,94.24,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2021,3,88.67,79.94,97.41,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2021,4,88.1,79.45,96.75,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2021,5,89.9,80.97,98.83,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2021,6,93.98,84.49,103.48,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2021,7,98.44,88.68,108.19,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2021,8,99.07,89.36,108.77,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2021,9,98.58,89.07,108.1,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2021,10,102.66,92.88,112.44,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2021,11,101.82,92.2,111.45,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2021,12,93.17,88.01,98.34,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2022,1,92.91,87.47,98.34,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2022,2,92.91,87.47,98.34,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2022,3,93.98,88.58,99.38,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2022,4,102.29,97.17,107.42,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2022,5,99.91,94.71,105.11,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2022,6,94.18,88.8,99.57,Modelled: Delhi monthly x 0.9738,low
+Dadra and Nagar Haveli and Daman and Diu,2022,7,94.18,91.27,97.09,Modelled: Delhi monthly x 0.9738,medium
+Dadra and Nagar Haveli and Daman and Diu,2022,8,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2022,9,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2022,10,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2022,11,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2022,12,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2023,1,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2023,2,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2023,3,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2023,4,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2023,5,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2023,6,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2023,7,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2023,8,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2023,9,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2023,10,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2023,11,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2023,12,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2024,1,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2024,2,94.18,92.89,95.48,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2024,3,93.11,91.88,94.34,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2024,4,92.23,91.06,93.41,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2024,5,92.23,91.06,93.41,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2024,6,92.23,91.06,93.41,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2024,7,92.23,91.51,92.96,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2024,8,92.23,91.51,92.96,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2024,9,92.23,91.51,92.96,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2024,10,92.24,91.51,92.97,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2024,11,92.28,91.56,93.01,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2024,12,92.28,91.56,93.01,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2025,1,92.28,91.56,93.01,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2025,2,92.28,91.56,93.01,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2025,3,92.28,91.56,93.01,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2025,4,92.28,91.56,93.01,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2025,5,92.28,91.56,93.01,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2025,6,92.28,91.56,93.01,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2025,7,92.28,91.56,93.01,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2025,8,92.28,91.56,93.01,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2025,9,92.28,91.56,93.01,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2025,10,92.28,91.56,93.01,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2025,11,92.28,91.56,93.01,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2025,12,92.28,91.56,93.01,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2026,1,92.28,91.52,93.05,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2026,2,92.28,91.52,93.05,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2026,3,92.28,91.52,93.05,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2026,4,92.28,91.52,93.05,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2026,5,95.06,94.59,95.53,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2026,6,99.44,98.95,99.93,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2026,7,99.44,98.95,99.93,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2026,8,99.44,98.95,99.93,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2026,9,99.44,98.95,99.93,Modelled: Delhi monthly x 0.9738,high
+Dadra and Nagar Haveli and Daman and Diu,2026,10,99.44,98.95,99.93,Modelled: Delhi monthly x 0.9738,high
+Delhi,2021,1,84.89,84.89,84.89,PPAC observed (Delhi monthly mean),observed
+Delhi,2021,2,88.83,88.83,88.83,PPAC observed (Delhi monthly mean),observed
+Delhi,2021,3,91.06,91.06,91.06,PPAC observed (Delhi monthly mean),observed
+Delhi,2021,4,90.47,90.47,90.47,PPAC observed (Delhi monthly mean),observed
+Delhi,2021,5,92.32,92.32,92.32,PPAC observed (Delhi monthly mean),observed
+Delhi,2021,6,96.52,96.52,96.52,PPAC observed (Delhi monthly mean),observed
+Delhi,2021,7,101.09,101.09,101.09,PPAC observed (Delhi monthly mean),observed
+Delhi,2021,8,101.74,101.74,101.74,PPAC observed (Delhi monthly mean),observed
+Delhi,2021,9,101.24,101.24,101.24,PPAC observed (Delhi monthly mean),observed
+Delhi,2021,10,105.43,105.43,105.43,PPAC observed (Delhi monthly mean),observed
+Delhi,2021,11,104.57,104.57,104.57,PPAC observed (Delhi monthly mean),observed
+Delhi,2021,12,95.69,95.69,95.69,PPAC observed (Delhi monthly mean),observed
+Delhi,2022,1,95.41,95.41,95.41,PPAC observed (Delhi monthly mean),observed
+Delhi,2022,2,95.41,95.41,95.41,PPAC observed (Delhi monthly mean),observed
+Delhi,2022,3,96.51,96.51,96.51,PPAC observed (Delhi monthly mean),observed
+Delhi,2022,4,105.05,105.05,105.05,PPAC observed (Delhi monthly mean),observed
+Delhi,2022,5,102.61,102.61,102.61,PPAC observed (Delhi monthly mean),observed
+Delhi,2022,6,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2022,7,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2022,8,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2022,9,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2022,10,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2022,11,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2022,12,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2023,1,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2023,2,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2023,3,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2023,4,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2023,5,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2023,6,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2023,7,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2023,8,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2023,9,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2023,10,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2023,11,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2023,12,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2024,1,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2024,2,96.72,96.72,96.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2024,3,95.62,95.62,95.62,PPAC observed (Delhi monthly mean),observed
+Delhi,2024,4,94.72,94.72,94.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2024,5,94.72,94.72,94.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2024,6,94.72,94.72,94.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2024,7,94.72,94.72,94.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2024,8,94.72,94.72,94.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2024,9,94.72,94.72,94.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2024,10,94.72,94.72,94.72,PPAC observed (Delhi monthly mean),observed
+Delhi,2024,11,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2024,12,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2025,1,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2025,2,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2025,3,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2025,4,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2025,5,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2025,6,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2025,7,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2025,8,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2025,9,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2025,10,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2025,11,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2025,12,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2026,1,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2026,2,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2026,3,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2026,4,94.77,94.77,94.77,PPAC observed (Delhi monthly mean),observed
+Delhi,2026,5,97.62,97.62,97.62,PPAC observed (Delhi monthly mean),observed
+Delhi,2026,6,102.12,102.12,102.12,PPAC observed (Delhi monthly mean),observed
+Delhi,2026,7,102.12,102.12,102.12,PPAC observed (Delhi monthly mean),observed
+Delhi,2026,8,102.12,102.12,102.12,PPAC observed (Delhi monthly mean),observed
+Delhi,2026,9,102.12,102.12,102.12,PPAC observed (Delhi monthly mean),observed
+Delhi,2026,10,102.12,102.12,102.12,PPAC observed (Delhi monthly mean),observed
+Goa,2021,1,86.45,79.1,93.81,Modelled: Delhi monthly x 1.0184,low
+Goa,2021,2,90.46,82.35,98.57,Modelled: Delhi monthly x 1.0184,low
+Goa,2021,3,92.74,83.6,101.87,Modelled: Delhi monthly x 1.0184,low
+Goa,2021,4,92.14,83.09,101.19,Modelled: Delhi monthly x 1.0184,low
+Goa,2021,5,94.02,84.68,103.36,Modelled: Delhi monthly x 1.0184,low
+Goa,2021,6,98.29,88.36,108.22,Modelled: Delhi monthly x 1.0184,low
+Goa,2021,7,102.95,92.75,113.15,Modelled: Delhi monthly x 1.0184,low
+Goa,2021,8,103.61,93.46,113.76,Modelled: Delhi monthly x 1.0184,low
+Goa,2021,9,103.1,93.15,113.05,Modelled: Delhi monthly x 1.0184,low
+Goa,2021,10,107.37,97.14,117.59,Modelled: Delhi monthly x 1.0184,low
+Goa,2021,11,106.49,96.42,116.56,Modelled: Delhi monthly x 1.0184,low
+Goa,2021,12,97.45,92.05,102.85,Modelled: Delhi monthly x 1.0184,low
+Goa,2022,1,97.17,91.48,102.85,Modelled: Delhi monthly x 1.0184,low
+Goa,2022,2,97.17,91.48,102.85,Modelled: Delhi monthly x 1.0184,low
+Goa,2022,3,98.29,92.64,103.93,Modelled: Delhi monthly x 1.0184,low
+Goa,2022,4,106.98,101.62,112.34,Modelled: Delhi monthly x 1.0184,low
+Goa,2022,5,104.5,99.06,109.93,Modelled: Delhi monthly x 1.0184,low
+Goa,2022,6,98.5,92.87,104.13,Modelled: Delhi monthly x 1.0184,low
+Goa,2022,7,98.5,95.45,101.55,Modelled: Delhi monthly x 1.0184,medium
+Goa,2022,8,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2022,9,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2022,10,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2022,11,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2022,12,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2023,1,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2023,2,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2023,3,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2023,4,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2023,5,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2023,6,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2023,7,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2023,8,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2023,9,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2023,10,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2023,11,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2023,12,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2024,1,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2024,2,98.5,97.15,99.85,Modelled: Delhi monthly x 1.0184,high
+Goa,2024,3,97.38,96.1,98.67,Modelled: Delhi monthly x 1.0184,high
+Goa,2024,4,96.46,95.23,97.7,Modelled: Delhi monthly x 1.0184,high
+Goa,2024,5,96.46,95.23,97.7,Modelled: Delhi monthly x 1.0184,high
+Goa,2024,6,96.46,95.23,97.7,Modelled: Delhi monthly x 1.0184,high
+Goa,2024,7,96.46,95.7,97.23,Modelled: Delhi monthly x 1.0184,high
+Goa,2024,8,96.46,95.7,97.23,Modelled: Delhi monthly x 1.0184,high
+Goa,2024,9,96.46,95.7,97.23,Modelled: Delhi monthly x 1.0184,high
+Goa,2024,10,96.47,95.71,97.23,Modelled: Delhi monthly x 1.0184,high
+Goa,2024,11,96.51,95.76,97.27,Modelled: Delhi monthly x 1.0184,high
+Goa,2024,12,96.51,95.76,97.27,Modelled: Delhi monthly x 1.0184,high
+Goa,2025,1,96.51,95.76,97.27,Modelled: Delhi monthly x 1.0184,high
+Goa,2025,2,96.51,95.76,97.27,Modelled: Delhi monthly x 1.0184,high
+Goa,2025,3,96.51,95.76,97.27,Modelled: Delhi monthly x 1.0184,high
+Goa,2025,4,96.51,95.76,97.27,Modelled: Delhi monthly x 1.0184,high
+Goa,2025,5,96.51,95.76,97.27,Modelled: Delhi monthly x 1.0184,high
+Goa,2025,6,96.51,95.76,97.27,Modelled: Delhi monthly x 1.0184,high
+Goa,2025,7,96.51,95.76,97.27,Modelled: Delhi monthly x 1.0184,high
+Goa,2025,8,96.51,95.76,97.27,Modelled: Delhi monthly x 1.0184,high
+Goa,2025,9,96.51,95.76,97.27,Modelled: Delhi monthly x 1.0184,high
+Goa,2025,10,96.51,95.76,97.27,Modelled: Delhi monthly x 1.0184,high
+Goa,2025,11,96.51,95.76,97.27,Modelled: Delhi monthly x 1.0184,high
+Goa,2025,12,96.51,95.76,97.27,Modelled: Delhi monthly x 1.0184,high
+Goa,2026,1,96.51,95.72,97.31,Modelled: Delhi monthly x 1.0184,high
+Goa,2026,2,96.51,95.72,97.31,Modelled: Delhi monthly x 1.0184,high
+Goa,2026,3,96.51,95.72,97.31,Modelled: Delhi monthly x 1.0184,high
+Goa,2026,4,96.51,95.72,97.31,Modelled: Delhi monthly x 1.0184,high
+Goa,2026,5,99.42,98.93,99.91,Modelled: Delhi monthly x 1.0184,high
+Goa,2026,6,104.0,103.95,104.05,Modelled: Delhi monthly x 1.0184,high
+Goa,2026,7,104.0,103.95,104.05,Modelled: Delhi monthly x 1.0184,high
+Goa,2026,8,104.0,103.95,104.05,Modelled: Delhi monthly x 1.0184,high
+Goa,2026,9,104.0,103.95,104.05,Modelled: Delhi monthly x 1.0184,high
+Goa,2026,10,104.0,103.95,104.05,Modelled: Delhi monthly x 1.0184,high
+Gujarat,2021,1,84.82,77.61,92.04,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2021,2,88.76,80.8,96.71,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2021,3,90.99,82.03,99.95,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2021,4,90.4,81.53,99.28,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2021,5,92.25,83.09,101.41,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2021,6,96.44,86.69,106.18,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2021,7,101.01,91.0,111.02,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2021,8,101.66,91.7,111.62,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2021,9,101.16,91.39,110.92,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2021,10,105.34,95.31,115.38,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2021,11,104.48,94.61,114.36,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2021,12,95.61,90.31,100.91,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2022,1,95.34,89.76,100.91,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2022,2,95.34,89.76,100.91,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2022,3,96.43,90.89,101.97,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2022,4,104.97,99.71,110.23,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2022,5,102.53,97.19,107.86,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2022,6,96.64,91.12,102.17,Modelled: Delhi monthly x 0.9992,low
+Gujarat,2022,7,96.64,93.66,99.63,Modelled: Delhi monthly x 0.9992,medium
+Gujarat,2022,8,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2022,9,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2022,10,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2022,11,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2022,12,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2023,1,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2023,2,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2023,3,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2023,4,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2023,5,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2023,6,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2023,7,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2023,8,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2023,9,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2023,10,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2023,11,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2023,12,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2024,1,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2024,2,96.64,95.32,97.97,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2024,3,95.55,94.29,96.81,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2024,4,94.65,93.44,95.85,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2024,5,94.65,93.44,95.85,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2024,6,94.65,93.44,95.85,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2024,7,94.65,93.9,95.39,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2024,8,94.65,93.9,95.39,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2024,9,94.65,93.9,95.39,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2024,10,94.65,93.9,95.4,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2024,11,94.7,93.95,95.44,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2024,12,94.7,93.95,95.44,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2025,1,94.7,93.95,95.44,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2025,2,94.7,93.95,95.44,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2025,3,94.7,93.95,95.44,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2025,4,94.7,93.95,95.44,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2025,5,94.7,93.95,95.44,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2025,6,94.7,93.95,95.44,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2025,7,94.7,93.95,95.44,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2025,8,94.7,93.95,95.44,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2025,9,94.7,93.95,95.44,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2025,10,94.7,93.95,95.44,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2025,11,94.7,93.95,95.44,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2025,12,94.7,93.95,95.44,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2026,1,94.7,93.91,95.48,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2026,2,94.7,93.91,95.48,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2026,3,94.7,93.91,95.48,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2026,4,94.7,93.91,95.48,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2026,5,97.55,97.07,98.02,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2026,6,102.04,101.63,102.45,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2026,7,102.04,101.63,102.45,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2026,8,102.04,101.63,102.45,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2026,9,102.04,101.63,102.45,Modelled: Delhi monthly x 0.9992,high
+Gujarat,2026,10,102.04,101.63,102.45,Modelled: Delhi monthly x 0.9992,high
+Haryana,2021,1,85.91,78.61,93.22,Modelled: Delhi monthly x 1.0120,low
+Haryana,2021,2,89.89,81.84,97.95,Modelled: Delhi monthly x 1.0120,low
+Haryana,2021,3,92.16,83.08,101.24,Modelled: Delhi monthly x 1.0120,low
+Haryana,2021,4,91.56,82.57,100.56,Modelled: Delhi monthly x 1.0120,low
+Haryana,2021,5,93.43,84.15,102.71,Modelled: Delhi monthly x 1.0120,low
+Haryana,2021,6,97.68,87.81,107.55,Modelled: Delhi monthly x 1.0120,low
+Haryana,2021,7,102.31,92.17,112.45,Modelled: Delhi monthly x 1.0120,low
+Haryana,2021,8,102.96,92.87,113.05,Modelled: Delhi monthly x 1.0120,low
+Haryana,2021,9,102.46,92.57,112.35,Modelled: Delhi monthly x 1.0120,low
+Haryana,2021,10,106.7,96.53,116.86,Modelled: Delhi monthly x 1.0120,low
+Haryana,2021,11,105.82,95.82,115.83,Modelled: Delhi monthly x 1.0120,low
+Haryana,2021,12,96.84,91.47,102.21,Modelled: Delhi monthly x 1.0120,low
+Haryana,2022,1,96.56,90.91,102.21,Modelled: Delhi monthly x 1.0120,low
+Haryana,2022,2,96.56,90.91,102.21,Modelled: Delhi monthly x 1.0120,low
+Haryana,2022,3,97.67,92.06,103.28,Modelled: Delhi monthly x 1.0120,low
+Haryana,2022,4,106.32,100.99,111.64,Modelled: Delhi monthly x 1.0120,low
+Haryana,2022,5,103.84,98.44,109.25,Modelled: Delhi monthly x 1.0120,low
+Haryana,2022,6,97.88,92.29,103.48,Modelled: Delhi monthly x 1.0120,low
+Haryana,2022,7,97.88,94.86,100.91,Modelled: Delhi monthly x 1.0120,medium
+Haryana,2022,8,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2022,9,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2022,10,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2022,11,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2022,12,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2023,1,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2023,2,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2023,3,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2023,4,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2023,5,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2023,6,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2023,7,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2023,8,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2023,9,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2023,10,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2023,11,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2023,12,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2024,1,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2024,2,97.88,96.54,99.23,Modelled: Delhi monthly x 1.0120,high
+Haryana,2024,3,96.77,95.5,98.05,Modelled: Delhi monthly x 1.0120,high
+Haryana,2024,4,95.86,94.64,97.09,Modelled: Delhi monthly x 1.0120,high
+Haryana,2024,5,95.86,94.64,97.09,Modelled: Delhi monthly x 1.0120,high
+Haryana,2024,6,95.86,94.64,97.09,Modelled: Delhi monthly x 1.0120,high
+Haryana,2024,7,95.86,95.1,96.62,Modelled: Delhi monthly x 1.0120,high
+Haryana,2024,8,95.86,95.1,96.62,Modelled: Delhi monthly x 1.0120,high
+Haryana,2024,9,95.86,95.1,96.62,Modelled: Delhi monthly x 1.0120,high
+Haryana,2024,10,95.86,95.11,96.62,Modelled: Delhi monthly x 1.0120,high
+Haryana,2024,11,95.91,95.16,96.67,Modelled: Delhi monthly x 1.0120,high
+Haryana,2024,12,95.91,95.16,96.67,Modelled: Delhi monthly x 1.0120,high
+Haryana,2025,1,95.91,95.16,96.67,Modelled: Delhi monthly x 1.0120,high
+Haryana,2025,2,95.91,95.16,96.67,Modelled: Delhi monthly x 1.0120,high
+Haryana,2025,3,95.91,95.16,96.67,Modelled: Delhi monthly x 1.0120,high
+Haryana,2025,4,95.91,95.16,96.67,Modelled: Delhi monthly x 1.0120,high
+Haryana,2025,5,95.91,95.16,96.67,Modelled: Delhi monthly x 1.0120,high
+Haryana,2025,6,95.91,95.16,96.67,Modelled: Delhi monthly x 1.0120,high
+Haryana,2025,7,95.91,95.16,96.67,Modelled: Delhi monthly x 1.0120,high
+Haryana,2025,8,95.91,95.16,96.67,Modelled: Delhi monthly x 1.0120,high
+Haryana,2025,9,95.91,95.16,96.67,Modelled: Delhi monthly x 1.0120,high
+Haryana,2025,10,95.91,95.16,96.67,Modelled: Delhi monthly x 1.0120,high
+Haryana,2025,11,95.91,95.16,96.67,Modelled: Delhi monthly x 1.0120,high
+Haryana,2025,12,95.91,95.16,96.67,Modelled: Delhi monthly x 1.0120,high
+Haryana,2026,1,95.91,95.12,96.7,Modelled: Delhi monthly x 1.0120,high
+Haryana,2026,2,95.91,95.12,96.7,Modelled: Delhi monthly x 1.0120,high
+Haryana,2026,3,95.91,95.12,96.7,Modelled: Delhi monthly x 1.0120,high
+Haryana,2026,4,95.91,95.12,96.7,Modelled: Delhi monthly x 1.0120,high
+Haryana,2026,5,98.8,98.31,99.28,Modelled: Delhi monthly x 1.0120,high
+Haryana,2026,6,103.35,103.19,103.51,Modelled: Delhi monthly x 1.0120,high
+Haryana,2026,7,103.35,103.19,103.51,Modelled: Delhi monthly x 1.0120,high
+Haryana,2026,8,103.35,103.19,103.51,Modelled: Delhi monthly x 1.0120,high
+Haryana,2026,9,103.35,103.19,103.51,Modelled: Delhi monthly x 1.0120,high
+Haryana,2026,10,103.35,103.19,103.51,Modelled: Delhi monthly x 1.0120,high
+Himachal Pradesh,2021,1,85.75,78.45,93.04,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2021,2,89.72,81.68,97.76,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2021,3,91.98,82.92,101.04,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2021,4,91.39,82.41,100.36,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2021,5,93.25,83.99,102.52,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2021,6,97.49,87.64,107.34,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2021,7,102.11,91.99,112.23,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2021,8,102.76,92.69,112.83,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2021,9,102.26,92.39,112.13,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2021,10,106.49,96.35,116.63,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2021,11,105.62,95.64,115.6,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2021,12,96.65,91.29,102.01,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2022,1,96.37,90.74,102.01,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2022,2,96.37,90.74,102.01,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2022,3,97.48,91.88,103.08,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2022,4,106.11,100.79,111.43,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2022,5,103.64,98.25,109.04,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2022,6,97.7,92.11,103.28,Modelled: Delhi monthly x 1.0101,low
+Himachal Pradesh,2022,7,97.7,94.67,100.72,Modelled: Delhi monthly x 1.0101,medium
+Himachal Pradesh,2022,8,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2022,9,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2022,10,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2022,11,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2022,12,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2023,1,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2023,2,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2023,3,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2023,4,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2023,5,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2023,6,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2023,7,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2023,8,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2023,9,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2023,10,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2023,11,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2023,12,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2024,1,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2024,2,97.7,96.35,99.04,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2024,3,96.59,95.31,97.86,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2024,4,95.68,94.45,96.9,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2024,5,95.68,94.45,96.9,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2024,6,95.68,94.45,96.9,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2024,7,95.68,94.6,96.75,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2024,8,95.68,94.6,96.75,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2024,9,95.68,94.6,96.75,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2024,10,95.68,94.6,96.75,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2024,11,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2024,12,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2025,1,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2025,2,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2025,3,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2025,4,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2025,5,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2025,6,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2025,7,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2025,8,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2025,9,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2025,10,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2025,11,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2025,12,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2026,1,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2026,2,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2026,3,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2026,4,95.73,94.65,96.8,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2026,5,98.61,97.5,99.71,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2026,6,103.15,101.99,104.31,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2026,7,103.15,101.99,104.31,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2026,8,103.15,101.99,104.31,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2026,9,103.15,101.99,104.31,Modelled: Delhi monthly x 1.0101,high
+Himachal Pradesh,2026,10,103.15,101.99,104.31,Modelled: Delhi monthly x 1.0101,high
+Jammu and Kashmir,2021,1,86.56,79.2,93.92,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2021,2,90.57,82.46,98.69,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2021,3,92.85,83.71,102.0,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2021,4,92.26,83.2,101.32,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2021,5,94.14,84.79,103.49,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2021,6,98.42,88.47,108.36,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2021,7,103.08,92.86,113.29,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2021,8,103.74,93.57,113.9,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2021,9,103.23,93.27,113.2,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2021,10,107.5,97.26,117.74,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2021,11,106.62,96.54,116.7,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2021,12,97.57,92.16,102.98,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2022,1,97.29,91.6,102.98,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2022,2,97.29,91.6,102.98,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2022,3,98.41,92.76,104.06,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2022,4,107.12,101.75,112.48,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2022,5,104.63,99.18,110.07,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2022,6,98.62,92.99,104.26,Modelled: Delhi monthly x 1.0197,low
+Jammu and Kashmir,2022,7,98.62,95.57,101.67,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2022,8,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2022,9,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2022,10,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2022,11,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2022,12,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2023,1,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2023,2,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2023,3,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2023,4,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2023,5,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2023,6,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2023,7,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2023,8,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2023,9,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2023,10,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2023,11,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2023,12,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2024,1,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2024,2,98.62,96.36,100.88,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2024,3,97.51,95.27,99.74,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2024,4,96.58,94.37,98.8,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2024,5,96.58,94.37,98.8,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2024,6,96.58,94.37,98.8,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2024,7,96.58,94.37,98.8,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2024,8,96.58,94.37,98.8,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2024,9,96.58,94.37,98.8,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2024,10,96.59,94.37,98.8,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2024,11,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2024,12,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2025,1,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2025,2,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2025,3,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2025,4,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2025,5,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2025,6,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2025,7,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2025,8,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2025,9,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2025,10,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2025,11,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2025,12,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2026,1,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2026,2,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2026,3,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2026,4,96.64,94.42,98.85,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2026,5,99.54,97.26,101.82,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2026,6,104.13,101.74,106.52,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2026,7,104.13,101.74,106.52,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2026,8,104.13,101.74,106.52,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2026,9,104.13,101.74,106.52,Modelled: Delhi monthly x 1.0197,medium
+Jammu and Kashmir,2026,10,104.13,101.74,106.52,Modelled: Delhi monthly x 1.0197,medium
+Jharkhand,2021,1,88.27,80.77,95.78,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2021,2,92.37,84.09,100.64,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2021,3,94.69,85.36,104.02,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2021,4,94.08,84.84,103.32,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2021,5,96.0,86.46,105.54,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2021,6,100.36,90.22,110.5,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2021,7,105.12,94.7,115.54,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2021,8,105.79,95.43,116.16,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2021,9,105.27,95.11,115.43,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2021,10,109.63,99.19,120.07,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2021,11,108.73,98.45,119.01,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2021,12,99.5,93.98,105.02,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2022,1,99.21,93.41,105.02,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2022,2,99.21,93.41,105.02,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2022,3,100.36,94.59,106.12,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2022,4,109.24,103.76,114.71,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2022,5,106.7,101.14,112.25,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2022,6,100.57,94.83,106.32,Modelled: Delhi monthly x 1.0399,low
+Jharkhand,2022,7,100.57,97.46,103.68,Modelled: Delhi monthly x 1.0399,medium
+Jharkhand,2022,8,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2022,9,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2022,10,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2022,11,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2022,12,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2023,1,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2023,2,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2023,3,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2023,4,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2023,5,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2023,6,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2023,7,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2023,8,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2023,9,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2023,10,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2023,11,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2023,12,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2024,1,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2024,2,100.57,99.19,101.96,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2024,3,99.43,98.12,100.75,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2024,4,98.5,97.24,99.75,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2024,5,98.5,97.24,99.75,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2024,6,98.5,97.24,99.75,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2024,7,98.5,97.72,99.27,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2024,8,98.5,97.72,99.27,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2024,9,98.5,97.72,99.27,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2024,10,98.5,97.72,99.28,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2024,11,98.55,97.77,99.32,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2024,12,98.55,97.77,99.32,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2025,1,98.55,97.77,99.32,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2025,2,98.55,97.77,99.32,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2025,3,98.55,97.77,99.32,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2025,4,98.55,97.77,99.32,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2025,5,98.55,97.77,99.32,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2025,6,98.55,97.77,99.32,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2025,7,98.55,97.77,99.32,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2025,8,98.55,97.77,99.32,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2025,9,98.55,97.77,99.32,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2025,10,98.55,97.77,99.32,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2025,11,98.55,97.77,99.32,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2025,12,98.55,97.77,99.32,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2026,1,98.55,97.73,99.36,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2026,2,98.55,97.73,99.36,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2026,3,98.55,97.73,99.36,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2026,4,98.55,97.73,99.36,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2026,5,101.51,101.01,102.01,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2026,6,106.19,106.18,106.2,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2026,7,106.19,106.18,106.2,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2026,8,106.19,106.18,106.2,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2026,9,106.19,106.18,106.2,Modelled: Delhi monthly x 1.0399,high
+Jharkhand,2026,10,106.19,106.18,106.2,Modelled: Delhi monthly x 1.0399,high
+Karnataka,2021,1,92.84,84.94,100.73,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2021,2,97.14,88.44,105.84,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2021,3,99.59,89.78,109.4,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2021,4,98.94,89.23,108.66,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2021,5,100.96,90.93,110.99,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2021,6,105.55,94.88,116.22,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2021,7,110.55,99.6,121.51,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2021,8,111.26,100.36,122.16,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2021,9,110.72,100.03,121.4,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2021,10,115.3,104.32,126.28,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2021,11,114.35,103.54,125.16,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2021,12,104.64,98.84,110.44,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2022,1,104.34,98.24,110.44,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2022,2,104.34,98.24,110.44,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2022,3,105.54,99.48,111.61,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2022,4,114.88,109.13,120.64,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2022,5,112.21,106.37,118.05,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2022,6,105.77,99.73,111.82,Modelled: Delhi monthly x 1.0936,low
+Karnataka,2022,7,105.77,102.5,109.05,Modelled: Delhi monthly x 1.0936,medium
+Karnataka,2022,8,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2022,9,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2022,10,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2022,11,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2022,12,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2023,1,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2023,2,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2023,3,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2023,4,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2023,5,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2023,6,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2023,7,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2023,8,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2023,9,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2023,10,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2023,11,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2023,12,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2024,1,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2024,2,105.77,104.32,107.23,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2024,3,104.58,103.19,105.96,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2024,4,103.59,102.26,104.91,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2024,5,103.59,102.26,104.91,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2024,6,103.59,102.26,104.91,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2024,7,103.59,102.77,104.41,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2024,8,103.59,102.77,104.41,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2024,9,103.59,102.77,104.41,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2024,10,103.59,102.77,104.41,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2024,11,103.64,102.83,104.46,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2024,12,103.64,102.83,104.46,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2025,1,103.64,102.83,104.46,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2025,2,103.64,102.83,104.46,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2025,3,103.64,102.83,104.46,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2025,4,103.64,102.83,104.46,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2025,5,103.64,102.83,104.46,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2025,6,103.64,102.83,104.46,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2025,7,103.64,102.83,104.46,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2025,8,103.64,102.83,104.46,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2025,9,103.64,102.83,104.46,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2025,10,103.64,102.83,104.46,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2025,11,103.64,102.83,104.46,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2025,12,103.64,102.83,104.46,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2026,1,103.64,102.79,104.5,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2026,2,103.64,102.79,104.5,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2026,3,103.64,102.79,104.5,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2026,4,103.64,102.79,104.5,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2026,5,106.76,105.94,107.58,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2026,6,111.68,110.82,112.54,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2026,7,111.68,110.82,112.54,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2026,8,111.68,110.82,112.54,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2026,9,111.68,110.82,112.54,Modelled: Delhi monthly x 1.0936,high
+Karnataka,2026,10,111.68,110.82,112.54,Modelled: Delhi monthly x 1.0936,high
+Kerala,2021,1,96.01,87.84,104.17,Modelled: Delhi monthly x 1.1309,low
+Kerala,2021,2,100.45,91.45,109.46,Modelled: Delhi monthly x 1.1309,low
+Kerala,2021,3,102.98,92.84,113.13,Modelled: Delhi monthly x 1.1309,low
+Kerala,2021,4,102.32,92.27,112.37,Modelled: Delhi monthly x 1.1309,low
+Kerala,2021,5,104.41,94.04,114.78,Modelled: Delhi monthly x 1.1309,low
+Kerala,2021,6,109.15,98.12,120.18,Modelled: Delhi monthly x 1.1309,low
+Kerala,2021,7,114.32,102.99,125.65,Modelled: Delhi monthly x 1.1309,low
+Kerala,2021,8,115.06,103.78,126.33,Modelled: Delhi monthly x 1.1309,low
+Kerala,2021,9,114.49,103.44,125.54,Modelled: Delhi monthly x 1.1309,low
+Kerala,2021,10,119.23,107.87,130.59,Modelled: Delhi monthly x 1.1309,low
+Kerala,2021,11,118.26,107.08,129.43,Modelled: Delhi monthly x 1.1309,low
+Kerala,2021,12,108.21,102.21,114.21,Modelled: Delhi monthly x 1.1309,low
+Kerala,2022,1,107.9,101.59,114.21,Modelled: Delhi monthly x 1.1309,low
+Kerala,2022,2,107.9,101.59,114.21,Modelled: Delhi monthly x 1.1309,low
+Kerala,2022,3,109.15,102.87,115.42,Modelled: Delhi monthly x 1.1309,low
+Kerala,2022,4,118.8,112.85,124.76,Modelled: Delhi monthly x 1.1309,low
+Kerala,2022,5,116.04,110.0,122.08,Modelled: Delhi monthly x 1.1309,low
+Kerala,2022,6,109.38,103.13,115.64,Modelled: Delhi monthly x 1.1309,low
+Kerala,2022,7,109.38,106.0,112.77,Modelled: Delhi monthly x 1.1309,medium
+Kerala,2022,8,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2022,9,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2022,10,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2022,11,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2022,12,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2023,1,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2023,2,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2023,3,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2023,4,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2023,5,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2023,6,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2023,7,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2023,8,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2023,9,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2023,10,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2023,11,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2023,12,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2024,1,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2024,2,109.38,107.88,110.89,Modelled: Delhi monthly x 1.1309,high
+Kerala,2024,3,108.14,106.71,109.57,Modelled: Delhi monthly x 1.1309,high
+Kerala,2024,4,107.12,105.75,108.49,Modelled: Delhi monthly x 1.1309,high
+Kerala,2024,5,107.12,105.75,108.49,Modelled: Delhi monthly x 1.1309,high
+Kerala,2024,6,107.12,105.75,108.49,Modelled: Delhi monthly x 1.1309,high
+Kerala,2024,7,107.12,106.28,107.97,Modelled: Delhi monthly x 1.1309,high
+Kerala,2024,8,107.12,106.28,107.97,Modelled: Delhi monthly x 1.1309,high
+Kerala,2024,9,107.12,106.28,107.97,Modelled: Delhi monthly x 1.1309,high
+Kerala,2024,10,107.12,106.28,107.97,Modelled: Delhi monthly x 1.1309,high
+Kerala,2024,11,107.18,106.33,108.02,Modelled: Delhi monthly x 1.1309,high
+Kerala,2024,12,107.18,106.33,108.02,Modelled: Delhi monthly x 1.1309,high
+Kerala,2025,1,107.18,106.33,108.02,Modelled: Delhi monthly x 1.1309,high
+Kerala,2025,2,107.18,106.33,108.02,Modelled: Delhi monthly x 1.1309,high
+Kerala,2025,3,107.18,106.33,108.02,Modelled: Delhi monthly x 1.1309,high
+Kerala,2025,4,107.18,106.33,108.02,Modelled: Delhi monthly x 1.1309,high
+Kerala,2025,5,107.18,106.33,108.02,Modelled: Delhi monthly x 1.1309,high
+Kerala,2025,6,107.18,106.33,108.02,Modelled: Delhi monthly x 1.1309,high
+Kerala,2025,7,107.18,106.33,108.02,Modelled: Delhi monthly x 1.1309,high
+Kerala,2025,8,107.18,106.33,108.02,Modelled: Delhi monthly x 1.1309,high
+Kerala,2025,9,107.18,106.33,108.02,Modelled: Delhi monthly x 1.1309,high
+Kerala,2025,10,107.18,106.33,108.02,Modelled: Delhi monthly x 1.1309,high
+Kerala,2025,11,107.18,106.33,108.02,Modelled: Delhi monthly x 1.1309,high
+Kerala,2025,12,107.18,106.33,108.02,Modelled: Delhi monthly x 1.1309,high
+Kerala,2026,1,107.18,106.29,108.06,Modelled: Delhi monthly x 1.1309,high
+Kerala,2026,2,107.18,106.29,108.06,Modelled: Delhi monthly x 1.1309,high
+Kerala,2026,3,107.18,106.29,108.06,Modelled: Delhi monthly x 1.1309,high
+Kerala,2026,4,107.18,106.29,108.06,Modelled: Delhi monthly x 1.1309,high
+Kerala,2026,5,110.4,109.6,111.2,Modelled: Delhi monthly x 1.1309,high
+Kerala,2026,6,115.49,114.65,116.33,Modelled: Delhi monthly x 1.1309,high
+Kerala,2026,7,115.49,114.65,116.33,Modelled: Delhi monthly x 1.1309,high
+Kerala,2026,8,115.49,114.65,116.33,Modelled: Delhi monthly x 1.1309,high
+Kerala,2026,9,115.49,114.65,116.33,Modelled: Delhi monthly x 1.1309,high
+Kerala,2026,10,115.49,114.65,116.33,Modelled: Delhi monthly x 1.1309,high
+Ladakh,2021,1,91.45,83.67,99.23,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2021,2,95.69,87.11,104.26,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2021,3,98.1,88.43,107.76,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2021,4,97.46,87.89,107.04,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2021,5,99.45,89.57,109.33,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2021,6,103.97,93.47,114.48,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2021,7,108.9,98.11,119.69,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2021,8,109.6,98.86,120.34,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2021,9,109.06,98.53,119.59,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2021,10,113.57,102.76,124.39,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2021,11,112.64,102.0,123.29,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2021,12,103.08,97.36,108.79,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2022,1,102.78,96.77,108.79,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2022,2,102.78,96.77,108.79,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2022,3,103.97,97.99,109.94,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2022,4,113.17,107.5,118.84,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2022,5,110.53,104.78,116.29,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2022,6,104.19,98.24,110.15,Modelled: Delhi monthly x 1.0773,low
+Ladakh,2022,7,104.19,100.97,107.41,Modelled: Delhi monthly x 1.0773,medium
+Ladakh,2022,8,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2022,9,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2022,10,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2022,11,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2022,12,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2023,1,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2023,2,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2023,3,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2023,4,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2023,5,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2023,6,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2023,7,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2023,8,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2023,9,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2023,10,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2023,11,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2023,12,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2024,1,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2024,2,104.19,102.76,105.62,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2024,3,103.01,101.65,104.37,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2024,4,102.04,100.74,103.34,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2024,5,102.04,100.74,103.34,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2024,6,102.04,100.74,103.34,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2024,7,102.04,101.23,102.84,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2024,8,102.04,101.23,102.84,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2024,9,102.04,101.23,102.84,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2024,10,102.04,101.24,102.85,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2024,11,102.09,101.29,102.9,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2024,12,102.09,101.29,102.9,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2025,1,102.09,101.29,102.9,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2025,2,102.09,101.29,102.9,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2025,3,102.09,101.29,102.9,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2025,4,102.09,101.29,102.9,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2025,5,102.09,101.29,102.9,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2025,6,102.09,101.29,102.9,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2025,7,102.09,101.29,102.9,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2025,8,102.09,101.29,102.9,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2025,9,102.09,101.29,102.9,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2025,10,102.09,101.29,102.9,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2025,11,102.09,101.29,102.9,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2025,12,102.09,101.29,102.9,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2026,1,102.09,101.25,102.94,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2026,2,102.09,101.25,102.94,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2026,3,102.09,101.25,102.94,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2026,4,102.09,101.25,102.94,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2026,5,105.16,104.55,105.77,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2026,6,110.01,109.37,110.65,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2026,7,110.01,109.37,110.65,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2026,8,110.01,109.37,110.65,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2026,9,110.01,109.37,110.65,Modelled: Delhi monthly x 1.0773,high
+Ladakh,2026,10,110.01,109.37,110.65,Modelled: Delhi monthly x 1.0773,high
+Lakshadweep,2021,1,89.36,81.76,96.96,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2021,2,93.5,85.13,101.88,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2021,3,95.86,86.42,105.3,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2021,4,95.24,85.89,104.59,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2021,5,97.19,87.53,106.84,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2021,6,101.6,91.33,111.87,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2021,7,106.41,95.87,116.96,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2021,8,107.1,96.6,117.59,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2021,9,106.57,96.29,116.86,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2021,10,110.98,100.41,121.55,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2021,11,110.07,99.67,120.48,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2021,12,100.73,95.14,106.31,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2022,1,100.44,94.56,106.31,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2022,2,100.44,94.56,106.31,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2022,3,101.59,95.76,107.43,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2022,4,110.58,105.04,116.12,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2022,5,108.01,102.39,113.63,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2022,6,101.82,96.0,107.64,Modelled: Delhi monthly x 1.0527,low
+Lakshadweep,2022,7,101.82,98.67,104.96,Modelled: Delhi monthly x 1.0527,medium
+Lakshadweep,2022,8,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2022,9,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2022,10,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2022,11,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2022,12,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2023,1,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2023,2,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2023,3,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2023,4,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2023,5,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2023,6,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2023,7,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2023,8,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2023,9,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2023,10,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2023,11,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2023,12,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2024,1,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2024,2,101.82,100.42,103.21,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2024,3,100.66,99.33,101.99,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2024,4,99.71,98.44,100.98,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2024,5,99.71,98.44,100.98,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2024,6,99.71,98.44,100.98,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2024,7,99.71,98.92,100.5,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2024,8,99.71,98.92,100.5,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2024,9,99.71,98.92,100.5,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2024,10,99.71,98.93,100.5,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2024,11,99.76,98.98,100.55,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2024,12,99.76,98.98,100.55,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2025,1,99.76,98.98,100.55,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2025,2,99.76,98.98,100.55,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2025,3,99.76,98.98,100.55,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2025,4,99.76,98.98,100.55,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2025,5,99.76,98.98,100.55,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2025,6,99.76,98.98,100.55,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2025,7,99.76,98.98,100.55,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2025,8,99.76,98.98,100.55,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2025,9,99.76,98.98,100.55,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2025,10,99.76,98.98,100.55,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2025,11,99.76,98.98,100.55,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2025,12,99.76,98.98,100.55,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2026,1,99.76,98.94,100.59,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2026,2,99.76,98.94,100.59,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2026,3,99.76,98.94,100.59,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2026,4,99.76,98.94,100.59,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2026,5,102.76,102.26,103.27,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2026,6,107.5,107.5,107.5,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2026,7,107.5,107.5,107.5,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2026,8,107.5,107.5,107.5,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2026,9,107.5,107.5,107.5,Modelled: Delhi monthly x 1.0527,high
+Lakshadweep,2026,10,107.5,107.5,107.5,Modelled: Delhi monthly x 1.0527,high
+Madhya Pradesh,2021,1,95.22,87.12,103.31,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2021,2,99.63,90.7,108.56,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2021,3,102.14,92.08,112.2,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2021,4,101.48,91.51,111.44,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2021,5,103.55,93.26,113.84,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2021,6,108.25,97.31,119.19,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2021,7,113.38,102.15,124.62,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2021,8,114.11,102.93,125.29,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2021,9,113.55,102.59,124.51,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2021,10,118.25,106.99,129.51,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2021,11,117.28,106.2,128.37,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2021,12,107.32,101.37,113.27,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2022,1,107.01,100.75,113.27,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2022,2,107.01,100.75,113.27,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2022,3,108.25,102.03,114.47,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2022,4,117.83,111.92,123.73,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2022,5,115.09,109.1,121.08,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2022,6,108.48,102.28,114.68,Modelled: Delhi monthly x 1.1216,low
+Madhya Pradesh,2022,7,108.48,105.13,111.84,Modelled: Delhi monthly x 1.1216,medium
+Madhya Pradesh,2022,8,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2022,9,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2022,10,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2022,11,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2022,12,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2023,1,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2023,2,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2023,3,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2023,4,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2023,5,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2023,6,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2023,7,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2023,8,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2023,9,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2023,10,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2023,11,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2023,12,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2024,1,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2024,2,108.48,106.99,109.97,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2024,3,107.25,105.84,108.67,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2024,4,106.24,104.88,107.6,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2024,5,106.24,104.88,107.6,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2024,6,106.24,104.88,107.6,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2024,7,106.24,105.15,107.33,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2024,8,106.24,105.15,107.33,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2024,9,106.24,105.15,107.33,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2024,10,106.24,105.15,107.34,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2024,11,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2024,12,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2025,1,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2025,2,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2025,3,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2025,4,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2025,5,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2025,6,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2025,7,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2025,8,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2025,9,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2025,10,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2025,11,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2025,12,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2026,1,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2026,2,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2026,3,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2026,4,106.3,105.2,107.39,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2026,5,109.49,108.37,110.62,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2026,6,114.54,113.36,115.72,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2026,7,114.54,113.36,115.72,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2026,8,114.54,113.36,115.72,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2026,9,114.54,113.36,115.72,Modelled: Delhi monthly x 1.1216,high
+Madhya Pradesh,2026,10,114.54,113.36,115.72,Modelled: Delhi monthly x 1.1216,high
+Maharashtra,2021,1,91.5,91.5,91.5,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2021,2,95.3,95.3,95.3,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2021,3,97.47,97.47,97.47,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2021,4,96.9,96.9,96.9,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2021,5,98.63,98.63,98.63,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2021,6,102.68,102.68,102.68,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2021,7,107.1,107.1,107.1,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2021,8,107.74,107.74,107.74,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2021,9,107.31,107.31,107.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2021,10,111.37,111.37,111.37,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2021,11,110.56,110.56,110.56,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2021,12,109.98,109.98,109.98,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2022,1,109.98,109.98,109.98,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2022,2,109.98,109.98,109.98,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2022,3,111.14,111.14,111.14,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2022,4,120.13,120.13,120.13,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2022,5,117.56,117.56,117.56,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2022,6,111.35,111.35,111.35,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2022,7,108.59,108.59,108.59,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2022,8,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2022,9,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2022,10,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2022,11,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2022,12,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2023,1,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2023,2,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2023,3,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2023,4,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2023,5,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2023,6,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2023,7,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2023,8,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2023,9,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2023,10,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2023,11,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2023,12,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2024,1,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2024,2,106.31,106.31,106.31,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2024,3,105.16,105.16,105.16,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2024,4,104.21,104.21,104.21,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2024,5,104.21,104.21,104.21,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2024,6,104.16,104.16,104.16,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2024,7,103.44,103.44,103.44,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2024,8,103.44,103.44,103.44,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2024,9,103.44,103.44,103.44,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2024,10,103.44,103.44,103.44,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2024,11,103.44,103.44,103.44,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2024,12,103.5,103.5,103.5,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2025,1,103.5,103.5,103.5,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2025,2,103.5,103.5,103.5,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2025,3,103.5,103.5,103.5,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2025,4,103.5,103.5,103.5,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2025,5,103.5,103.5,103.5,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2025,6,103.5,103.5,103.5,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2025,7,103.5,103.5,103.5,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2025,8,103.5,103.5,103.5,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2025,9,103.5,103.5,103.5,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2025,10,103.5,103.5,103.5,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2025,11,103.5,103.5,103.5,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2025,12,103.53,103.53,103.53,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2026,1,103.54,103.54,103.54,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2026,2,103.54,103.54,103.54,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2026,3,103.54,103.54,103.54,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2026,4,103.54,103.54,103.54,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2026,5,106.52,106.52,106.52,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2026,6,111.21,111.21,111.21,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2026,7,111.21,111.21,111.21,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2026,8,111.21,111.21,111.21,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2026,9,111.21,111.21,111.21,PPAC observed (Mumbai monthly mean),observed
+Maharashtra,2026,10,111.21,111.21,111.21,PPAC observed (Mumbai monthly mean),observed
+Manipur,2021,1,88.86,81.31,96.42,Modelled: Delhi monthly x 1.0468,low
+Manipur,2021,2,92.98,84.65,101.31,Modelled: Delhi monthly x 1.0468,low
+Manipur,2021,3,95.32,85.93,104.71,Modelled: Delhi monthly x 1.0468,low
+Manipur,2021,4,94.71,85.41,104.01,Modelled: Delhi monthly x 1.0468,low
+Manipur,2021,5,96.64,87.04,106.24,Modelled: Delhi monthly x 1.0468,low
+Manipur,2021,6,101.03,90.82,111.24,Modelled: Delhi monthly x 1.0468,low
+Manipur,2021,7,105.82,95.33,116.31,Modelled: Delhi monthly x 1.0468,low
+Manipur,2021,8,106.5,96.06,116.93,Modelled: Delhi monthly x 1.0468,low
+Manipur,2021,9,105.98,95.75,116.21,Modelled: Delhi monthly x 1.0468,low
+Manipur,2021,10,110.36,99.85,120.87,Modelled: Delhi monthly x 1.0468,low
+Manipur,2021,11,109.46,99.11,119.81,Modelled: Delhi monthly x 1.0468,low
+Manipur,2021,12,100.16,94.61,105.72,Modelled: Delhi monthly x 1.0468,low
+Manipur,2022,1,99.88,94.03,105.72,Modelled: Delhi monthly x 1.0468,low
+Manipur,2022,2,99.88,94.03,105.72,Modelled: Delhi monthly x 1.0468,low
+Manipur,2022,3,101.03,95.22,106.83,Modelled: Delhi monthly x 1.0468,low
+Manipur,2022,4,109.97,104.46,115.48,Modelled: Delhi monthly x 1.0468,low
+Manipur,2022,5,107.41,101.82,113.0,Modelled: Delhi monthly x 1.0468,low
+Manipur,2022,6,101.25,95.46,107.03,Modelled: Delhi monthly x 1.0468,low
+Manipur,2022,7,101.25,98.12,104.38,Modelled: Delhi monthly x 1.0468,medium
+Manipur,2022,8,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2022,9,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2022,10,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2022,11,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2022,12,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2023,1,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2023,2,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2023,3,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2023,4,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2023,5,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2023,6,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2023,7,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2023,8,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2023,9,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2023,10,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2023,11,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2023,12,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2024,1,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2024,2,101.25,99.86,102.64,Modelled: Delhi monthly x 1.0468,high
+Manipur,2024,3,100.1,98.78,101.42,Modelled: Delhi monthly x 1.0468,high
+Manipur,2024,4,99.15,97.89,100.42,Modelled: Delhi monthly x 1.0468,high
+Manipur,2024,5,99.15,97.89,100.42,Modelled: Delhi monthly x 1.0468,high
+Manipur,2024,6,99.15,97.89,100.42,Modelled: Delhi monthly x 1.0468,high
+Manipur,2024,7,99.15,98.37,99.94,Modelled: Delhi monthly x 1.0468,high
+Manipur,2024,8,99.15,98.37,99.94,Modelled: Delhi monthly x 1.0468,high
+Manipur,2024,9,99.15,98.37,99.94,Modelled: Delhi monthly x 1.0468,high
+Manipur,2024,10,99.16,98.37,99.94,Modelled: Delhi monthly x 1.0468,high
+Manipur,2024,11,99.21,98.43,99.99,Modelled: Delhi monthly x 1.0468,high
+Manipur,2024,12,99.21,98.43,99.99,Modelled: Delhi monthly x 1.0468,high
+Manipur,2025,1,99.21,98.43,99.99,Modelled: Delhi monthly x 1.0468,high
+Manipur,2025,2,99.21,98.43,99.99,Modelled: Delhi monthly x 1.0468,high
+Manipur,2025,3,99.21,98.43,99.99,Modelled: Delhi monthly x 1.0468,high
+Manipur,2025,4,99.21,98.43,99.99,Modelled: Delhi monthly x 1.0468,high
+Manipur,2025,5,99.21,98.43,99.99,Modelled: Delhi monthly x 1.0468,high
+Manipur,2025,6,99.21,98.43,99.99,Modelled: Delhi monthly x 1.0468,high
+Manipur,2025,7,99.21,98.43,99.99,Modelled: Delhi monthly x 1.0468,high
+Manipur,2025,8,99.21,98.43,99.99,Modelled: Delhi monthly x 1.0468,high
+Manipur,2025,9,99.21,98.43,99.99,Modelled: Delhi monthly x 1.0468,high
+Manipur,2025,10,99.21,98.43,99.99,Modelled: Delhi monthly x 1.0468,high
+Manipur,2025,11,99.21,98.43,99.99,Modelled: Delhi monthly x 1.0468,high
+Manipur,2025,12,99.21,98.43,99.99,Modelled: Delhi monthly x 1.0468,high
+Manipur,2026,1,99.21,98.39,100.03,Modelled: Delhi monthly x 1.0468,high
+Manipur,2026,2,99.21,98.39,100.03,Modelled: Delhi monthly x 1.0468,high
+Manipur,2026,3,99.21,98.39,100.03,Modelled: Delhi monthly x 1.0468,high
+Manipur,2026,4,99.21,98.39,100.03,Modelled: Delhi monthly x 1.0468,high
+Manipur,2026,5,102.19,101.69,102.69,Modelled: Delhi monthly x 1.0468,high
+Manipur,2026,6,106.9,106.74,107.06,Modelled: Delhi monthly x 1.0468,high
+Manipur,2026,7,106.9,106.74,107.06,Modelled: Delhi monthly x 1.0468,high
+Manipur,2026,8,106.9,106.74,107.06,Modelled: Delhi monthly x 1.0468,high
+Manipur,2026,9,106.9,106.74,107.06,Modelled: Delhi monthly x 1.0468,high
+Manipur,2026,10,106.9,106.74,107.06,Modelled: Delhi monthly x 1.0468,high
+Meghalaya,2021,1,85.32,78.07,92.58,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2021,2,89.28,81.28,97.28,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2021,3,91.53,82.51,100.54,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2021,4,90.94,82.01,99.87,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2021,5,92.79,83.57,102.01,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2021,6,97.01,87.2,106.81,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2021,7,101.6,91.53,111.67,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2021,8,102.25,92.24,112.27,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2021,9,101.75,91.93,111.58,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2021,10,105.96,95.87,116.06,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2021,11,105.1,95.16,115.03,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2021,12,96.17,90.84,101.5,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2022,1,95.9,90.29,101.5,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2022,2,95.9,90.29,101.5,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2022,3,97.0,91.43,102.57,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2022,4,105.58,100.3,110.87,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2022,5,103.13,97.76,108.5,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2022,6,97.21,91.66,102.77,Modelled: Delhi monthly x 1.0051,low
+Meghalaya,2022,7,97.21,94.21,100.22,Modelled: Delhi monthly x 1.0051,medium
+Meghalaya,2022,8,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2022,9,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2022,10,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2022,11,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2022,12,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2023,1,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2023,2,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2023,3,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2023,4,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2023,5,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2023,6,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2023,7,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2023,8,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2023,9,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2023,10,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2023,11,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2023,12,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2024,1,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2024,2,97.21,95.88,98.55,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2024,3,96.11,94.84,97.38,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2024,4,95.2,93.99,96.42,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2024,5,95.2,93.99,96.42,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2024,6,95.2,93.99,96.42,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2024,7,95.2,94.45,95.95,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2024,8,95.2,94.45,95.95,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2024,9,95.2,94.45,95.95,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2024,10,95.21,94.45,95.96,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2024,11,95.25,94.5,96.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2024,12,95.25,94.5,96.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2025,1,95.25,94.5,96.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2025,2,95.25,94.5,96.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2025,3,95.25,94.5,96.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2025,4,95.25,94.5,96.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2025,5,95.25,94.5,96.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2025,6,95.25,94.5,96.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2025,7,95.25,94.5,96.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2025,8,95.25,94.5,96.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2025,9,95.25,94.5,96.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2025,10,95.25,94.5,96.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2025,11,95.25,94.5,96.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2025,12,95.25,94.5,96.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2026,1,95.25,94.47,96.04,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2026,2,95.25,94.47,96.04,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2026,3,95.25,94.47,96.04,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2026,4,95.25,94.47,96.04,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2026,5,98.12,97.64,98.6,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2026,6,102.64,102.28,103.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2026,7,102.64,102.28,103.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2026,8,102.64,102.28,103.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2026,9,102.64,102.28,103.0,Modelled: Delhi monthly x 1.0051,high
+Meghalaya,2026,10,102.64,102.28,103.0,Modelled: Delhi monthly x 1.0051,high
+Mizoram,2021,1,88.57,81.03,96.1,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2021,2,92.67,84.37,100.97,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2021,3,95.0,85.64,104.36,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2021,4,94.39,85.12,103.66,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2021,5,96.32,86.75,105.89,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2021,6,100.69,90.52,110.87,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2021,7,105.46,95.01,115.92,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2021,8,106.14,95.74,116.54,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2021,9,105.62,95.43,115.81,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2021,10,109.99,99.51,120.47,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2021,11,109.09,98.78,119.4,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2021,12,99.83,94.29,105.36,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2022,1,99.54,93.72,105.36,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2022,2,99.54,93.72,105.36,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2022,3,100.69,94.9,106.47,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2022,4,109.6,104.11,115.09,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2022,5,107.05,101.48,112.62,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2022,6,100.91,95.14,106.67,Modelled: Delhi monthly x 1.0433,low
+Mizoram,2022,7,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2022,8,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2022,9,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2022,10,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2022,11,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2022,12,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2023,1,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2023,2,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2023,3,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2023,4,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2023,5,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2023,6,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2023,7,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2023,8,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2023,9,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2023,10,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2023,11,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2023,12,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2024,1,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2024,2,100.91,97.62,104.19,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2024,3,99.76,96.51,103.01,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2024,4,98.82,95.6,102.04,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2024,5,98.82,95.6,102.04,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2024,6,98.82,95.6,102.04,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2024,7,98.82,95.6,102.04,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2024,8,98.82,95.6,102.04,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2024,9,98.82,95.6,102.04,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2024,10,98.82,95.6,102.04,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2024,11,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2024,12,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2025,1,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2025,2,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2025,3,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2025,4,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2025,5,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2025,6,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2025,7,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2025,8,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2025,9,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2025,10,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2025,11,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2025,12,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2026,1,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2026,2,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2026,3,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2026,4,98.87,95.65,102.09,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2026,5,101.85,98.53,105.17,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2026,6,106.54,103.07,110.01,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2026,7,106.54,103.07,110.01,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2026,8,106.54,103.07,110.01,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2026,9,106.54,103.07,110.01,Modelled: Delhi monthly x 1.0433,medium
+Mizoram,2026,10,106.54,103.07,110.01,Modelled: Delhi monthly x 1.0433,medium
+Nagaland,2021,1,87.2,79.79,94.62,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2021,2,91.24,83.07,99.42,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2021,3,93.54,84.33,102.76,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2021,4,92.94,83.81,102.06,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2021,5,94.83,85.41,104.26,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2021,6,99.14,89.12,109.16,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2021,7,103.84,93.55,114.13,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2021,8,104.51,94.27,114.75,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2021,9,103.99,93.96,114.03,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2021,10,108.3,97.98,118.61,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2021,11,107.41,97.26,117.57,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2021,12,98.29,92.84,103.74,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2022,1,98.01,92.27,103.74,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2022,2,98.01,92.27,103.74,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2022,3,99.14,93.44,104.83,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2022,4,107.91,102.5,113.32,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2022,5,105.4,99.91,110.89,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2022,6,99.35,93.67,105.03,Modelled: Delhi monthly x 1.0272,low
+Nagaland,2022,7,99.35,96.28,102.43,Modelled: Delhi monthly x 1.0272,medium
+Nagaland,2022,8,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2022,9,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2022,10,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2022,11,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2022,12,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2023,1,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2023,2,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2023,3,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2023,4,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2023,5,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2023,6,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2023,7,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2023,8,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2023,9,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2023,10,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2023,11,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2023,12,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2024,1,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2024,2,99.35,97.99,100.72,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2024,3,98.23,96.93,99.52,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2024,4,97.3,96.06,98.54,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2024,5,97.3,96.06,98.54,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2024,6,97.3,96.06,98.54,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2024,7,97.3,96.12,98.48,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2024,8,97.3,96.12,98.48,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2024,9,97.3,96.12,98.48,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2024,10,97.3,96.12,98.48,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2024,11,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2024,12,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2025,1,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2025,2,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2025,3,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2025,4,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2025,5,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2025,6,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2025,7,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2025,8,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2025,9,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2025,10,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2025,11,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2025,12,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2026,1,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2026,2,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2026,3,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2026,4,97.35,96.17,98.53,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2026,5,100.28,99.06,101.49,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2026,6,104.9,103.63,106.17,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2026,7,104.9,103.63,106.17,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2026,8,104.9,103.63,106.17,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2026,9,104.9,103.63,106.17,Modelled: Delhi monthly x 1.0272,high
+Nagaland,2026,10,104.9,103.63,106.17,Modelled: Delhi monthly x 1.0272,high
+Odisha,2021,1,90.59,82.88,98.29,Modelled: Delhi monthly x 1.0671,low
+Odisha,2021,2,94.78,86.29,103.28,Modelled: Delhi monthly x 1.0671,low
+Odisha,2021,3,97.17,87.6,106.74,Modelled: Delhi monthly x 1.0671,low
+Odisha,2021,4,96.54,87.06,106.02,Modelled: Delhi monthly x 1.0671,low
+Odisha,2021,5,98.51,88.73,108.3,Modelled: Delhi monthly x 1.0671,low
+Odisha,2021,6,102.99,92.58,113.4,Modelled: Delhi monthly x 1.0671,low
+Odisha,2021,7,107.87,97.18,118.56,Modelled: Delhi monthly x 1.0671,low
+Odisha,2021,8,108.56,97.92,119.2,Modelled: Delhi monthly x 1.0671,low
+Odisha,2021,9,108.03,97.6,118.46,Modelled: Delhi monthly x 1.0671,low
+Odisha,2021,10,112.5,101.78,123.21,Modelled: Delhi monthly x 1.0671,low
+Odisha,2021,11,111.58,101.03,122.13,Modelled: Delhi monthly x 1.0671,low
+Odisha,2021,12,102.1,96.44,107.76,Modelled: Delhi monthly x 1.0671,low
+Odisha,2022,1,101.81,95.86,107.76,Modelled: Delhi monthly x 1.0671,low
+Odisha,2022,2,101.81,95.86,107.76,Modelled: Delhi monthly x 1.0671,low
+Odisha,2022,3,102.98,97.07,108.9,Modelled: Delhi monthly x 1.0671,low
+Odisha,2022,4,112.1,106.48,117.71,Modelled: Delhi monthly x 1.0671,low
+Odisha,2022,5,109.49,103.79,115.19,Modelled: Delhi monthly x 1.0671,low
+Odisha,2022,6,103.21,97.31,109.11,Modelled: Delhi monthly x 1.0671,low
+Odisha,2022,7,103.21,100.02,106.4,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2022,8,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2022,9,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2022,10,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2022,11,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2022,12,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2023,1,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2023,2,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2023,3,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2023,4,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2023,5,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2023,6,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2023,7,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2023,8,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2023,9,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2023,10,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2023,11,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2023,12,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2024,1,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2024,2,103.21,101.53,104.88,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2024,3,102.04,100.38,103.7,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2024,4,101.07,99.43,102.72,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2024,5,101.07,99.43,102.72,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2024,6,101.07,99.43,102.72,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2024,7,101.07,99.43,102.72,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2024,8,101.07,99.43,102.72,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2024,9,101.07,99.43,102.72,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2024,10,101.08,99.43,102.72,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2024,11,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2024,12,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2025,1,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2025,2,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2025,3,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2025,4,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2025,5,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2025,6,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2025,7,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2025,8,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2025,9,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2025,10,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2025,11,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2025,12,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2026,1,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2026,2,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2026,3,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2026,4,101.13,99.48,102.77,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2026,5,104.17,102.48,105.86,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2026,6,108.97,107.2,110.74,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2026,7,108.97,107.2,110.74,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2026,8,108.97,107.2,110.74,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2026,9,108.97,107.2,110.74,Modelled: Delhi monthly x 1.0671,medium
+Odisha,2026,10,108.97,107.2,110.74,Modelled: Delhi monthly x 1.0671,medium
+Puducherry,2021,1,86.1,78.78,93.43,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2021,2,90.09,82.02,98.17,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2021,3,92.36,83.26,101.46,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2021,4,91.77,82.76,100.78,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2021,5,93.64,84.34,102.94,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2021,6,97.9,88.0,107.79,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2021,7,102.53,92.37,112.7,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2021,8,103.19,93.08,113.3,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2021,9,102.69,92.77,112.6,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2021,10,106.93,96.75,117.12,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2021,11,106.06,96.03,116.09,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2021,12,97.05,91.67,102.43,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2022,1,96.77,91.11,102.43,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2022,2,96.77,91.11,102.43,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2022,3,97.89,92.27,103.51,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2022,4,106.55,101.21,111.89,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2022,5,104.07,98.66,109.49,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2022,6,98.1,92.5,103.71,Modelled: Delhi monthly x 1.0143,low
+Puducherry,2022,7,98.1,95.07,101.14,Modelled: Delhi monthly x 1.0143,medium
+Puducherry,2022,8,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2022,9,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2022,10,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2022,11,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2022,12,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2023,1,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2023,2,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2023,3,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2023,4,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2023,5,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2023,6,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2023,7,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2023,8,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2023,9,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2023,10,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2023,11,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2023,12,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2024,1,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2024,2,98.1,96.75,99.45,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2024,3,96.99,95.71,98.27,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2024,4,96.07,94.85,97.3,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2024,5,96.07,94.85,97.3,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2024,6,96.07,94.85,97.3,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2024,7,96.07,95.32,96.83,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2024,8,96.07,95.32,96.83,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2024,9,96.07,95.32,96.83,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2024,10,96.08,95.32,96.84,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2024,11,96.12,95.37,96.88,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2024,12,96.12,95.37,96.88,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2025,1,96.12,95.37,96.88,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2025,2,96.12,95.37,96.88,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2025,3,96.12,95.37,96.88,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2025,4,96.12,95.37,96.88,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2025,5,96.12,95.37,96.88,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2025,6,96.12,95.37,96.88,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2025,7,96.12,95.37,96.88,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2025,8,96.12,95.37,96.88,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2025,9,96.12,95.37,96.88,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2025,10,96.12,95.37,96.88,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2025,11,96.12,95.37,96.88,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2025,12,96.12,95.37,96.88,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2026,1,96.12,95.33,96.92,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2026,2,96.12,95.33,96.92,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2026,3,96.12,95.33,96.92,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2026,4,96.12,95.33,96.92,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2026,5,99.02,98.53,99.5,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2026,6,103.58,103.23,103.93,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2026,7,103.58,103.23,103.93,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2026,8,103.58,103.23,103.93,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2026,9,103.58,103.23,103.93,Modelled: Delhi monthly x 1.0143,high
+Puducherry,2026,10,103.58,103.23,103.93,Modelled: Delhi monthly x 1.0143,high
+Punjab,2021,1,87.75,80.29,95.21,Modelled: Delhi monthly x 1.0337,low
+Punjab,2021,2,91.82,83.59,100.04,Modelled: Delhi monthly x 1.0337,low
+Punjab,2021,3,94.13,84.86,103.4,Modelled: Delhi monthly x 1.0337,low
+Punjab,2021,4,93.52,84.34,102.71,Modelled: Delhi monthly x 1.0337,low
+Punjab,2021,5,95.43,85.95,104.91,Modelled: Delhi monthly x 1.0337,low
+Punjab,2021,6,99.77,89.69,109.85,Modelled: Delhi monthly x 1.0337,low
+Punjab,2021,7,104.49,94.14,114.85,Modelled: Delhi monthly x 1.0337,low
+Punjab,2021,8,105.16,94.86,115.47,Modelled: Delhi monthly x 1.0337,low
+Punjab,2021,9,104.65,94.55,114.75,Modelled: Delhi monthly x 1.0337,low
+Punjab,2021,10,108.98,98.6,119.36,Modelled: Delhi monthly x 1.0337,low
+Punjab,2021,11,108.09,97.87,118.31,Modelled: Delhi monthly x 1.0337,low
+Punjab,2021,12,98.91,93.43,104.39,Modelled: Delhi monthly x 1.0337,low
+Punjab,2022,1,98.62,92.86,104.39,Modelled: Delhi monthly x 1.0337,low
+Punjab,2022,2,98.62,92.86,104.39,Modelled: Delhi monthly x 1.0337,low
+Punjab,2022,3,99.76,94.03,105.49,Modelled: Delhi monthly x 1.0337,low
+Punjab,2022,4,108.59,103.15,114.03,Modelled: Delhi monthly x 1.0337,low
+Punjab,2022,5,106.06,100.54,111.58,Modelled: Delhi monthly x 1.0337,low
+Punjab,2022,6,99.98,94.26,105.69,Modelled: Delhi monthly x 1.0337,low
+Punjab,2022,7,99.98,96.89,103.07,Modelled: Delhi monthly x 1.0337,medium
+Punjab,2022,8,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2022,9,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2022,10,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2022,11,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2022,12,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2023,1,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2023,2,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2023,3,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2023,4,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2023,5,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2023,6,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2023,7,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2023,8,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2023,9,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2023,10,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2023,11,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2023,12,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2024,1,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2024,2,99.98,98.58,101.38,Modelled: Delhi monthly x 1.0337,high
+Punjab,2024,3,98.84,97.46,100.23,Modelled: Delhi monthly x 1.0337,high
+Punjab,2024,4,97.91,96.54,99.28,Modelled: Delhi monthly x 1.0337,high
+Punjab,2024,5,97.91,96.54,99.28,Modelled: Delhi monthly x 1.0337,high
+Punjab,2024,6,97.91,96.54,99.28,Modelled: Delhi monthly x 1.0337,high
+Punjab,2024,7,97.91,96.54,99.28,Modelled: Delhi monthly x 1.0337,high
+Punjab,2024,8,97.91,96.54,99.28,Modelled: Delhi monthly x 1.0337,high
+Punjab,2024,9,97.91,96.54,99.28,Modelled: Delhi monthly x 1.0337,high
+Punjab,2024,10,97.91,96.54,99.29,Modelled: Delhi monthly x 1.0337,high
+Punjab,2024,11,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2024,12,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2025,1,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2025,2,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2025,3,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2025,4,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2025,5,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2025,6,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2025,7,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2025,8,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2025,9,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2025,10,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2025,11,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2025,12,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2026,1,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2026,2,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2026,3,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2026,4,97.96,96.59,99.33,Modelled: Delhi monthly x 1.0337,high
+Punjab,2026,5,100.91,99.5,102.32,Modelled: Delhi monthly x 1.0337,high
+Punjab,2026,6,105.56,104.08,107.04,Modelled: Delhi monthly x 1.0337,high
+Punjab,2026,7,105.56,104.08,107.04,Modelled: Delhi monthly x 1.0337,high
+Punjab,2026,8,105.56,104.08,107.04,Modelled: Delhi monthly x 1.0337,high
+Punjab,2026,9,105.56,104.08,107.04,Modelled: Delhi monthly x 1.0337,high
+Punjab,2026,10,105.56,104.08,107.04,Modelled: Delhi monthly x 1.0337,high
+Rajasthan,2021,1,94.09,86.09,102.1,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2021,2,98.45,89.63,107.28,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2021,3,100.93,90.99,110.88,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2021,4,100.28,90.43,110.13,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2021,5,102.33,92.16,112.49,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2021,6,106.98,96.17,117.79,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2021,7,112.05,100.94,123.15,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2021,8,112.77,101.72,123.81,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2021,9,112.21,101.38,123.04,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2021,10,116.86,105.73,127.99,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2021,11,115.9,104.94,126.86,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2021,12,106.06,100.18,111.94,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2022,1,105.75,99.57,111.94,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2022,2,105.75,99.57,111.94,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2022,3,106.97,100.83,113.12,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2022,4,116.44,110.6,122.27,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2022,5,113.73,107.81,119.65,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2022,6,107.2,101.08,113.33,Modelled: Delhi monthly x 1.1084,low
+Rajasthan,2022,7,107.2,103.89,110.52,Modelled: Delhi monthly x 1.1084,medium
+Rajasthan,2022,8,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2022,9,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2022,10,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2022,11,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2022,12,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2023,1,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2023,2,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2023,3,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2023,4,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2023,5,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2023,6,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2023,7,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2023,8,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2023,9,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2023,10,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2023,11,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2023,12,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2024,1,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2024,2,107.2,105.73,108.68,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2024,3,105.99,104.59,107.39,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2024,4,104.99,103.65,106.33,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2024,5,104.99,103.65,106.33,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2024,6,104.99,103.65,106.33,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2024,7,104.99,104.16,105.82,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2024,8,104.99,104.16,105.82,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2024,9,104.99,104.16,105.82,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2024,10,104.99,104.16,105.82,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2024,11,105.04,104.22,105.87,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2024,12,105.04,104.22,105.87,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2025,1,105.04,104.22,105.87,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2025,2,105.04,104.22,105.87,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2025,3,105.04,104.22,105.87,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2025,4,105.04,104.22,105.87,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2025,5,105.04,104.22,105.87,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2025,6,105.04,104.22,105.87,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2025,7,105.04,104.22,105.87,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2025,8,105.04,104.22,105.87,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2025,9,105.04,104.22,105.87,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2025,10,105.04,104.22,105.87,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2025,11,105.04,104.22,105.87,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2025,12,105.04,104.22,105.87,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2026,1,105.04,104.18,105.91,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2026,2,105.04,104.18,105.91,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2026,3,105.04,104.18,105.91,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2026,4,105.04,104.18,105.91,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2026,5,108.2,107.67,108.74,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2026,6,113.19,112.81,113.57,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2026,7,113.19,112.81,113.57,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2026,8,113.19,112.81,113.57,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2026,9,113.19,112.81,113.57,Modelled: Delhi monthly x 1.1084,high
+Rajasthan,2026,10,113.19,112.81,113.57,Modelled: Delhi monthly x 1.1084,high
+Sikkim,2021,1,92.11,84.27,99.94,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2021,2,96.37,87.74,105.01,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2021,3,98.8,89.07,108.54,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2021,4,98.16,88.52,107.8,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2021,5,100.17,90.22,110.12,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2021,6,104.72,94.14,115.3,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2021,7,109.68,98.81,120.55,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2021,8,110.38,99.57,121.2,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2021,9,109.84,99.24,120.45,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2021,10,114.39,103.49,125.28,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2021,11,113.45,102.73,124.18,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2021,12,103.82,98.06,109.57,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2022,1,103.52,97.46,109.57,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2022,2,103.52,97.46,109.57,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2022,3,104.71,98.7,110.73,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2022,4,113.98,108.27,119.69,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2022,5,111.33,105.53,117.12,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2022,6,104.94,98.94,110.94,Modelled: Delhi monthly x 1.0850,low
+Sikkim,2022,7,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2022,8,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2022,9,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2022,10,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2022,11,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2022,12,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2023,1,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2023,2,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2023,3,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2023,4,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2023,5,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2023,6,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2023,7,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2023,8,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2023,9,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2023,10,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2023,11,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2023,12,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2024,1,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2024,2,104.94,101.14,108.74,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2024,3,103.75,99.99,107.51,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2024,4,102.77,99.05,106.49,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2024,5,102.77,99.05,106.49,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2024,6,102.77,99.05,106.49,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2024,7,102.77,99.05,106.49,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2024,8,102.77,99.05,106.49,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2024,9,102.77,99.05,106.49,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2024,10,102.77,99.05,106.5,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2024,11,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2024,12,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2025,1,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2025,2,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2025,3,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2025,4,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2025,5,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2025,6,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2025,7,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2025,8,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2025,9,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2025,10,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2025,11,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2025,12,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2026,1,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2026,2,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2026,3,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2026,4,102.83,99.1,106.55,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2026,5,105.92,102.08,109.76,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2026,6,110.8,106.79,114.81,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2026,7,110.8,106.79,114.81,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2026,8,110.8,106.79,114.81,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2026,9,110.8,106.79,114.81,Modelled: Delhi monthly x 1.0850,medium
+Sikkim,2026,10,110.8,106.79,114.81,Modelled: Delhi monthly x 1.0850,medium
+Tamil Nadu,2021,1,87.57,87.57,87.57,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2021,2,91.04,91.04,91.04,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2021,3,93.02,93.02,93.02,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2021,4,92.5,92.5,92.5,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2021,5,94.08,94.08,94.08,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2021,6,97.78,97.78,97.78,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2021,7,101.83,101.83,101.83,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2021,8,100.66,100.66,100.66,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2021,9,99.0,99.0,99.0,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2021,10,102.65,102.65,102.65,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2021,11,101.92,101.92,101.92,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2021,12,101.4,101.4,101.4,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2022,1,101.4,101.4,101.4,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2022,2,101.4,101.4,101.4,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2022,3,102.44,102.44,102.44,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2022,4,110.51,110.51,110.51,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2022,5,108.2,108.2,108.2,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2022,6,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2022,7,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2022,8,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2022,9,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2022,10,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2022,11,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2022,12,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2023,1,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2023,2,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2023,3,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2023,4,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2023,5,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2023,6,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2023,7,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2023,8,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2023,9,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2023,10,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2023,11,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2023,12,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2024,1,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2024,2,102.63,102.63,102.63,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2024,3,101.6,101.6,101.6,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2024,4,100.75,100.75,100.75,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2024,5,100.75,100.75,100.75,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2024,6,100.75,100.75,100.75,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2024,7,100.75,100.75,100.75,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2024,8,100.75,100.75,100.75,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2024,9,100.75,100.75,100.75,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2024,10,100.75,100.75,100.75,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2024,11,100.8,100.8,100.8,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2024,12,100.8,100.8,100.8,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2025,1,100.8,100.8,100.8,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2025,2,100.8,100.8,100.8,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2025,3,100.8,100.8,100.8,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2025,4,100.8,100.8,100.8,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2025,5,100.8,100.8,100.8,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2025,6,100.8,100.8,100.8,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2025,7,100.8,100.8,100.8,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2025,8,100.8,100.8,100.8,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2025,9,100.8,100.8,100.8,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2025,10,100.8,100.8,100.8,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2025,11,100.8,100.8,100.8,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2025,12,100.8,100.8,100.8,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2026,1,100.84,100.84,100.84,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2026,2,100.84,100.84,100.84,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2026,3,100.84,100.84,100.84,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2026,4,100.84,100.84,100.84,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2026,5,103.53,103.53,103.53,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2026,6,107.77,107.77,107.77,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2026,7,107.77,107.77,107.77,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2026,8,107.77,107.77,107.77,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2026,9,107.77,107.77,107.77,PPAC observed (Chennai monthly mean),observed
+Tamil Nadu,2026,10,107.77,107.77,107.77,PPAC observed (Chennai monthly mean),observed
+Telangana,2021,1,96.55,88.34,104.77,Modelled: Delhi monthly x 1.1374,low
+Telangana,2021,2,101.03,91.98,110.08,Modelled: Delhi monthly x 1.1374,low
+Telangana,2021,3,103.57,93.37,113.78,Modelled: Delhi monthly x 1.1374,low
+Telangana,2021,4,102.9,92.8,113.01,Modelled: Delhi monthly x 1.1374,low
+Telangana,2021,5,105.01,94.57,115.44,Modelled: Delhi monthly x 1.1374,low
+Telangana,2021,6,109.78,98.68,120.87,Modelled: Delhi monthly x 1.1374,low
+Telangana,2021,7,114.98,103.58,126.37,Modelled: Delhi monthly x 1.1374,low
+Telangana,2021,8,115.71,104.38,127.05,Modelled: Delhi monthly x 1.1374,low
+Telangana,2021,9,115.15,104.03,126.26,Modelled: Delhi monthly x 1.1374,low
+Telangana,2021,10,119.91,108.49,131.33,Modelled: Delhi monthly x 1.1374,low
+Telangana,2021,11,118.93,107.69,130.17,Modelled: Delhi monthly x 1.1374,low
+Telangana,2021,12,108.83,102.8,114.87,Modelled: Delhi monthly x 1.1374,low
+Telangana,2022,1,108.52,102.17,114.87,Modelled: Delhi monthly x 1.1374,low
+Telangana,2022,2,108.52,102.17,114.87,Modelled: Delhi monthly x 1.1374,low
+Telangana,2022,3,109.77,103.46,116.08,Modelled: Delhi monthly x 1.1374,low
+Telangana,2022,4,119.48,113.5,125.47,Modelled: Delhi monthly x 1.1374,low
+Telangana,2022,5,116.7,110.63,122.78,Modelled: Delhi monthly x 1.1374,low
+Telangana,2022,6,110.01,103.72,116.3,Modelled: Delhi monthly x 1.1374,low
+Telangana,2022,7,110.01,106.61,113.41,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2022,8,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2022,9,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2022,10,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2022,11,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2022,12,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2023,1,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2023,2,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2023,3,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2023,4,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2023,5,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2023,6,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2023,7,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2023,8,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2023,9,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2023,10,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2023,11,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2023,12,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2024,1,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2024,2,110.01,108.11,111.91,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2024,3,108.76,106.88,110.64,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2024,4,107.73,105.87,109.59,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2024,5,107.73,105.87,109.59,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2024,6,107.73,105.87,109.59,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2024,7,107.73,105.87,109.59,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2024,8,107.73,105.87,109.59,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2024,9,107.73,105.87,109.59,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2024,10,107.74,105.88,109.6,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2024,11,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2024,12,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2025,1,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2025,2,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2025,3,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2025,4,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2025,5,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2025,6,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2025,7,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2025,8,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2025,9,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2025,10,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2025,11,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2025,12,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2026,1,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2026,2,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2026,3,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2026,4,107.79,105.93,109.65,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2026,5,111.03,109.12,112.95,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2026,6,116.15,114.15,118.15,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2026,7,116.15,114.15,118.15,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2026,8,116.15,114.15,118.15,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2026,9,116.15,114.15,118.15,Modelled: Delhi monthly x 1.1374,medium
+Telangana,2026,10,116.15,114.15,118.15,Modelled: Delhi monthly x 1.1374,medium
+Tripura,2021,1,87.25,79.83,94.67,Modelled: Delhi monthly x 1.0278,low
+Tripura,2021,2,91.3,83.11,99.48,Modelled: Delhi monthly x 1.0278,low
+Tripura,2021,3,93.59,84.37,102.81,Modelled: Delhi monthly x 1.0278,low
+Tripura,2021,4,92.99,83.86,102.12,Modelled: Delhi monthly x 1.0278,low
+Tripura,2021,5,94.89,85.46,104.31,Modelled: Delhi monthly x 1.0278,low
+Tripura,2021,6,99.2,89.18,109.22,Modelled: Delhi monthly x 1.0278,low
+Tripura,2021,7,103.9,93.6,114.2,Modelled: Delhi monthly x 1.0278,low
+Tripura,2021,8,104.57,94.32,114.81,Modelled: Delhi monthly x 1.0278,low
+Tripura,2021,9,104.05,94.01,114.1,Modelled: Delhi monthly x 1.0278,low
+Tripura,2021,10,108.36,98.04,118.68,Modelled: Delhi monthly x 1.0278,low
+Tripura,2021,11,107.47,97.31,117.63,Modelled: Delhi monthly x 1.0278,low
+Tripura,2021,12,98.35,92.9,103.8,Modelled: Delhi monthly x 1.0278,low
+Tripura,2022,1,98.06,92.33,103.8,Modelled: Delhi monthly x 1.0278,low
+Tripura,2022,2,98.06,92.33,103.8,Modelled: Delhi monthly x 1.0278,low
+Tripura,2022,3,99.19,93.49,104.89,Modelled: Delhi monthly x 1.0278,low
+Tripura,2022,4,107.97,102.56,113.38,Modelled: Delhi monthly x 1.0278,low
+Tripura,2022,5,105.46,99.97,110.95,Modelled: Delhi monthly x 1.0278,low
+Tripura,2022,6,99.41,93.73,105.09,Modelled: Delhi monthly x 1.0278,low
+Tripura,2022,7,99.41,96.34,102.48,Modelled: Delhi monthly x 1.0278,medium
+Tripura,2022,8,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2022,9,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2022,10,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2022,11,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2022,12,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2023,1,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2023,2,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2023,3,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2023,4,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2023,5,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2023,6,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2023,7,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2023,8,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2023,9,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2023,10,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2023,11,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2023,12,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2024,1,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2024,2,99.41,98.04,100.78,Modelled: Delhi monthly x 1.0278,high
+Tripura,2024,3,98.28,96.98,99.58,Modelled: Delhi monthly x 1.0278,high
+Tripura,2024,4,97.35,96.11,98.6,Modelled: Delhi monthly x 1.0278,high
+Tripura,2024,5,97.35,96.11,98.6,Modelled: Delhi monthly x 1.0278,high
+Tripura,2024,6,97.35,96.11,98.6,Modelled: Delhi monthly x 1.0278,high
+Tripura,2024,7,97.35,96.59,98.12,Modelled: Delhi monthly x 1.0278,high
+Tripura,2024,8,97.35,96.59,98.12,Modelled: Delhi monthly x 1.0278,high
+Tripura,2024,9,97.35,96.59,98.12,Modelled: Delhi monthly x 1.0278,high
+Tripura,2024,10,97.36,96.59,98.13,Modelled: Delhi monthly x 1.0278,high
+Tripura,2024,11,97.41,96.64,98.17,Modelled: Delhi monthly x 1.0278,high
+Tripura,2024,12,97.41,96.64,98.17,Modelled: Delhi monthly x 1.0278,high
+Tripura,2025,1,97.41,96.64,98.17,Modelled: Delhi monthly x 1.0278,high
+Tripura,2025,2,97.41,96.64,98.17,Modelled: Delhi monthly x 1.0278,high
+Tripura,2025,3,97.41,96.64,98.17,Modelled: Delhi monthly x 1.0278,high
+Tripura,2025,4,97.41,96.64,98.17,Modelled: Delhi monthly x 1.0278,high
+Tripura,2025,5,97.41,96.64,98.17,Modelled: Delhi monthly x 1.0278,high
+Tripura,2025,6,97.41,96.64,98.17,Modelled: Delhi monthly x 1.0278,high
+Tripura,2025,7,97.41,96.64,98.17,Modelled: Delhi monthly x 1.0278,high
+Tripura,2025,8,97.41,96.64,98.17,Modelled: Delhi monthly x 1.0278,high
+Tripura,2025,9,97.41,96.64,98.17,Modelled: Delhi monthly x 1.0278,high
+Tripura,2025,10,97.41,96.64,98.17,Modelled: Delhi monthly x 1.0278,high
+Tripura,2025,11,97.41,96.64,98.17,Modelled: Delhi monthly x 1.0278,high
+Tripura,2025,12,97.41,96.64,98.17,Modelled: Delhi monthly x 1.0278,high
+Tripura,2026,1,97.41,96.6,98.21,Modelled: Delhi monthly x 1.0278,high
+Tripura,2026,2,97.41,96.6,98.21,Modelled: Delhi monthly x 1.0278,high
+Tripura,2026,3,97.41,96.6,98.21,Modelled: Delhi monthly x 1.0278,high
+Tripura,2026,4,97.41,96.6,98.21,Modelled: Delhi monthly x 1.0278,high
+Tripura,2026,5,100.34,99.84,100.83,Modelled: Delhi monthly x 1.0278,high
+Tripura,2026,6,104.96,104.54,105.38,Modelled: Delhi monthly x 1.0278,high
+Tripura,2026,7,104.96,104.54,105.38,Modelled: Delhi monthly x 1.0278,high
+Tripura,2026,8,104.96,104.54,105.38,Modelled: Delhi monthly x 1.0278,high
+Tripura,2026,9,104.96,104.54,105.38,Modelled: Delhi monthly x 1.0278,high
+Tripura,2026,10,104.96,104.54,105.38,Modelled: Delhi monthly x 1.0278,high
+Uttar Pradesh,2021,1,84.67,77.47,91.88,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2021,2,88.6,80.66,96.54,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2021,3,90.83,81.88,99.78,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2021,4,90.24,81.38,99.11,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2021,5,92.09,82.94,101.23,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2021,6,96.27,86.54,106.0,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2021,7,100.83,90.84,110.82,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2021,8,101.48,91.53,111.42,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2021,9,100.98,91.23,110.73,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2021,10,105.16,95.14,115.17,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2021,11,104.3,94.44,114.16,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2021,12,95.44,90.15,100.73,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2022,1,95.17,89.6,100.73,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2022,2,95.17,89.6,100.73,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2022,3,96.26,90.73,101.79,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2022,4,104.78,99.53,110.03,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2022,5,102.35,97.02,107.67,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2022,6,96.47,90.96,101.99,Modelled: Delhi monthly x 0.9975,low
+Uttar Pradesh,2022,7,96.47,93.49,99.46,Modelled: Delhi monthly x 0.9975,medium
+Uttar Pradesh,2022,8,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2022,9,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2022,10,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2022,11,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2022,12,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2023,1,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2023,2,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2023,3,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2023,4,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2023,5,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2023,6,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2023,7,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2023,8,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2023,9,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2023,10,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2023,11,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2023,12,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2024,1,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2024,2,96.47,95.15,97.8,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2024,3,95.38,94.12,96.64,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2024,4,94.48,93.27,95.69,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2024,5,94.48,93.27,95.69,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2024,6,94.48,93.27,95.69,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2024,7,94.48,93.33,95.63,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2024,8,94.48,93.33,95.63,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2024,9,94.48,93.33,95.63,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2024,10,94.48,93.33,95.63,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2024,11,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2024,12,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2025,1,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2025,2,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2025,3,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2025,4,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2025,5,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2025,6,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2025,7,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2025,8,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2025,9,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2025,10,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2025,11,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2025,12,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2026,1,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2026,2,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2026,3,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2026,4,94.53,93.38,95.68,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2026,5,97.37,96.19,98.56,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2026,6,101.86,100.62,103.1,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2026,7,101.86,100.62,103.1,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2026,8,101.86,100.62,103.1,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2026,9,101.86,100.62,103.1,Modelled: Delhi monthly x 0.9975,high
+Uttar Pradesh,2026,10,101.86,100.62,103.1,Modelled: Delhi monthly x 0.9975,high
+Uttarakhand,2021,1,82.75,75.71,89.78,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2021,2,86.58,78.82,94.34,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2021,3,88.76,80.02,97.51,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2021,4,88.19,79.53,96.85,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2021,5,89.99,81.05,98.93,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2021,6,94.08,84.57,103.58,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2021,7,98.54,88.77,108.3,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2021,8,99.17,89.45,108.88,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2021,9,98.68,89.16,108.21,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2021,10,102.76,92.98,112.55,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2021,11,101.92,92.29,111.56,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2021,12,93.27,88.1,98.44,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2022,1,93.0,87.56,98.44,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2022,2,93.0,87.56,98.44,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2022,3,94.07,88.67,99.48,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2022,4,102.4,97.27,107.53,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2022,5,100.01,94.81,105.22,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2022,6,94.28,88.89,99.67,Modelled: Delhi monthly x 0.9747,low
+Uttarakhand,2022,7,94.28,91.36,97.19,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2022,8,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2022,9,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2022,10,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2022,11,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2022,12,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2023,1,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2023,2,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2023,3,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2023,4,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2023,5,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2023,6,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2023,7,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2023,8,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2023,9,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2023,10,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2023,11,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2023,12,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2024,1,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2024,2,94.28,92.8,95.75,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2024,3,93.21,91.75,94.66,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2024,4,92.33,90.88,93.77,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2024,5,92.33,90.88,93.77,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2024,6,92.33,90.88,93.77,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2024,7,92.33,90.88,93.77,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2024,8,92.33,90.88,93.77,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2024,9,92.33,90.88,93.77,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2024,10,92.33,90.89,93.77,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2024,11,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2024,12,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2025,1,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2025,2,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2025,3,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2025,4,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2025,5,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2025,6,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2025,7,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2025,8,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2025,9,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2025,10,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2025,11,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2025,12,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2026,1,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2026,2,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2026,3,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2026,4,92.38,90.93,93.82,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2026,5,95.16,93.67,96.64,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2026,6,99.54,97.98,101.1,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2026,7,99.54,97.98,101.1,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2026,8,99.54,97.98,101.1,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2026,9,99.54,97.98,101.1,Modelled: Delhi monthly x 0.9747,medium
+Uttarakhand,2026,10,99.54,97.98,101.1,Modelled: Delhi monthly x 0.9747,medium
+West Bengal,2021,1,86.33,86.33,86.33,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2021,2,89.89,89.89,89.89,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2021,3,91.25,91.25,91.25,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2021,4,90.69,90.69,90.69,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2021,5,92.42,92.42,92.42,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2021,6,96.44,96.44,96.44,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2021,7,101.23,101.23,101.23,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2021,8,102.0,102.0,102.0,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2021,9,101.67,101.67,101.67,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2021,10,106.02,106.02,106.02,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2021,11,105.24,105.24,105.24,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2021,12,104.67,104.67,104.67,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2022,1,104.67,104.67,104.67,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2022,2,104.67,104.67,104.67,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2022,3,105.82,105.82,105.82,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2022,4,114.74,114.74,114.74,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2022,5,112.19,112.19,112.19,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2022,6,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2022,7,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2022,8,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2022,9,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2022,10,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2022,11,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2022,12,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2023,1,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2023,2,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2023,3,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2023,4,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2023,5,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2023,6,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2023,7,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2023,8,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2023,9,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2023,10,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2023,11,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2023,12,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2024,1,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2024,2,106.03,106.03,106.03,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2024,3,104.88,104.88,104.88,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2024,4,103.94,103.94,103.94,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2024,5,103.94,103.94,103.94,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2024,6,103.94,103.94,103.94,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2024,7,104.95,104.95,104.95,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2024,8,104.95,104.95,104.95,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2024,9,104.95,104.95,104.95,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2024,10,104.95,104.95,104.95,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2024,11,104.95,104.95,104.95,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2024,12,105.01,105.01,105.01,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2025,1,105.01,105.01,105.01,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2025,2,105.01,105.01,105.01,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2025,3,105.01,105.01,105.01,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2025,4,105.01,105.01,105.01,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2025,5,105.27,105.27,105.27,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2025,6,105.41,105.41,105.41,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2025,7,105.41,105.41,105.41,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2025,8,105.41,105.41,105.41,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2025,9,105.41,105.41,105.41,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2025,10,105.41,105.41,105.41,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2025,11,105.41,105.41,105.41,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2025,12,105.41,105.41,105.41,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2026,1,105.45,105.45,105.45,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2026,2,105.45,105.45,105.45,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2026,3,105.45,105.45,105.45,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2026,4,105.45,105.45,105.45,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2026,5,108.58,108.58,108.58,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2026,6,113.51,113.51,113.51,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2026,7,113.51,113.51,113.51,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2026,8,113.51,113.51,113.51,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2026,9,113.51,113.51,113.51,PPAC observed (Kolkata monthly mean),observed
+West Bengal,2026,10,113.51,113.51,113.51,PPAC observed (Kolkata monthly mean),observed

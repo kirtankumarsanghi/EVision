@@ -1,0 +1,3 @@
+model,auc_mean,auc_sd,auc_p05,auc_p95,train_auc,train_cv_gap,accuracy,f1,precision,recall,loocv_accuracy
+Logistic,0.822,0.136,0.6,1.0,0.883,0.061,0.765,0.74,0.806,0.714,0.765
+LDA,0.818,0.138,0.6,1.0,0.877,0.059,0.768,0.745,0.807,0.72,0.784

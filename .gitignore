@@ -1,0 +1,39 @@
+# User environment & tools
+.commandcode/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache & build
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment & credentials
+.env
+.env.local
+*.pem
+*.key
+
+# Logs & scratch
+*.log
+logs_*.txt
+backend/run_models.log
+backend/logs_models.txt
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Raw scraper response cache (140MB+ of regenerable XML/HTML responses)
+backend/data/raw/
+backend/data/interim/

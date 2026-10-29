@@ -1,0 +1,52 @@
+city,state,radius_km,stations_within_radius,connectors,fast_stations,share_fast_pct,stations_pdf_city_field
+Mumbai,Maharashtra,30,802,1851,179,22.3,456
+Delhi,Delhi,30,1629,2806,196,12.0,1957
+Kolkata,West Bengal,25,130,246,76,58.5,85
+Chennai,Tamil Nadu,25,282,978,167,59.2,265
+Bengaluru,Karnataka,30,4414,6493,103,2.3,4408
+Hyderabad,Telangana,30,449,821,204,45.4,223
+Ahmedabad,Gujarat,20,159,287,81,50.9,193
+Pune,Maharashtra,25,1455,1761,80,5.5,1907
+Surat,Gujarat,20,76,248,51,67.1,9
+Jaipur,Rajasthan,20,91,143,32,35.2,141
+Kanpur,Uttar Pradesh,20,39,54,6,15.4,13
+Lucknow,Uttar Pradesh,20,58,81,20,34.5,65
+Nagpur,Maharashtra,20,113,295,53,46.9,100
+Ghaziabad,Uttar Pradesh,15,54,91,17,31.5,24
+Indore,Madhya Pradesh,20,57,88,27,47.4,60
+Coimbatore,Tamil Nadu,20,99,141,52,52.5,118
+Kochi,Kerala,25,201,294,49,24.4,97
+Patna,Bihar,20,25,38,12,48.0,36
+Kozhikode,Kerala,20,68,125,31,45.6,51
+Bhopal,Madhya Pradesh,20,61,99,33,54.1,57
+Vadodara,Gujarat,20,51,79,22,43.1,58
+Agra,Uttar Pradesh,20,56,78,18,32.1,80
+Visakhapatnam,Andhra Pradesh,20,40,59,18,45.0,41
+Thiruvananthapuram,Kerala,20,170,224,26,15.3,126
+Ludhiana,Punjab,20,58,85,25,43.1,69
+Nashik,Maharashtra,20,98,133,35,35.7,126
+Vijayawada,Andhra Pradesh,20,45,59,17,37.8,28
+Madurai,Tamil Nadu,20,49,65,22,44.9,69
+Varanasi,Uttar Pradesh,20,50,73,20,40.0,47
+Meerut,Uttar Pradesh,20,17,55,10,58.8,28
+Faridabad,Delhi,15,85,261,20,23.5,42
+Rajkot,Gujarat,20,35,51,20,57.1,59
+Jamshedpur,Jharkhand,20,23,42,18,78.3,14
+Jabalpur,Madhya Pradesh,20,26,36,11,42.3,32
+Srinagar,Jammu and Kashmir,20,22,34,8,36.4,9
+Allahabad (Prayagraj),Uttar Pradesh,20,45,53,11,24.4,63
+Aurangabad,Maharashtra,20,55,73,15,27.3,61
+Amritsar,Punjab,20,43,52,10,23.3,47
+Jodhpur,Rajasthan,20,33,45,19,57.6,99
+Ranchi,Jharkhand,20,46,61,11,23.9,37
+Raipur,Chhattisgarh,20,56,74,22,39.3,51
+Gwalior,Madhya Pradesh,20,45,60,18,40.0,51
+Tiruchirappalli,Tamil Nadu,20,44,64,22,50.0,20
+Kota,Rajasthan,20,21,34,15,71.4,46
+Chandigarh,Punjab,20,57,101,22,38.6,14
+Guwahati,Assam,20,58,75,20,34.5,26
+Mysuru,Karnataka,20,64,81,12,18.8,40
+Bhubaneswar,Odisha,20,55,85,18,32.7,34
+Dehradun,Uttarakhand,20,57,113,20,35.1,68
+Gurugram,Haryana,15,238,1924,70,29.4,156
+Noida,Uttar Pradesh,15,156,328,42,26.9,88

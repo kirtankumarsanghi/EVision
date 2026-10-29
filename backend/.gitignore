@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.env
+
+# Build outputs
+# data/processed/ is tracked so API and model artifacts are available on clone
+data/raw/
+data/interim/
+logs_*.txt
+
+# Keep these
+!data/reference/
+!data/provenance/

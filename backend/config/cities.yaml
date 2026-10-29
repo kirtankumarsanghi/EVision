@@ -1,0 +1,364 @@
+# Target city universe for the Charging Demand model.
+#
+# rto_codes are the *printed* RTO codes (e.g. MH-12). Vahan's dashboard uses
+# internal numeric office IDs which differ per state and must be resolved at
+# ingest time from the live RTO dropdown (see sources/vahan.py:list_rtos).
+# Never hardcode the numeric IDs — they are database keys, not RTO numbers.
+#
+# tier:      metro | tier2
+# corridor:  1 if the city sits on a golden-quadrilateral / major NH corridor
+#            (manual coding, see config/policy_scores.yaml for provenance)
+#
+# Demographic columns are intentionally absent here. They come from the census
+# source and are stored with explicit provenance so nothing is invented.
+
+cities:
+  # ---------------- metros ----------------
+  - name: Delhi
+    state: DL
+    tier: metro
+    corridor: 1
+    rto_codes: [DL-01, DL-02, DL-03, DL-04, DL-05, DL-06, DL-07, DL-08, DL-09, DL-10, DL-11, DL-12, DL-13]
+  - name: Mumbai
+    state: MH
+    tier: metro
+    corridor: 1
+    rto_codes: [MH-01, MH-02, MH-03, MH-47]
+  - name: Pune
+    state: MH
+    tier: metro
+    corridor: 1
+    rto_codes: [MH-12, MH-14]
+  - name: Bengaluru
+    state: KA
+    tier: metro
+    corridor: 1
+    rto_codes: [KA-01, KA-02, KA-03, KA-04, KA-05, KA-51, KA-53]
+  - name: Chennai
+    state: TN
+    tier: metro
+    corridor: 1
+    rto_codes: [TN-01, TN-02, TN-03, TN-04, TN-05, TN-06, TN-07, TN-09, TN-10]
+  - name: Hyderabad
+    state: TG
+    tier: metro
+    corridor: 1
+    rto_codes: [TG-07, TG-08, TG-09, TG-10, TG-11, TG-12, TG-13]
+  - name: Ahmedabad
+    state: GJ
+    tier: metro
+    corridor: 1
+    rto_codes: [GJ-01, GJ-27]
+  - name: Kolkata
+    state: WB
+    tier: metro
+    corridor: 1
+    rto_codes: [WB-01]
+  - name: Surat
+    state: GJ
+    tier: metro
+    corridor: 1
+    rto_codes: [GJ-05]
+  - name: Jaipur
+    state: RJ
+    tier: metro
+    corridor: 1
+    rto_codes: [RJ-14]
+  - name: Lucknow
+    state: UP
+    tier: metro
+    corridor: 1
+    rto_codes: [UP-32]
+  - name: Chandigarh
+    state: CH
+    tier: metro
+    corridor: 1
+    rto_codes: [CH-01]
+  - name: Kochi
+    state: KL
+    tier: metro
+    corridor: 1
+    rto_codes: [KL-07, KL-43]
+  - name: Nagpur
+    state: MH
+    tier: metro
+    corridor: 1
+    rto_codes: [MH-31, MH-49]
+  - name: Indore
+    state: MP
+    tier: metro
+    corridor: 1
+    rto_codes: [MP-09, MP-41]
+
+  # ---------------- tier-2 ----------------
+  - name: Coimbatore
+    state: TN
+    tier: tier2
+    corridor: 1
+    rto_codes: [TN-38, TN-66]
+  - name: Madurai
+    state: TN
+    tier: tier2
+    corridor: 0
+    rto_codes: [TN-58, TN-59]
+  - name: Tiruchirappalli
+    state: TN
+    tier: tier2
+    corridor: 1
+    rto_codes: [TN-45, TN-48]
+  - name: Salem
+    state: TN
+    tier: tier2
+    corridor: 1
+    rto_codes: [TN-30, TN-90]
+  - name: Visakhapatnam
+    state: AP
+    tier: tier2
+    corridor: 1
+    rto_codes: [AP-31]
+  - name: Vijayawada
+    state: AP
+    tier: tier2
+    corridor: 1
+    rto_codes: [AP-16]
+  - name: Guntur
+    state: AP
+    tier: tier2
+    corridor: 1
+    rto_codes: [AP-07]
+  - name: Tirupati
+    state: AP
+    tier: tier2
+    corridor: 1
+    rto_codes: [AP-03, AP-26]
+  - name: Mysuru
+    state: KA
+    tier: tier2
+    corridor: 0
+    rto_codes: [KA-09, KA-55]
+  - name: Mangaluru
+    state: KA
+    tier: tier2
+    corridor: 1
+    rto_codes: [KA-19]
+  - name: Hubballi
+    state: KA
+    tier: tier2
+    corridor: 1
+    rto_codes: [KA-25, KA-63]
+  - name: Belagavi
+    state: KA
+    tier: tier2
+    corridor: 1
+    rto_codes: [KA-22, KA-49]
+  - name: Thiruvananthapuram
+    state: KL
+    tier: tier2
+    corridor: 1
+    rto_codes: [KL-01, KL-19]
+  - name: Kozhikode
+    state: KL
+    tier: tier2
+    corridor: 1
+    rto_codes: [KL-11, KL-18]
+  - name: Thrissur
+    state: KL
+    tier: tier2
+    corridor: 1
+    rto_codes: [KL-08, KL-45]
+  - name: Bhopal
+    state: MP
+    tier: tier2
+    corridor: 1
+    rto_codes: [MP-04, MP-44]
+  - name: Jabalpur
+    state: MP
+    tier: tier2
+    corridor: 0
+    rto_codes: [MP-20]
+  - name: Gwalior
+    state: MP
+    tier: tier2
+    corridor: 1
+    rto_codes: [MP-07]
+  - name: Ujjain
+    state: MP
+    tier: tier2
+    corridor: 0
+    rto_codes: [MP-13]
+  - name: Vadodara
+    state: GJ
+    tier: tier2
+    corridor: 1
+    rto_codes: [GJ-06]
+  - name: Rajkot
+    state: GJ
+    tier: tier2
+    corridor: 1
+    rto_codes: [GJ-03, GJ-30]
+  - name: Bhavnagar
+    state: GJ
+    tier: tier2
+    corridor: 0
+    rto_codes: [GJ-04]
+  - name: Nashik
+    state: MH
+    tier: tier2
+    corridor: 1
+    rto_codes: [MH-15, MH-41]
+  - name: Aurangabad
+    state: MH
+    tier: tier2
+    corridor: 1
+    rto_codes: [MH-20]
+  - name: Solapur
+    state: MH
+    tier: tier2
+    corridor: 1
+    rto_codes: [MH-13]
+  - name: Kolhapur
+    state: MH
+    tier: tier2
+    corridor: 1
+    rto_codes: [MH-09]
+  - name: Amritsar
+    state: PB
+    tier: tier2
+    corridor: 1
+    rto_codes: [PB-02, PB-46]
+  - name: Ludhiana
+    state: PB
+    tier: tier2
+    corridor: 1
+    rto_codes: [PB-10, PB-91]
+  - name: Jalandhar
+    state: PB
+    tier: tier2
+    corridor: 1
+    rto_codes: [PB-08, PB-90]
+  - name: Varanasi
+    state: UP
+    tier: tier2
+    corridor: 1
+    rto_codes: [UP-65]
+  - name: Kanpur
+    state: UP
+    tier: tier2
+    corridor: 1
+    rto_codes: [UP-78]
+  - name: Agra
+    state: UP
+    tier: tier2
+    corridor: 1
+    rto_codes: [UP-80]
+  - name: Meerut
+    state: UP
+    tier: tier2
+    corridor: 1
+    rto_codes: [UP-15]
+  - name: Patna
+    state: BR
+    tier: tier2
+    corridor: 1
+    rto_codes: [BR-01]
+  - name: Ranchi
+    state: JH
+    tier: tier2
+    corridor: 0
+    rto_codes: [JH-01]
+  - name: Raipur
+    state: CG
+    tier: tier2
+    corridor: 1
+    rto_codes: [CG-04]
+  # Odisha registers with OD-xx codes in Vahan (the state selector still uses
+  # the legacy "OR" state code, which is a common source of confusion).
+  - name: Bhubaneswar
+    state: OR
+    tier: tier2
+    corridor: 1
+    rto_codes: [OD-02, OD-33]
+  - name: Cuttack
+    state: OR
+    tier: tier2
+    corridor: 1
+    rto_codes: [OD-05]
+  - name: Guwahati
+    state: AS
+    tier: tier2
+    corridor: 1
+    rto_codes: [AS-01]
+  - name: Dehradun
+    state: UK
+    tier: tier2
+    corridor: 0
+    rto_codes: [UK-07]
+  - name: Shimla
+    state: HP
+    tier: tier2
+    corridor: 0
+    rto_codes: [HP-03]
+  - name: Jammu
+    state: JK
+    tier: tier2
+    corridor: 1
+    rto_codes: [JK-02]
+  # Vahan does not publish a GA-01 (Panaji) office; GA-07 covers north Goa.
+  - name: Panaji
+    state: GA
+    tier: tier2
+    corridor: 1
+    rto_codes: [GA-07]
+  - name: Puducherry
+    state: PY
+    tier: tier2
+    corridor: 1
+    rto_codes: [PY-01]
+
+  # --- added to cover the 51-city analysis universe -----------------------
+  # RTO codes verified against the RTO names present in the Vahan export.
+  - name: Allahabad (Prayagraj)
+    state: UP
+    tier: tier2
+    corridor: 1
+    rto_codes: [UP-70]
+  - name: Faridabad
+    state: HR
+    tier: tier2
+    corridor: 1
+    rto_codes: [HR-51, HR-38, HR-29]
+  - name: Ghaziabad
+    state: UP
+    tier: tier2
+    corridor: 1
+    rto_codes: [UP-14]
+  - name: Gurugram
+    state: HR
+    tier: tier2
+    corridor: 1
+    rto_codes: [HR-26, HR-98]
+  - name: Jamshedpur
+    state: JH
+    tier: tier2
+    corridor: 1
+    rto_codes: [JH-05]
+  - name: Jodhpur
+    state: RJ
+    tier: tier2
+    corridor: 0
+    rto_codes: [RJ-19]
+  - name: Kota
+    state: RJ
+    tier: tier2
+    corridor: 1
+    rto_codes: [RJ-20]
+  - name: Noida
+    state: UP
+    tier: tier2
+    corridor: 1
+    rto_codes: [UP-16]
+  - name: Srinagar
+    state: JK
+    tier: tier2
+    corridor: 0
+    rto_codes: [JK-01]

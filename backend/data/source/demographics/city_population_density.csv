@@ -1,0 +1,52 @@
+city,state,pop_2011,area_km2_2011,pop_density_per_km2_2011,pop_estimate_2023,estimate_method,boundary_type,pop_area_source,demographic_verified,pop_area_url,boundary_harmonised
+Mumbai,Maharashtra,18394912,1063.49,17297,25189000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Delhi,Delhi,16349831,1139.48,14349,31190000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Kolkata,West Bengal,14057991,1056.13,13311,21747000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Chennai,Tamil Nadu,8653521,932.47,9280,11570000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Bengaluru,Karnataka,8520435,748.42,11385,15257000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Hyderabad,Telangana,7677018,1225.59,6264,9797000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Ahmedabad,Gujarat,6357693,1060.95,5992,8006000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Pune,Maharashtra,5057709,502.78,10059,6819000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Surat,Gujarat,4591246,431.01,10652,6601000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Jaipur,Rajasthan,3046163,484.64,6285,4360000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Kanpur,Uttar Pradesh,2920496,301.16,9697,4350000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Lucknow,Uttar Pradesh,2902920,393.6,7375,4661000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Nagpur,Maharashtra,2497870,229.2,10898,3493000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Ghaziabad,Uttar Pradesh,2375820,263.29,9024,2840574,Projected: pop_2011*(1+g)^years,Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Indore,Madhya Pradesh,2170295,233.6,9291,3765000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Coimbatore,Tamil Nadu,2136916,696.25,3069,2551000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Kochi,Kerala,2119724,843.84,2512,2381000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Patna,Bihar,2049156,142.46,14384,3331000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Kozhikode,Kerala,2028399,909.79,2230,3049000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Bhopal,Madhya Pradesh,1886100,336.06,5612,2562000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Vadodara,Gujarat,1822221,310.35,5872,2182000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Agra,Uttar Pradesh,1760285,166.21,10591,2737000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Visakhapatnam,Andhra Pradesh,1728128,513.61,3365,2005000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Thiruvananthapuram,Kerala,1679754,542.57,3096,2851000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Ludhiana,Punjab,1618879,159.37,10158,2205000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Nashik,Maharashtra,1561809,321.98,4851,1810000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Vijayawada,Andhra Pradesh,1476931,283.58,5208,1232000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Madurai,Tamil Nadu,1465625,151.34,9684,2048000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Varanasi,Uttar Pradesh,1432280,118.68,12068,3229000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Meerut,Uttar Pradesh,1420902,186.61,7614,2011000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Faridabad,Haryana,1414050,204.0,6932,1690664,Projected: pop_2011*(1+g)^years,Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Rajkot,Gujarat,1390640,185.38,7502,1487000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Jamshedpur,Jharkhand,1339438,184.07,7277,1925000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Jabalpur,Madhya Pradesh,1268848,237.16,5350,1533000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Srinagar,Jammu and Kashmir,1264202,304.27,4155,1212000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Allahabad (Prayagraj),Uttar Pradesh,1212395,115.46,10501,2438000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Aurangabad,Maharashtra,1193167,148.12,8055,1490000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Amritsar,Punjab,1183549,136.0,8703,1313000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Jodhpur,Rajasthan,1138300,132.97,8561,1497000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Ranchi,Jharkhand,1126720,197.36,5709,2217000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Raipur,Chhattisgarh,1123558,192.55,5835,1429000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Gwalior,Madhya Pradesh,1102884,183.71,6003,1477000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Tiruchirappalli,Tamil Nadu,1022518,211.51,4834,1131000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Kota,Rajasthan,1001694,527.03,1901,1172000,Demographia 2023 (built-up area; wider boundary),Urban agglomeration (Census 2011),Census 2011 via Wikipedia table,True,,True
+Chandigarh,Chandigarh,961587,114.0,8435,1261915,Projected: pop_2011*(1+g)^years,Municipal/Census Town (NOT agglomeration),Census 2011 city (census2011.co.in); area: Wikipedia infobox,True,https://www.census2011.co.in/census/city/22-chandigarh.html,False
+Guwahati,Assam,957352,216.79,4416,1144627,Projected: pop_2011*(1+g)^years,Municipal/Census Town (NOT agglomeration),Census 2011 city (census2011.co.in); area: Wikipedia infobox,True,https://www.census2011.co.in/census/city/191-guwahati.html,False
+Mysuru,Karnataka,920550,286.0,3219,1100626,Projected: pop_2011*(1+g)^years,Municipal/Census Town (NOT agglomeration),Census 2011 Municipal Corporation (census2011.co.in); area: Wikipedia infobox,True,https://www.census2011.co.in/data/town/803194-mysore-karnataka.html,False
+Bhubaneswar,Odisha,885363,186.0,4760,1005316,Projected: pop_2011*(1+g)^years,Municipal/Census Town (NOT agglomeration),Census 2011 Municipal Corporation (census2011.co.in); area: Wikipedia infobox,True,https://www.census2011.co.in/data/town/801859-bhubaneswar-orissa.html,False
+Dehradun,Uttarakhand,574840,196.48,2926,691569,Projected: pop_2011*(1+g)^years,Municipal/Census Town (NOT agglomeration),Census 2011 Municipal Corporation (census2011.co.in); area: Wikipedia infobox,True,https://www.census2011.co.in/data/town/800309-dehradun-uttarakhand.html,False
+Gurugram,Haryana,876969,333.0,2634,1048520,Projected: pop_2011*(1+g)^years,Municipal/Census Town (NOT agglomeration),Census 2011 city (Wikipedia); area: Wikipedia infobox,True,https://en.wikipedia.org/wiki/Gurgaon,False
+Noida,Uttar Pradesh,637272,203.0,3139,761934,Projected: pop_2011*(1+g)^years,Municipal/Census Town (NOT agglomeration),Census 2011 Census Town (census2011.co.in); area: Wikipedia infobox,True,https://www.census2011.co.in/data/town/120227-noida-uttar-pradesh.html,False

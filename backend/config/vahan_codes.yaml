@@ -1,0 +1,163 @@
+# Vahan 4 dashboard code tables — VERIFIED against the live report form
+# (https://vahan.parivahan.gov.in/vahan4dashboard/vahan/view/reportview.xhtml)
+# Extracted from the rendered HTML on 2026-10-28. Do not guess these values.
+
+form:
+  id: masterLayout_formlogin
+  data_source: irclay          # the element whose AJAX action renders the report
+  data_panel: tablePnl         # where the report table is rendered
+  viewstate_field: javax.faces.ViewState
+
+# Axis variables accepted by yaxisVar / xaxisVar
+axes:
+  y:
+    - Vehicle Category
+    - Vehicle Class
+    - Norms
+    - Fuel
+    - Maker
+    - State
+  x:
+    - Vehicle Category
+    - Norms
+    - Fuel
+    - VCG
+    - Financial Year
+    - Calendar Year
+    - Month Wise
+
+year_type:
+  financial: F
+  calendar: C
+  till_today: A
+
+# Fuel checkboxes. NOTE: in our verified runs the dashboard ignored the fuel
+# checkbox filter on submission, so EV figures are extracted by setting
+# yaxisVar=Fuel and reading the electric rows directly. Keep these codes for
+# parsing row labels rather than for filtering.
+fuel:
+  "33": BIO-CNG/BIO-GAS
+  "38": BIO-DIESEL(B100)
+  "32": BIO-METHANE
+  "6": CNG ONLY
+  "2": DIESEL
+  "12": DIESEL/HYBRID
+  "21": DI-METHYL ETHER
+  "18": DUAL DIESEL/BIO CNG
+  "19": DUAL DIESEL/CNG
+  "20": DUAL DIESEL/LNG
+  "4": ELECTRIC(BOV)
+  "13": ETHANOL(E100)
+  "36": FLEX-FUEL(BIO-DIESEL)
+  "35": FLEX-FUEL(ETHANOL)
+  "22": FUEL CELL HYDROGEN
+  "34": HCNG
+  "37": HYDROGEN(ICE)
+  "17": LNG
+  "8": LPG ONLY
+  "15": METHANOL
+  "99": NOT APPLICABLE
+  "1": PETROL
+  "3": PETROL/CNG
+  "16": PETROL(E20)
+  "29": PETROL(E20)/CNG
+  "31": PETROL(E20)/HYBRID
+  "40": PETROL(E20)/HYBRID/CNG
+  "30": PETROL(E20)/LPG
+  "11": PETROL/HYBRID
+  "39": PETROL/HYBRID/CNG
+  "5": PETROL/LPG
+  "14": PETROL/METHANOL
+  "26": PLUG-IN HYBRID EV
+  "23": PURE EV
+  "10": SOLAR
+  "25": STRONG HYBRID EV
+
+# Fuel labels that count as "electric" for this project.
+# Vahan migrated many records from ELECTRIC(BOV) to PURE EV during 2024, so
+# both must be summed or the series shows a spurious mid-year collapse.
+ev_fuel_labels:
+  - ELECTRIC(BOV)
+  - PURE EV
+plugin_hybrid_labels:
+  - PLUG-IN HYBRID EV
+  - STRONG HYBRID EV
+
+# Vehicle class codes -> our 2W / 3W / 4W buckets
+vehicle_classes:
+  "1": {label: M-CYCLE/SCOOTER, bucket: 2W}
+  "2": {label: M-CYCLE/SCOOTER-WITH SIDE CAR, bucket: 2W}
+  "3": {label: MOPED, bucket: 2W}
+  "4": {label: MOTORISED CYCLE (CC > 25CC), bucket: 2W}
+  "51": {label: MOTOR CYCLE/SCOOTER-SIDECAR(T), bucket: 2W}
+  "52": {label: MOTOR CYCLE/SCOOTER-WITH TRAILER, bucket: 2W}
+  "53": {label: MOTOR CYCLE/SCOOTER-USED FOR HIRE, bucket: 2W}
+  "6": {label: THREE WHEELER (PERSONAL), bucket: 3W}
+  "54": {label: E-RICKSHAW WITH CART (G), bucket: 3W}
+  "55": {label: E-RICKSHAW(P), bucket: 3W}
+  "57": {label: THREE WHEELER (PASSENGER), bucket: 3W}
+  "58": {label: THREE WHEELER (GOODS), bucket: 3W}
+  "7": {label: MOTOR CAR, bucket: 4W}
+  "31": {label: QUADRICYCLE (PRIVATE), bucket: 4W}
+  "93": {label: QUADRICYCLE (COMMERCIAL), bucket: 4W}
+
+# Vahan renders vehicle categories abbreviated when used as an x-axis
+# (verified from a live fuel x Vehicle Category cross-tab). Map them to the
+# 2W / 3W / 4W / COMM buckets the model uses.
+category_buckets:
+  2WIC: 2W    # TWO WHEELER (Invalid Carriage)
+  2WN: 2W     # TWO WHEELER(NT)
+  2WT: 2W     # TWO WHEELER(T)
+  3WIC: 3W    # THREE WHEELER (Invalid Carriage)
+  3WN: 3W     # THREE WHEELER(NT)
+  3WT: 3W     # THREE WHEELER(T)
+  4WIC: 4W    # FOUR WHEELER (Invalid Carriage)
+  LMV: 4W     # LIGHT MOTOR VEHICLE
+  LPV: 4W     # LIGHT PASSENGER VEHICLE
+  MPV: 4W     # MEDIUM PASSENGER VEHICLE
+  LGV: COMM   # LIGHT GOODS VEHICLE
+  HGV: COMM   # HEAVY GOODS VEHICLE
+  HMV: COMM   # HEAVY MOTOR VEHICLE
+  HPV: COMM   # HEAVY PASSENGER VEHICLE
+  MGV: COMM   # MEDIUM GOODS VEHICLE
+  MMV: COMM   # MEDIUM MOTOR VEHICLE
+  OTH: OTHER
+
+# State/UT codes as accepted by the j_idt40 selector (verified: 37 entries).
+states:
+  AN: Andaman & Nicobar Island
+  AP: Andhra Pradesh
+  AR: Arunachal Pradesh
+  AS: Assam
+  BR: Bihar
+  CG: Chhattisgarh
+  CH: Chandigarh
+  DD: UT of DNH and DD
+  DL: Delhi
+  GA: Goa
+  GJ: Gujarat
+  HP: Himachal Pradesh
+  HR: Haryana
+  JH: Jharkhand
+  JK: Jammu and Kashmir
+  KA: Karnataka
+  KL: Kerala
+  LA: Ladakh
+  LD: Lakshadweep
+  MH: Maharashtra
+  ML: Meghalaya
+  MN: Manipur
+  MP: Madhya Pradesh
+  MZ: Mizoram
+  NL: Nagaland
+  OR: Odisha
+  PB: Punjab
+  PY: Puducherry
+  RJ: Rajasthan
+  SK: Sikkim
+  TG: Telangana
+  TN: Tamil Nadu
+  TR: Tripura
+  UK: Uttarakhand
+  UP: Uttar Pradesh
+  WB: West Bengal
