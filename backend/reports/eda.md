@@ -111,12 +111,12 @@ Guwahati's 6.2× step is the clearest sign that its 2021 cache is thin; the
 
 ## 5. Model quality
 
-- M2 AUC (mean, p05–p95): 0.822
-  (0.600–1.000) logistic,
-  0.818 (0.600–1.000) LDA.
+- M2 AUC (mean, p05–p95): 0.914
+  (0.733–1.000) logistic,
+  0.915 (0.720–1.000) LDA.
 - M3 quality: **51 ok**, **0 weak**, **0 unstable**.
-- M3 winners: 28 SARIMA, 23 Holt-Winters.
-- Median holdout RMSE / last-12-month total: **0.032**.
+- M3 winners: 22 SARIMA, 29 Holt-Winters.
+- Median holdout RMSE / last-12-month total: **0.025**.
 
 ![M3 forecast vs observed](figures/m3_forecast_vs_observed.png)
 

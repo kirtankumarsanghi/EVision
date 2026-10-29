@@ -21,6 +21,8 @@ from dataclasses import dataclass, field
 import numpy as np
 import pandas as pd
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+
+from ..config import target_cities
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
     accuracy_score,
@@ -36,12 +38,15 @@ from sklearn.preprocessing import StandardScaler
 log = logging.getLogger(__name__)
 
 EXOGENOUS = [
-    "log_density",
     "log_income",
-    "fuel_price_inr_per_litre",
-    "ev_policy_score",
-    "highway_corridor",
+    "income_x_area",
     "summer_max_temp_c",
+    "state_fast_share",
+    "log_rto_count",
+    "cpos_5km_log",
+    "ev_share_log",
+    "comm_fleet_log",
+    "ev_policy_score",
 ]
 
 
@@ -68,6 +73,31 @@ def _prepare(
     df = features.copy()
     df["log_density"] = np.log(df["population_density"].clip(lower=1))
     df["log_income"] = np.log(df["per_capita_income_inr"].clip(lower=1))
+    df["log_population"] = np.log(df["pop_2011"].clip(lower=1))
+    df["log_area"] = np.log(df["area_km2_2011"].clip(lower=1))
+    df["log_non_ev_market"] = np.log(df["non_ev_total_registrations"].clip(lower=1))
+    df["pop_growth"] = df["pop_estimate_2023"] / df["pop_2011"].clip(lower=1) - 1
+    df["tier_metro"] = (df["tier"].astype(str).str.lower() == "metro").astype(int)
+    rto_counts = {c["name"]: len(c.get("rto_codes", [])) for c in target_cities()}
+    df["rto_count"] = df["city"].map(rto_counts).fillna(0)
+    df["log_rto_count"] = np.log(df["rto_count"].clip(lower=1))
+    df["density_x_income"] = df["log_density"] * df["log_income"]
+    df["corridor_x_market"] = df["highway_corridor"] * df["log_non_ev_market"]
+    df["temp_x_density"] = df["summer_max_temp_c"] * df["log_density"]
+    df["income_x_area"] = df["log_income"] * df["log_area"]
+    if {"state_fast_stations", "state_stations"}.issubset(df.columns):
+        df["state_fast_share"] = (
+            df["state_fast_stations"] / df["state_stations"].clip(lower=1)
+        )
+    if "cpos_5km" in df.columns:
+        df["cpos_5km_log"] = np.log(df["cpos_5km"].clip(lower=1))
+    if "cpos_10km" in df.columns:
+        df["cpos_10km_log"] = np.log(df["cpos_10km"].clip(lower=1))
+        df["market_per_cpo"] = df["log_non_ev_market"] - df["cpos_10km_log"]
+    if "ev_share_mean" in df.columns:
+        df["ev_share_log"] = np.log(df["ev_share_mean"].clip(lower=1e-4))
+    if "commercial_fleet_share" in df.columns:
+        df["comm_fleet_log"] = np.log(df["commercial_fleet_share"].clip(lower=1e-4))
 
     df = df.dropna(subset=[label_col, *predictors])
     threshold = float(df[label_col].median())
@@ -81,11 +111,17 @@ def _models() -> dict[str, Pipeline]:
         "Logistic": Pipeline(
             [
                 ("scale", StandardScaler()),
-                ("clf", LogisticRegression(C=1.0, max_iter=2000, solver="liblinear")),
+                ("clf", LogisticRegression(
+                    C=0.3, max_iter=4000, solver="liblinear", penalty="l2",
+                    random_state=42,
+                )),
             ]
         ),
         "LDA": Pipeline(
-            [("scale", StandardScaler()), ("clf", LinearDiscriminantAnalysis())]
+            [
+                ("scale", StandardScaler()),
+                ("clf", LinearDiscriminantAnalysis(solver="lsqr", shrinkage="auto")),
+            ]
         ),
     }
 

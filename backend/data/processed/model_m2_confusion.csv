@@ -1,0 +1,5 @@
+model,evaluation,tn,fp,fn,tp
+Logistic,LOOCV,24,2,3,22
+LDA,LOOCV,24,2,3,22
+Logistic,Repeated CV (aggregated folds),469,51,81,419
+LDA,Repeated CV (aggregated folds),475,45,74,426

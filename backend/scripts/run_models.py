@@ -76,6 +76,10 @@ def main() -> int:
         help="limit M3 to the N largest cities (default: every city)",
     )
     parser.add_argument("--repeats", type=int, default=20, help="CV repeats for M2")
+    parser.add_argument(
+        "--skip-m3", action="store_true",
+        help="reuse the existing M3 outputs instead of refitting the grid",
+    )
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
 
@@ -166,11 +170,20 @@ def main() -> int:
     )
 
     # ---------------------------------------------------------------- M3
-    logging.info("fitting M3 forecasts for %d cities ...", top_n)
-    m3 = m3_forecast.run(panel, top_n=top_n)
-    m3.summary.to_csv(PROCESSED_DIR / "model_m3_summary.csv", index=False)
-    m3.forecasts.to_csv(PROCESSED_DIR / "model_m3_forecasts.csv", index=False)
-    m3.diagnostics.to_csv(PROCESSED_DIR / "model_m3_diagnostics.csv", index=False)
+    if args.skip_m3:
+        from types import SimpleNamespace
+        logging.info("reusing existing M3 outputs")
+        m3 = SimpleNamespace(
+            summary=pd.read_csv(PROCESSED_DIR / "model_m3_summary.csv"),
+            forecasts=pd.read_csv(PROCESSED_DIR / "model_m3_forecasts.csv", parse_dates=["date"]),
+            diagnostics=pd.read_csv(PROCESSED_DIR / "model_m3_diagnostics.csv"),
+        )
+    else:
+        logging.info("fitting M3 forecasts for %d cities ...", top_n)
+        m3 = m3_forecast.run(panel, top_n=top_n)
+        m3.summary.to_csv(PROCESSED_DIR / "model_m3_summary.csv", index=False)
+        m3.forecasts.to_csv(PROCESSED_DIR / "model_m3_forecasts.csv", index=False)
+        m3.diagnostics.to_csv(PROCESSED_DIR / "model_m3_diagnostics.csv", index=False)
 
     # ---------------------------------------------------------------- CDS
     logging.info("building Charging Demand Score ...")

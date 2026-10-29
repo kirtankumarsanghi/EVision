@@ -32,16 +32,17 @@ The four model outputs are:
   consistent with early adoption concentrating in younger, higher-density
   markets but is not a causal estimate. The provisional policy score is
   positive (IRR 1.35, p = 0.001) but rests on unverified scores.
-- **M2 (classifier):** logistic regression and LDA separate High from Low
-  demand with cross-validated AUC of 0.822 and 0.818 respectively. The
-  train–CV gap is about 0.06, and leave-one-out accuracy is 76.5–78.4%. There is
+- **M2 (classifier):** after expanding the exogenous feature set and using
+  shrinkage/elastic-net regularisation, cross-validated AUC is **0.861 (LDA)**
+  and **0.844 (logistic)**, up from 0.833/0.809 on the original features.
+  Leave-one-out accuracy is 78–80%; the train–CV gap is 0.071/0.094. There is
   no label leakage: EV stock, chargers, and growth are excluded.
 - **M3 (forecasts):** all 51 cities are forecast with SARIMA or Holt-Winters;
   28 cities select SARIMA and 23 select Holt-Winters. Every forecast passes a
   holdout quality gate after the numerical fix described in Section 8.
-- **CDS:** Bengaluru, Jaipur, Delhi, Pune and Rajkot lead the ranking. Two cities
-  are Critical and two High. The top-15 shortlist is stable under weight
-  perturbations (14–15 of 15 cities retained).
+- **CDS:** Delhi, Bengaluru, Pune, Guwahati and Jaipur lead the ranking after
+  bias correction. Two cities are Critical and three High. The top-15 shortlist
+  is stable under weight perturbations (14–15 of 15 cities retained).
 
 The main caveats are data-bound: policy scores are unverified, seven cities use
 municipal boundaries rather than urban agglomerations (their populations are now
@@ -299,6 +300,12 @@ cannot separate Delhi from a much smaller market.
 
 ### 6.3 Interpretation
 
+M1a diagnostics: alpha 0.10, AIC 741.5 versus 8,110 for Poisson, dispersion
+175.7, pseudo R² 0.998. M1b has 3,410 city-months and a fitted/observed
+correlation of 0.99999. The design matrix is full rank but ill-conditioned
+(condition number ≈ 5,800), so the coefficients are associations, not precise
+causal effects.
+
 Market size is the strongest correlate: a 1% larger non-EV market is associated
 with a 2.7% higher EV registration rate. The negative income coefficient is
 counterintuitive if read as "richer cities buy fewer EVs"; it more likely picks
@@ -356,20 +363,39 @@ expose the optimism gap.
 
 | Model | AUC mean | SD | p05–p95 | Accuracy | LOOCV | Train–CV gap |
 |---|---:|---:|---|---:|---:|---:|
-| Logistic | 0.822 | 0.136 | 0.600–1.000 | 0.765 | 0.765 | 0.061 |
-| LDA | 0.818 | 0.138 | 0.600–1.000 | 0.768 | 0.784 | 0.059 |
+| Logistic | 0.844 | 0.116 | 0.665–1.000 | 0.801 | 0.804 | 0.094 |
+| LDA | 0.861 | 0.116 | 0.665–1.000 | 0.799 | 0.784 | 0.071 |
 
 The two models are statistically indistinguishable at this sample size. LDA has
 slightly better leave-one-out accuracy; logistic is easier to interpret. Neither
 justifies reporting a single AUC without the spread.
 
+**Confusion matrices (threshold 0.5).**
+
+| Model | Evaluation | TN | FP | FN | TP |
+|---|---|---:|---:|---:|---:|
+| Logistic | LOOCV | 20 | 6 | 4 | 21 |
+| LDA | LOOCV | 19 | 7 | 4 | 21 |
+| Logistic | Repeated CV, aggregated | 409 | 111 | 92 | 408 |
+| LDA | Repeated CV, aggregated | 411 | 109 | 96 | 404 |
+
+LOOCV adds: logistic specificity 0.769, NPV 0.833, balanced accuracy 0.805,
+MCC 0.610, kappa 0.608, Brier 0.168, log loss 0.563; LDA specificity 0.731,
+NPV 0.826, balanced accuracy 0.785, MCC 0.573, kappa 0.569, Brier 0.156, log
+loss 0.609. Bootstrap 95% CI for LOOCV accuracy is 0.686–0.902 (logistic) and
+0.667–0.902 (LDA). Full tables: `data/processed/model_m2_metrics.csv` and
+`model_m2_confusion.csv`; a formatted summary is in `reports/model_metrics.md`.
+The fold-mean AUC in `model_m2_comparison.csv` (0.861/0.844) and the
+repeat-pooled AUC (0.847/0.837) average different quantities; both are reported.
+
 ### 7.5 Sensitivity
 
-Dropping the provisional policy score improves CV AUC to 0.837 (LDA) and 0.832
-(logistic). Restricting to the 44 boundary-harmonised cities raises AUC to 0.896
-and 0.892. The second result is expected: the seven excluded rows use municipal
-boundaries rather than urban agglomerations, which adds noise to density. The
-first is evidence that the provisional policy score is not adding signal.
+In the controlled feature experiment, dropping the provisional policy score
+improved CV AUC to 0.837 (LDA) and 0.832 (logistic). Restricting to the 42
+cities with a measured vehicle split raised AUC to 0.931/0.932, and the
+bottom-third vs top-third label reached 0.934/0.941. Those are the strongest
+honest gains available from these data; they come from a cleaner label, not a
+more complex model. Full comparison: `reports/improvement_m1_m2.md`.
 
 ### 7.6 Interpretation
 
@@ -408,30 +434,42 @@ holdout total) and `forecast_quality` (`ok` if ≤0.5, `weak` if ≤1.0, else
 
 | City | Winner | Last 12m | Forecast 12m | Growth | RMSE/level |
 |---|---|---:|---:|---:|---:|
-| Jaipur | Holt-Winters | 30,456 | 63,996 | 1.101 | 0.051 |
-| Rajkot | SARIMA | 8,300 | 15,780 | 0.901 | 0.052 |
-| Bhubaneswar | SARIMA | 36,036 | 60,525 | 0.680 | 0.049 |
-| Guwahati | Holt-Winters | 14,543 | 24,258 | 0.668 | 0.044 |
-| Pune | Holt-Winters | 67,754 | 107,179 | 0.582 | 0.044 |
-| Madurai | SARIMA | 5,455 | 8,585 | 0.574 | 0.054 |
-| Gurugram | SARIMA | 3,238 | 5,055 | 0.561 | 0.086 |
-| Srinagar | SARIMA | 3,092 | 4,780 | 0.546 | 0.046 |
-| Nashik | SARIMA | 29,344 | 45,007 | 0.534 | 0.038 |
-| Noida | SARIMA | 22,049 | 33,496 | 0.519 | 0.025 |
-| Vadodara | Holt-Winters | 11,872 | 17,612 | 0.484 | 0.051 |
-| Coimbatore | Holt-Winters | 10,769 | 15,784 | 0.466 | 0.025 |
+| Guwahati | Holt-Winters | 14,543 | 36,387 | 1.502 | 0.044 |
+| Rajkot | SARIMA | 8,300 | 17,500 | 1.108 | 0.052 |
+| Surat | SARIMA | 22,319 | 45,324 | 1.031 | 0.027 |
+| Bhubaneswar | SARIMA | 36,036 | 69,483 | 0.928 | 0.049 |
+| Coimbatore | Holt-Winters | 10,769 | 19,888 | 0.847 | 0.025 |
+| Ahmedabad | SARIMA | 26,387 | 48,707 | 0.846 | 0.037 |
+| Delhi | SARIMA | 93,369 | 167,936 | 0.799 | 0.029 |
+| Madurai | SARIMA | 5,455 | 9,564 | 0.753 | 0.054 |
+| Kozhikode | Holt-Winters | 6,262 | 10,572 | 0.688 | 0.037 |
+| Thiruvananthapuram | SARIMA | 9,649 | 16,208 | 0.680 | 0.011 |
+| Patna | SARIMA | 22,931 | 37,924 | 0.654 | 0.031 |
+| Chandigarh | Holt-Winters | 6,683 | 10,754 | 0.609 | 0.032 |
 
 SARIMA wins 28 cities and Holt-Winters 23. The table carries both forecasts for
 every city, so the SARIMA objective is satisfied even where Holt-Winters wins
 the holdout.
 
+**Bias correction.** Uncorrected forecasts under-predict the nine-month holdout
+by a median of **−22%**. A rolling-origin correction (factor estimated on the
+earlier nine-month window, applied to the current forecast and capped to
+0.75–1.5) reduces the median bias to about **+14%** and the median RMSE from
+**477 to 381** in the rolling-origin experiment. The correction is applied per
+city and recorded in `bias_correction_factor`; the CDS uses the corrected
+growth. This is a calibration fix, not a claim that the forecast level is
+exact. Per-city RMSE, MAE and bias are in
+`data/processed/model_m3_metrics.csv`.
+
 ### 8.5 The 2021 seam and forecast sensitivity
 
-Refitting M3 on the 2022-only panel changes forecast growth by a median of
-0.033. The largest moves are Bhopal +0.41, Guwahati −0.26, Rajkot −0.26, Pune
-−0.24, and Agra +0.20. For cities with a large 2021→2022 step (Guwahati,
-Jabalpur, Rajkot), the 2022-only forecast is the more defensible one. The full
-sensitivity is in `model_m3_2022only.csv`.
+The rolling-origin experiment is the defensible sensitivity: it estimates the
+correction on an earlier window and evaluates it on the current holdout. It
+reduces the median bias from −22% to +14% and the median RMSE from 477 to 381
+(`reports/improvement_m3.md`, `data/processed/improvement_m3.csv`). For cities
+with a large 2021→2022 step (Guwahati, Jabalpur, Rajkot), the 2022-only
+forecast remains the more defensible one; the seam diagnostics are in
+`reports/seam_2021_2022.csv`.
 
 ### 8.6 Which forecasts to trust
 
@@ -464,25 +502,25 @@ so every city uses its model forecast.
 
 | Rank | City | CDS | Recommendation |
 |---:|---|---:|---|
-| 1 | Bengaluru | 1.702 | Critical — immediate fast-charger deployment |
-| 2 | Jaipur | 1.513 | Critical — immediate fast-charger deployment |
-| 3 | Delhi | 1.498 | High — prioritise in the next wave |
-| 4 | Pune | 1.354 | High — prioritise in the next wave |
-| 5 | Rajkot | 0.734 | Moderate — monitor and plan |
-| 6 | Bhubaneswar | 0.719 | Moderate — monitor and plan |
-| 7 | Hyderabad | 0.634 | Moderate — monitor and plan |
-| 8 | Noida | 0.541 | Moderate — monitor and plan |
-| 9 | Lucknow | 0.484 | Moderate — monitor and plan |
-| 10 | Guwahati | 0.401 | Moderate — monitor and plan |
-| 11 | Patna | 0.389 | Moderate — monitor and plan |
-| 12 | Nashik | 0.365 | Moderate — monitor and plan |
-| 13 | Gwalior | 0.232 | Moderate — monitor and plan |
-| 14 | Indore | 0.219 | Moderate — monitor and plan |
-| 15 | Ranchi | 0.169 | Moderate — monitor and plan |
+| 1 | Delhi | 1.816 | Critical — immediate fast-charger deployment |
+| 2 | Bengaluru | 1.616 | Critical — immediate fast-charger deployment |
+| 3 | Pune | 0.959 | High — prioritise in the next wave |
+| 4 | Guwahati | 0.935 | High — prioritise in the next wave |
+| 5 | Jaipur | 0.826 | High — prioritise in the next wave |
+| 6 | Bhubaneswar | 0.677 | Moderate — monitor and plan |
+| 7 | Ranchi | 0.670 | Moderate — monitor and plan |
+| 8 | Lucknow | 0.637 | Moderate — monitor and plan |
+| 9 | Surat | 0.633 | Moderate — monitor and plan |
+| 10 | Hyderabad | 0.516 | Moderate — monitor and plan |
+| 11 | Rajkot | 0.489 | Moderate — monitor and plan |
+| 12 | Patna | 0.428 | Moderate — monitor and plan |
+| 13 | Ahmedabad | 0.399 | Moderate — monitor and plan |
+| 14 | Noida | 0.328 | Moderate — monitor and plan |
+| 15 | Indore | 0.293 | Moderate — monitor and plan |
 
-Bengaluru and Jaipur are the only Critical cities: both combine a high expected
-monthly level with strong forecast growth. Delhi and Pune are High. The
-remainder of the shortlist is Moderate; the full 51-city ranking is in
+Delhi and Bengaluru are the only Critical cities: both combine a high expected
+monthly level with strong forecast growth. Pune, Guwahati and Jaipur are High.
+The remainder of the shortlist is Moderate; the full 51-city ranking is in
 `cds_ranking.csv`.
 
 ### 9.3 Sensitivity
@@ -492,12 +530,12 @@ therefore informative at the top but not knife-edge.
 
 | Perturbation | Overlap | Entered | Dropped |
 |---|---:|---|---|
-| M1 −0.10 | 15/15 | – | – |
-| M1 +0.10 | 14/15 | Surat | Ranchi |
-| M2 −0.10 | 14/15 | Surat | Ranchi |
-| M2 +0.10 | 14/15 | Allahabad (Prayagraj) | Ranchi |
-| M3 −0.10 | 14/15 | Allahabad (Prayagraj) | Ranchi |
-| M3 +0.10 | 14/15 | Madurai | Indore |
+| M1 −0.10 | 14/15 | Dehradun | Indore |
+| M1 +0.10 | 15/15 | – | – |
+| M2 −0.10 | 14/15 | Dehradun | Indore |
+| M2 +0.10 | 15/15 | – | – |
+| M3 −0.10 | 15/15 | – | – |
+| M3 +0.10 | 14/15 | Dehradun | Indore |
 
 ### 9.4 Map and use
 

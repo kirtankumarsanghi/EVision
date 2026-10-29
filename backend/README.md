@@ -142,6 +142,9 @@ window, so report the boundary rather than presenting one ranking as absolute.
 | `reports/final_deck.pptx` | 11-slide deck |
 | `reports/eda.md` | exploratory analysis |
 | `reports/figures/` | report figures |
+| `reports/model_metrics.md` | all M1/M2/M3/CDS metrics and confusion matrices |
+| `reports/improvement_m1_m2.md`, `reports/improvement_m3.md` | before/after improvement experiments |
+| `data/processed/model_m2_metrics.csv`, `model_m2_confusion.csv`, `model_m3_metrics.csv` | metric tables |
 | `reports/seam_2021_2022.csv` | Dec-2021 → Jan-2022 diagnostics |
 | `notebooks/01_eda.ipynb` … `05_cds_hotspots.ipynb` | executed analysis notebooks |
 

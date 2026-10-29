@@ -28,6 +28,8 @@ import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 
+from evision.config import target_cities
+
 log = logging.getLogger(__name__)
 
 RAW_FEATURES = [
@@ -39,6 +41,11 @@ RAW_FEATURES = [
     "highway_corridor",
     "summer_max_temp_c",
     "non_ev_total_registrations",
+    "non_ev_4w_registrations",
+    "fast_10km",
+    "stations_10km",
+    "cpos_10km",
+    "tier",
 ]
 
 DRIVER_TERMS = [
@@ -50,6 +57,12 @@ DRIVER_TERMS = [
     "ev_policy_score",
     "highway_corridor",
     "summer_max_temp_c",
+    "market_4w_share",
+    "share_fast_10km",
+    "tier_metro",
+    "log_rto_count",
+    "market_x_rto",
+    "log_cpos_10km",
 ]
 
 
@@ -89,7 +102,38 @@ class CountModelResult:
 
 def _base(panel: pd.DataFrame, features: pd.DataFrame) -> pd.DataFrame:
     available = [c for c in RAW_FEATURES if c in features.columns]
-    keep = features[["city", *available]]
+    keep = features[["city", *available]].copy()
+    rto_counts = {c["name"]: len(c.get("rto_codes", [])) for c in target_cities()}
+    keep["rto_count"] = keep["city"].map(rto_counts).fillna(1)
+    if "pop_2011" in keep.columns:
+        keep["log_population"] = np.log(keep["pop_2011"].clip(lower=1))
+    if "population_density" in keep.columns:
+        keep["log_density"] = np.log(keep["population_density"].clip(lower=1))
+    if "per_capita_income_inr" in keep.columns:
+        keep["log_income"] = np.log(keep["per_capita_income_inr"].clip(lower=1))
+    if "non_ev_total_registrations" in keep.columns:
+        keep["log_non_ev_market"] = np.log(
+            keep["non_ev_total_registrations"].clip(lower=1)
+        )
+    if "fuel_price_inr_per_litre" in keep.columns:
+        keep["mean_fuel_price"] = keep["fuel_price_inr_per_litre"]
+    if {"non_ev_4w_registrations", "non_ev_total_registrations"}.issubset(keep.columns):
+        keep["market_4w_share"] = (
+            keep["non_ev_4w_registrations"]
+            / keep["non_ev_total_registrations"].clip(lower=1)
+        )
+    if {"fast_10km", "stations_10km"}.issubset(keep.columns):
+        keep["share_fast_10km"] = (
+            keep["fast_10km"] / keep["stations_10km"].clip(lower=1)
+        )
+    if "tier" in keep.columns:
+        keep["tier_metro"] = (keep["tier"] == "Metro").astype(float)
+    keep["log_rto_count"] = np.log(keep["rto_count"].clip(lower=1))
+    if "log_non_ev_market" in keep.columns:
+        keep["market_x_rto"] = keep["log_non_ev_market"] * keep["log_rto_count"]
+    if "cpos_10km" in keep.columns:
+        keep["log_cpos_10km"] = np.log((keep["cpos_10km"] + 1).clip(lower=1))
+
     df = panel[["city", "date", "ev_registrations"]].merge(keep, on="city", how="left")
     df["month"] = df["date"].dt.month
     return df

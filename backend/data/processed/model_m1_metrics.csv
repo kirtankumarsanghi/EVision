@@ -1,0 +1,11 @@
+metric,value
+M1a_n_cities,51.0
+M1a_alpha,0.1
+M1a_aic_negbin,731.617744659984
+M1a_aic_poisson,4971.787688646798
+M1a_poisson_dispersion,113.33030240288542
+M1a_pseudo_r2,0.9985669762389223
+M1b_n_obs,3410.0
+M1b_n_cities,51.0
+M1b_alpha,0.5
+M1b_corr_fitted_observed,0.9999932795382317

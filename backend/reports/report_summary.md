@@ -13,19 +13,19 @@ Key results:
 - **3,519 city-months**, 51 cities, 2021-01 to
   2026-09; 96.9% observed.
 - **M1 drivers:** non-EV market size is the strongest correlate
-  (IRR 2.72, p < 0.001); income is
-  negative (IRR 0.56) and policy is positive
-  (IRR 1.35, provisional).
-- **M2:** logistic AUC 0.822 and LDA
-  0.818 under repeated 5-fold CV; the train–CV gap
+  (IRR 2.13, p < 0.001); income is
+  negative (IRR 0.62) and policy is positive
+  (IRR 1.28, provisional).
+- **M2:** logistic AUC 0.914 and LDA
+  0.915 under repeated 5-fold CV; the train–CV gap
   is about 0.06.
-- **M3:** all 51 cities forecast; 28 SARIMA and
-  23 Holt-Winters win their holdout. All fits are
+- **M3:** all 51 cities forecast; 22 SARIMA and
+  29 Holt-Winters win their holdout. All fits are
   finite after scaling; no city is `unstable`.
-- **CDS top five:** Bengaluru, Jaipur, Delhi, Pune, Rajkot. 2 cities are Critical and 2 High.
+- **CDS top five:** Delhi, Bengaluru, Guwahati, Surat, Pune. 2 cities are Critical and 3 High.
 - **Robustness:** dropping the fuel price or the provisional policy score does
   not change the market-size and income findings. Dropping the seven unverified
-  demographics raises M2 AUC to nan.
+  demographics raises M2 AUC to 0.977.
 
 ## 1. Problem and objectives
 
@@ -85,14 +85,18 @@ reports incidence-rate ratios from M1a.
 
 | Term | IRR | p |
 |---|---:|---:|
-| log_non_ev_market | 2.72 | 1.56e-34 |
-| log_income | 0.56 | 1.1e-10 |
-| ev_policy_score | 1.35 | 0.000771 |
-| log_density | 0.8 | 0.0536 |
-| mean_fuel_price | 1.01 | 0.15 |
-| summer_max_temp_c | 0.98 | 0.242 |
-| log_population | 1.1 | 0.311 |
-| highway_corridor | 0.94 | 0.702 |
+| log_non_ev_market | 2.13 | 1.33e-14 |
+| log_income | 0.62 | 2.35e-05 |
+| market_x_rto | 1.29 | 0.00674 |
+| log_rto_count | 0.03 | 0.00853 |
+| ev_policy_score | 1.28 | 0.0106 |
+| mean_fuel_price | 1.02 | 0.0206 |
+| share_fast_10km | 0.53 | 0.0378 |
+| log_density | 0.88 | 0.317 |
+| log_population | 1.04 | 0.692 |
+| summer_max_temp_c | 1.0 | 0.887 |
+| log_cpos_10km | 1.03 | 0.901 |
+| highway_corridor | 0.99 | 0.93 |
 
 The fuel price is mostly the Delhi series times a city ratio, so its coefficient
 is not a causal price effect. Refitting without it leaves the market-size and
@@ -108,14 +112,14 @@ stock, charger counts and growth are excluded.
 
 | Model | AUC mean | SD | p05–p95 | Accuracy | LOOCV | Train–CV gap |
 |---|---:|---:|---|---:|---:|---:|
-| Logistic | 0.822 | 0.136 | 0.6–1.0 | 0.765 | 0.765 | 0.061 |
-| LDA | 0.818 | 0.138 | 0.6–1.0 | 0.768 | 0.784 | 0.059 |
+| LDA | 0.915 | 0.099 | 0.72–1.0 | 0.883 | 0.902 | 0.039 |
+| Logistic | 0.914 | 0.095 | 0.733–1.0 | 0.871 | 0.902 | 0.052 |
 
 Dropping the provisional policy score **improves** CV AUC to
-0.837, which is
+0.922, which is
 evidence that the provisional score adds noise. Restricting to the 44 verified
 demographics raises AUC to
-nan.
+0.977.
 
 ![M2 CV AUC](figures/m2_auc.png)
 
@@ -128,18 +132,18 @@ around 1e30.
 
 | City | Winner | Last 12m | Forecast 12m | Growth | RMSE/level | Quality |
 |---|---|---|---:|---:|---:|---|
-| Jaipur | Holt-Winters | 30,456 | 63,996 | 1.101 | 0.051 | ok |
-| Rajkot | SARIMA | 8,300 | 15,780 | 0.901 | 0.052 | ok |
-| Bhubaneswar | SARIMA | 36,036 | 60,525 | 0.680 | 0.049 | ok |
-| Guwahati | Holt-Winters | 14,543 | 24,258 | 0.668 | 0.044 | ok |
-| Pune | Holt-Winters | 67,754 | 107,179 | 0.582 | 0.044 | ok |
-| Madurai | SARIMA | 5,455 | 8,585 | 0.574 | 0.054 | ok |
-| Gurugram | SARIMA | 3,238 | 5,055 | 0.561 | 0.086 | ok |
-| Srinagar | SARIMA | 3,092 | 4,780 | 0.546 | 0.046 | ok |
-| Nashik | SARIMA | 29,344 | 45,007 | 0.534 | 0.038 | ok |
-| Noida | SARIMA | 22,049 | 33,496 | 0.519 | 0.025 | ok |
-| Vadodara | Holt-Winters | 11,872 | 17,612 | 0.483 | 0.051 | ok |
-| Coimbatore | Holt-Winters | 10,769 | 15,784 | 0.466 | 0.025 | ok |
+| Guwahati | Holt-Winters | 14,543 | 48,516 | 2.336 | 0.028 | ok |
+| Surat | SARIMA | 22,319 | 60,433 | 1.708 | 0.033 | ok |
+| Gurugram | Holt-Winters | 3,238 | 8,269 | 1.554 | 0.090 | ok |
+| Ranchi | Holt-Winters | 9,865 | 20,994 | 1.128 | 0.032 | ok |
+| Rajkot | SARIMA | 8,300 | 17,504 | 1.109 | 0.046 | ok |
+| Dehradun | Holt-Winters | 6,945 | 14,077 | 1.027 | 0.034 | ok |
+| Jaipur | Holt-Winters | 30,456 | 60,656 | 0.992 | 0.045 | ok |
+| Bhubaneswar | SARIMA | 36,036 | 69,492 | 0.928 | 0.037 | ok |
+| Coimbatore | Holt-Winters | 10,769 | 19,891 | 0.847 | 0.021 | ok |
+| Ahmedabad | SARIMA | 26,387 | 48,713 | 0.846 | 0.026 | ok |
+| Delhi | SARIMA | 93,369 | 167,971 | 0.799 | 0.026 | ok |
+| Madurai | SARIMA | 5,455 | 9,562 | 0.753 | 0.041 | ok |
 
 Quality: 51 ok, 0 weak, 0
 unstable. The 2022-only sensitivity changes forecast growth by a median of
@@ -157,21 +161,21 @@ used and `m3_source` says so.
 
 | Rank | City | CDS | Recommendation |
 |---:|---|---:|---|
-| 1 | Bengaluru | 1.702 | Critical — immediate fast-charger deployment |
-| 2 | Jaipur | 1.513 | Critical — immediate fast-charger deployment |
-| 3 | Delhi | 1.498 | High — prioritise in the next wave |
-| 4 | Pune | 1.354 | High — prioritise in the next wave |
-| 5 | Rajkot | 0.734 | Moderate — monitor and plan |
-| 6 | Bhubaneswar | 0.719 | Moderate — monitor and plan |
-| 7 | Hyderabad | 0.634 | Moderate — monitor and plan |
-| 8 | Noida | 0.541 | Moderate — monitor and plan |
-| 9 | Lucknow | 0.484 | Moderate — monitor and plan |
-| 10 | Guwahati | 0.401 | Moderate — monitor and plan |
-| 11 | Patna | 0.389 | Moderate — monitor and plan |
-| 12 | Nashik | 0.365 | Moderate — monitor and plan |
-| 13 | Gwalior | 0.232 | Moderate — monitor and plan |
-| 14 | Indore | 0.219 | Moderate — monitor and plan |
-| 15 | Ranchi | 0.169 | Moderate — monitor and plan |
+| 1 | Delhi | 1.706 | Critical — immediate fast-charger deployment |
+| 2 | Bengaluru | 1.625 | Critical — immediate fast-charger deployment |
+| 3 | Guwahati | 1.198 | High — prioritise in the next wave |
+| 4 | Surat | 0.934 | High — prioritise in the next wave |
+| 5 | Pune | 0.901 | High — prioritise in the next wave |
+| 6 | Jaipur | 0.656 | Moderate — monitor and plan |
+| 7 | Lucknow | 0.608 | Moderate — monitor and plan |
+| 8 | Bhubaneswar | 0.597 | Moderate — monitor and plan |
+| 9 | Hyderabad | 0.444 | Moderate — monitor and plan |
+| 10 | Gurugram | 0.420 | Moderate — monitor and plan |
+| 11 | Ranchi | 0.406 | Moderate — monitor and plan |
+| 12 | Patna | 0.359 | Moderate — monitor and plan |
+| 13 | Ahmedabad | 0.272 | Moderate — monitor and plan |
+| 14 | Indore | 0.252 | Moderate — monitor and plan |
+| 15 | Rajkot | 0.208 | Moderate — monitor and plan |
 
 ![CDS top 15](figures/cds_top15.png)
 
@@ -179,12 +183,12 @@ Weight sensitivity (top-15 membership):
 
 | Perturbation | Overlap | Entered | Dropped |
 |---|---:|---|---|
-| m1 -0.10 | 15/15 | - | - |
-| m1 +0.10 | 14/15 | Surat | Ranchi |
-| m2 -0.10 | 14/15 | Surat | Ranchi |
-| m2 +0.10 | 14/15 | Allahabad (Prayagraj) | Ranchi |
-| m3 -0.10 | 14/15 | Allahabad (Prayagraj) | Ranchi |
-| m3 +0.10 | 14/15 | Madurai | Indore |
+| m1 -0.10 | 14/15 | Gwalior | Indore |
+| m1 +0.10 | 14/15 | Nagpur | Rajkot |
+| m2 -0.10 | 15/15 | - | - |
+| m2 +0.10 | 13/15 | Gwalior, Raipur | Ahmedabad, Rajkot |
+| m3 -0.10 | 13/15 | Nagpur, Raipur | Gurugram, Rajkot |
+| m3 +0.10 | 15/15 | - | - |
 
 The interactive map is `reports/cds_map.html`.
 

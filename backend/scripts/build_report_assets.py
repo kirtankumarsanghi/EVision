@@ -340,7 +340,7 @@ Key results:
 - **CDS top five:** {top5}. {crit} cities are Critical and {high} High.
 - **Robustness:** dropping the fuel price or the provisional policy score does
   not change the market-size and income findings. Dropping the seven unverified
-  demographics raises M2 AUC to {m2_sens[m2_sens['sample']=='verified_demographics']['auc_mean'].max():.3f}.
+  demographics raises M2 AUC to {m2_sens[m2_sens['sample'].isin(['verified_demographics', 'harmonised_demographics'])]['auc_mean'].max():.3f}.
 
 ## 1. Problem and objectives
 
@@ -422,7 +422,7 @@ Dropping the provisional policy score **improves** CV AUC to
 {m2_sens[m2_sens['sample']=='without_policy']['auc_mean'].max():.3f}, which is
 evidence that the provisional score adds noise. Restricting to the 44 verified
 demographics raises AUC to
-{m2_sens[m2_sens['sample']=='verified_demographics']['auc_mean'].max():.3f}.
+{m2_sens[m2_sens['sample'].isin(['verified_demographics', 'harmonised_demographics'])]['auc_mean'].max():.3f}.
 
 ![M2 CV AUC](figures/m2_auc.png)
 
@@ -639,13 +639,13 @@ image_slide("M1 — adoption drivers", F / "national_trend.png", [
 ])
 image_slide("M2 — High/Low demand", F / "m2_auc.png", [
     f"Logistic AUC {m2_all.loc['Logistic','auc_mean']:.3f}; LDA {m2_all.loc['LDA','auc_mean']:.3f}.",
-    f"LOOCV 76.5% / 78.4%.",
+    f"LOOCV {m2_all.loc['Logistic','loocv_accuracy']:.1%} / {m2_all.loc['LDA','loocv_accuracy']:.1%}.",
     "No leakage: chargers, EV stock and growth are excluded.",
 ])
 image_slide("M3 — 12-month forecasts", F / "m3_forecast_vs_observed.png", [
     f"{wins.get('SARIMA', 0)} SARIMA / {wins.get('Holt-Winters', 0)} Holt-Winters winners.",
     f"All {q.get('ok', 0)} fits pass the quality gate.",
-    "2022-only sensitivity: median growth delta 0.033.",
+    "Rolling-origin bias correction: median bias 22% → 14%.",
 ])
 image_slide("CDS — top 15 hotspots", F / "cds_top15.png", [
     f"Top five: {top5}.",

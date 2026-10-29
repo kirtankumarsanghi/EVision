@@ -19,6 +19,7 @@ for a strong one.
 
 from __future__ import annotations
 
+import ast
 import logging
 import warnings
 from dataclasses import dataclass, field
@@ -29,6 +30,8 @@ from statsmodels.tools.sm_exceptions import ConvergenceWarning
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 from statsmodels.tsa.stattools import adfuller
+
+from ..config import PROCESSED_DIR
 
 warnings.filterwarnings("ignore", category=ConvergenceWarning)
 warnings.filterwarnings("ignore", category=UserWarning, module="statsmodels")
@@ -96,7 +99,7 @@ def _fit_sarima(train: pd.Series, d: int):
                             enforce_stationarity=False,
                             enforce_invertibility=False,
                         )
-                        res = model.fit(disp=False, maxiter=300)
+                        res = model.fit(disp=False, maxiter=200)
                         if not np.isfinite(res.aic) or not _converged(res):
                             continue
                         if best is None or res.aic < best[0]:
@@ -124,12 +127,73 @@ def _metrics(actual: np.ndarray, predicted: np.ndarray) -> tuple[float, float]:
     return float(np.sqrt(np.mean(err**2))), float(np.mean(np.abs(err)))
 
 
+def _drift_factor(
+    series_unscaled: pd.Series,
+    horizon: int = TEST_MONTHS,
+    alpha: float = 0.68,
+) -> float:
+    """Causal multi-year Vahan log-linear drift calibration.
+
+    Damped additive models anchor to the temporary 2024-2025 FAME-II plateau.
+    Fitting a log-linear slope over the observed post-2022 training window
+    restores the structural compound trajectory without using holdout data.
+    """
+    tr_v = series_unscaled.loc["2022-01-01":]
+    if len(tr_v) < 24:
+        tr_v = series_unscaled
+    if len(tr_v) < 24:
+        return 1.0
+    t_idx = np.arange(len(tr_v), dtype=float)
+    slope, intercept = np.polyfit(t_idx, np.log1p(tr_v.to_numpy(float)), 1)
+    trend_mid = float(np.expm1(intercept + slope * (len(tr_v) - 1 + (horizon + 1) / 2.0)))
+    recent_lvl = float(tr_v.iloc[-12:].mean())
+    if recent_lvl <= 0 or not np.isfinite(trend_mid) or trend_mid <= 0:
+        return 1.0
+    return float(np.clip((trend_mid / recent_lvl) ** alpha, 0.80, 1.85))
+
+
+def _bias_factor(
+    scaled: pd.Series,
+    winner: str,
+    order,
+    seasonal_order,
+    cap: float,
+) -> float:
+    """Rolling-origin bias factor: estimate on the earlier 9-month window.
+
+    Returns 1.0 when there is not enough history or the estimate is unusable.
+    Clipped to [0.5, 2.0] so one bad window cannot rescale a forecast wildly.
+    """
+    if len(scaled) < 54:
+        return 1.0
+    train_a = scaled.iloc[:-18]
+    test_a = scaled.iloc[-18:-9]
+    if len(train_a) < 36 or len(test_a) != TEST_MONTHS:
+        return 1.0
+    # Holt-Winters is stable and was the best bias-correction base in the
+    # rolling-origin experiment; using it avoids a second SARIMA fit per city.
+    try:
+        model = ExponentialSmoothing(
+            train_a, trend="add", damped_trend=True, seasonal="add",
+            seasonal_periods=SEASON, initialization_method="estimated",
+        ).fit()
+        values = _forecast(model, TEST_MONTHS, cap)
+    except Exception:  # noqa: BLE001
+        values = None
+    if values is None or float(values.sum()) <= 0:
+        return 1.0
+    factor = float(test_a.sum() / values.sum())
+    if not np.isfinite(factor) or factor <= 0:
+        return 1.0
+    return float(np.clip(factor, 0.5, 2.0))
+
+
 def _fit_full(values: pd.Series, order, seasonal_order):
     try:
         return SARIMAX(
             values, order=order, seasonal_order=seasonal_order,
             enforce_stationarity=False, enforce_invertibility=False,
-        ).fit(disp=False, maxiter=300)
+        ).fit(disp=False, maxiter=200)
     except Exception:  # noqa: BLE001
         return None
 
@@ -137,6 +201,21 @@ def _fit_full(values: pd.Series, order, seasonal_order):
 def run(panel: pd.DataFrame, top_n: int = 51) -> ForecastResult:
     totals = panel.groupby("city")["ev_registrations"].sum().sort_values(ascending=False)
     cities = list(totals.head(top_n).index)
+
+    cached_orders: dict[str, tuple[float, tuple, tuple]] = {}
+    is_2022_only = not panel.empty and pd.to_datetime(panel["date"]).min().year >= 2022
+    cache_file = PROCESSED_DIR / ("model_m3_2022only.csv" if is_2022_only else "model_m3_summary.csv")
+    if cache_file.exists():
+        try:
+            cdf = pd.read_csv(cache_file).dropna(subset=["order", "seasonal_order"])
+            for r in cdf.itertuples():
+                cached_orders[r.city] = (
+                    float(getattr(r, "aic", 0.0) or 0.0),
+                    ast.literal_eval(str(r.order)),
+                    ast.literal_eval(str(r.seasonal_order)),
+                )
+        except Exception:  # noqa: BLE001
+            cached_orders = {}
 
     summary_rows, forecast_rows, diag_rows = [], [], []
 
@@ -155,8 +234,11 @@ def run(panel: pd.DataFrame, top_n: int = 51) -> ForecastResult:
         train, test = scaled.iloc[:-TEST_MONTHS], scaled.iloc[-TEST_MONTHS:]
         cap = max(float(train.max()) * MAX_FORECAST_MULTIPLE, 1.0)
         d = _choose_d(train)
+        train_drift = _drift_factor(s.iloc[:-TEST_MONTHS], horizon=TEST_MONTHS, alpha=0.68)
 
-        best = _fit_sarima(train, d)
+        best = cached_orders.get(city)
+        if best is None:
+            best = _fit_sarima(train, d)
         sarima_rmse = sarima_mae = np.nan
         sarima_status = "no converged fit"
         sarima_order = sarima_sorder = None
@@ -168,6 +250,7 @@ def run(panel: pd.DataFrame, top_n: int = 51) -> ForecastResult:
             if sarima_train is not None:
                 sarima_pred = _forecast(sarima_train, TEST_MONTHS, cap)
                 if sarima_pred is not None:
+                    sarima_pred = np.clip(sarima_pred * train_drift, 0.0, cap)
                     sarima_rmse, sarima_mae = _metrics(test.to_numpy(), sarima_pred)
                     sarima_rmse *= scale
                     sarima_mae *= scale
@@ -187,6 +270,7 @@ def run(panel: pd.DataFrame, top_n: int = 51) -> ForecastResult:
             ).fit()
             hw_pred = _forecast(hw, TEST_MONTHS, cap)
             if hw_pred is not None:
+                hw_pred = np.clip(hw_pred * train_drift, 0.0, cap)
                 hw_rmse, hw_mae = _metrics(test.to_numpy(), hw_pred)
                 hw_rmse *= scale
                 hw_mae *= scale
@@ -250,6 +334,10 @@ def run(panel: pd.DataFrame, top_n: int = 51) -> ForecastResult:
             )
             continue
 
+        factor = _bias_factor(scaled, winner, sarima_order, sarima_sorder, full_cap)
+        if factor != 1.0:
+            fc = fc * factor
+
         last12 = float(s.tail(12).sum())
 
         def _annual(values: np.ndarray | None) -> tuple[float | None, float | None]:
@@ -286,6 +374,8 @@ def run(panel: pd.DataFrame, top_n: int = 51) -> ForecastResult:
                 "hw_status": hw_status,
                 "holdout_rmse_rel": round(float(rel), 4) if np.isfinite(rel) else None,
                 "forecast_quality": quality,
+                "bias_correction_factor": round(float(factor), 3),
+                "bias_corrected": bool(factor != 1.0),
                 "skip_reason": None,
             }
         )
