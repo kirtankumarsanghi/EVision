@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #0f172a;
+    background-color: #f8fafc;
+  }
+  
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Recommendation tag styles */
+.tag-critical {
+  @apply bg-red-100 text-red-800 border border-red-200 font-semibold;
+}
+
+.tag-high {
+  @apply bg-orange-100 text-orange-800 border border-orange-200 font-semibold;
+}
+
+.tag-moderate {
+  @apply bg-sky-100 text-sky-800 border border-sky-200 font-semibold;
+}
+
+.tag-low {
+  @apply bg-slate-100 text-slate-700 border border-slate-200 font-medium;
+}
+
+/* Split badge styles */
+.badge-measured {
+  @apply bg-emerald-50 text-emerald-700 border border-emerald-200 font-medium text-xs px-2 py-0.5 rounded-full;
+}
+
+.badge-state {
+  @apply bg-amber-50 text-amber-700 border border-amber-200 font-medium text-xs px-2 py-0.5 rounded-full;
+}
+
+.badge-national {
+  @apply bg-rose-50 text-rose-700 border border-rose-200 font-medium text-xs px-2 py-0.5 rounded-full;
+}
