@@ -21,7 +21,14 @@ python scripts/build_master_panel.py    # merged analysis panel
 python scripts/run_models.py            # M1 / M2 / M3 (all cities) / CDS
 python scripts/make_map.py              # reports/cds_map.html
 python scripts/run_api.py               # http://127.0.0.1:8000/docs
+python scripts/export_frontend_snapshots.py   # refresh frontend offline snapshots
 ```
+
+`export_frontend_snapshots.py` pulls every endpoint the dashboard consumes and
+rewrites `frontend/src/data/snapshots/`, so the offline fallback can never drift
+from the API. Run it with `--check` to fail when a committed snapshot is stale
+(the comparison tolerates float round-off and extra API columns). It also
+verifies that the static map file has coordinates for every analysed city.
 
 `build_vehicle_split.py` regenerates the measured 2W/3W/4W split from the Vahan
 dashboard. It is optional — `run_models.py` uses the existing

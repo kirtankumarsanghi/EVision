@@ -36,6 +36,7 @@ import {
   VehicleSplit,
 } from '../types';
 import { api } from '../api';
+import { PageHeader, StatGroup, Tag, splitTone } from './ui';
 
 interface CityDetailViewProps {
   selectedCity: string;
@@ -149,19 +150,20 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
     return <div>Select a city to analyze.</div>;
   }
 
-  const isCritical = cityRanking.cds >= 1.5;
-  const isHigh = cityRanking.cds >= 0.75 && cityRanking.cds < 1.5;
-
   return (
-    <div className="space-y-6 pb-12">
-      {/* City Selector Header */}
-      <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <div className="flex items-center space-x-3">
+    <div className="space-y-5 pb-12">
+      <PageHeader
+        eyebrow={`City profile · rank #${cityRanking.rank} of ${hotspots.length}`}
+        icon={LineChartIcon}
+        title={`${cityRanking.city} (${cityRanking.state_code})`}
+        description={`Charging Demand Score ${cityRanking.cds.toFixed(3)} · ${cityRanking.recommendation}`}
+        actions={
+          <>
             <select
               value={selectedCity}
               onChange={(e) => onSelectCity(e.target.value)}
-              className="text-2xl sm:text-3xl font-black text-slate-900 bg-transparent border-b-2 border-slate-300 hover:border-emerald-500 focus:border-emerald-600 focus:outline-none pr-6 cursor-pointer"
+              aria-label="Choose a city"
+              className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-500"
             >
               {hotspots.map((h) => (
                 <option key={h.city} value={h.city}>
@@ -169,33 +171,15 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
                 </option>
               ))}
             </select>
-            <span
-              className={`text-xs font-bold px-3 py-1 rounded-full ${
-                isCritical ? 'tag-critical' : isHigh ? 'tag-high' : 'tag-moderate'
-              }`}
-            >
-              {cityRanking.recommendation.split('—')[0].trim()}
-            </span>
-          </div>
-          <p className="text-xs text-slate-500 mt-1">
-            Rank <b>#{cityRanking.rank}</b> of 51 cities · Charging Demand Score:{' '}
-            <b className="text-slate-900">{cityRanking.cds.toFixed(3)}</b>
-          </p>
-        </div>
-
-        <div className="flex items-center space-x-2 text-xs">
-          <span className={`badge-${cityRanking.split_method}`}>
-            {cityRanking.split_method} vehicle split
-          </span>
-          <span className="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-semibold border border-slate-200">
-            {cityRanking.state_code}
-          </span>
-        </div>
-      </div>
+            <Tag tone={splitTone(cityRanking.split_method)}>{cityRanking.split_method} split</Tag>
+          </>
+        }
+      />
 
       {/* City Metrics Scorecard */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-        <div className="bg-white p-4 rounded-xl border border-slate-200">
+      <div className="surface overflow-hidden">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-slate-200/70">
+        <div className="bg-white p-4">
           <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">EV Fleet Stock</div>
           <div className="text-xl font-extrabold text-slate-900 mt-1">
             {Math.round(cityRanking.ev_stock).toLocaleString()}
@@ -203,11 +187,11 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
           <div className="text-[11px] text-slate-400 mt-0.5">Cumulative registered</div>
         </div>
 
-        <div className="bg-white p-4 rounded-xl border border-slate-200">
+        <div className="bg-white p-4">
           <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">12m Outlook</div>
           <div
             className={`text-xl font-extrabold mt-1 ${
-              cityRanking.forecast_growth >= 0 ? 'text-emerald-700' : 'text-slate-700'
+              cityRanking.forecast_growth >= 0 ? 'text-slate-900' : 'text-slate-600'
             }`}
           >
             {(cityRanking.forecast_growth * 100).toFixed(0)}%
@@ -215,7 +199,7 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
           <div className="text-[11px] text-slate-400 mt-0.5">{cityRanking.winner} winner</div>
         </div>
 
-        <div className="bg-white p-4 rounded-xl border border-slate-200">
+        <div className="bg-white p-4">
           <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Public Stations</div>
           <div className="text-xl font-extrabold text-slate-900 mt-1">
             {cityRanking.stations_10km || cityFeatures?.stations_within_radius || 0}
@@ -225,7 +209,7 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
           </div>
         </div>
 
-        <div className="bg-white p-4 rounded-xl border border-slate-200">
+        <div className="bg-white p-4">
           <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">M1 Exp Monthly</div>
           <div className="text-xl font-extrabold text-slate-900 mt-1">
             {Math.round(cityRanking.m1_expected_monthly).toLocaleString()}
@@ -233,7 +217,7 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
           <div className="text-[11px] text-slate-400 mt-0.5">Expected additions/mo</div>
         </div>
 
-        <div className="bg-white p-4 rounded-xl border border-slate-200">
+        <div className="bg-white p-4">
           <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Population (2023)</div>
           <div className="text-xl font-extrabold text-slate-900 mt-1">
             {cityFeatures?.pop_estimate_2023
@@ -247,7 +231,7 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
           </div>
         </div>
 
-        <div className="bg-white p-4 rounded-xl border border-slate-200">
+        <div className="bg-white p-4">
           <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Per Capita Income</div>
           <div className="text-xl font-extrabold text-slate-900 mt-1">
             {cityFeatures?.per_capita_income_inr
@@ -256,18 +240,19 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
           </div>
           <div className="text-[11px] text-slate-400 mt-0.5">State domestic product</div>
         </div>
+        </div>
       </div>
 
       {/* Main Historical & Forward Forecast Chart */}
-      <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+      <div className="surface p-5 sm:p-6 space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <div>
             <h3 className="text-base font-bold text-slate-900 flex items-center space-x-2">
-              <Activity className="w-4 h-4 text-emerald-600" />
+              <Activity className="w-4 h-4 text-brand-600" />
               <span>Historical Registrations (2021–2026) & 12-Month SARIMA/HW Forecast</span>
             </h3>
             <p className="text-xs text-slate-500">
-              Solid line: Observed Vahan additions · Dashed violet line: 12-Month outlook · Red dots: Winsorized outliers
+              Solid ink line is observed Vahan registrations; the dashed line is the 12-month forecast.
             </p>
           </div>
 
@@ -302,83 +287,59 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
             </div>
           ) : chartMode === 'monthly' ? (
             <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={combinedSeries} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
+              <LineChart data={combinedSeries} margin={{ top: 10, right: 16, left: 0, bottom: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--chart-grid)" vertical={false} />
                 <XAxis
                   dataKey="date"
-                  tick={{ fontSize: 11, fill: '#64748b' }}
+                  tick={{ fontSize: 10, fill: 'var(--chart-axis)' }}
                   tickLine={false}
-                  axisLine={{ stroke: '#e2e8f0' }}
-                  interval={5}
+                  axisLine={{ stroke: 'var(--chart-border)' }}
+                  interval={6}
                 />
                 <YAxis
-                  tick={{ fontSize: 11, fill: '#64748b' }}
+                  tick={{ fontSize: 10, fill: 'var(--chart-axis)' }}
                   tickLine={false}
-                  axisLine={{ stroke: '#e2e8f0' }}
-                  tickFormatter={(v) => (v >= 1000 ? `${(v / 1000).toFixed(0)}k` : v)}
+                  axisLine={false}
+                  tickFormatter={(value) => (value >= 1000 ? `${Math.round(value / 1000)}k` : value)}
                 />
                 <Tooltip
                   content={({ active, payload }) => {
-                    if (active && payload && payload.length) {
-                      const d = payload[0].payload;
-                      return (
-                        <div className="bg-slate-900 text-white p-3 rounded-lg text-xs shadow-lg space-y-1">
-                          <p className="font-semibold text-slate-400">{d.date}</p>
-                          {d.historical !== null && (
-                            <p className="font-bold text-emerald-400 text-sm">
-                              {Number(d.historical).toLocaleString()} EVs registered
-                            </p>
-                          )}
-                          {d.forecast !== null && (
-                            <p className="font-bold text-purple-400 text-sm">
-                              {Number(d.forecast).toLocaleString()} EVs (Forecast)
-                            </p>
-                          )}
-                          {d.is_outlier && (
-                            <p className="text-amber-400 font-bold flex items-center space-x-1">
-                              <AlertCircle className="w-3 h-3 inline" />
-                              <span>Flagged IQR outlier (winsorized)</span>
-                            </p>
-                          )}
-                        </div>
-                      );
-                    }
-                    return null;
+                    if (!active || !payload || !payload.length) return null;
+                    const point = payload[0].payload;
+                    return (
+                      <div className="rounded-md bg-slate-900 px-3 py-2 text-[11px] text-white shadow-lg">
+                        <p className="font-medium text-slate-400">{point.date}</p>
+                        {point.historical !== null && (
+                          <p className="font-semibold text-white">
+                            {Number(point.historical).toLocaleString()} observed
+                          </p>
+                        )}
+                        {point.forecast !== null && (
+                          <p className="font-semibold text-slate-300">
+                            {Number(point.forecast).toLocaleString()} forecast
+                          </p>
+                        )}
+                      </div>
+                    );
                   }}
                 />
-                <Legend />
-                <Line
+                <Legend wrapperStyle={{ fontSize: 11 }} />
+                <Line isAnimationActive={false}
                   type="monotone"
                   dataKey="historical"
-                  name="Historical Registrations"
-                  stroke="#059669"
-                  strokeWidth={2.5}
-                  dot={(props: any) => {
-                    const { cx, cy, payload } = props;
-                    if (payload.is_outlier) {
-                      return (
-                        <circle
-                          key={payload.date}
-                          cx={cx}
-                          cy={cy}
-                          r={4.5}
-                          fill="#ef4444"
-                          stroke="#ffffff"
-                          strokeWidth={1.5}
-                        />
-                      );
-                    }
-                    return <circle key={payload.date} cx={cx} cy={cy} r={0} />;
-                  }}
+                  name="Observed registrations"
+                  stroke="var(--bar)"
+                  strokeWidth={2.2}
+                  dot={false}
                 />
-                <Line
+                <Line isAnimationActive={false}
                   type="monotone"
                   dataKey="forecast"
-                  name="12m Forward Outlook"
-                  stroke="#8b5cf6"
-                  strokeWidth={2.5}
+                  name="12-month forecast"
+                  stroke="var(--bar-3)"
+                  strokeWidth={2.2}
                   strokeDasharray="4 4"
-                  dot={{ r: 2.5, fill: '#8b5cf6' }}
+                  dot={false}
                 />
               </LineChart>
             </ResponsiveContainer>
@@ -387,22 +348,22 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
               <AreaChart data={registrations} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
                 <defs>
                   <linearGradient id="stockGradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#0284c7" stopOpacity={0.3} />
-                    <stop offset="95%" stopColor="#0284c7" stopOpacity={0.0} />
+                    <stop offset="5%" stopColor="var(--bar)" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="var(--bar)" stopOpacity={0.0} />
                   </linearGradient>
                 </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--chart-grid)" vertical={false} />
                 <XAxis
                   dataKey="date"
-                  tick={{ fontSize: 11, fill: '#64748b' }}
+                  tick={{ fontSize: 11, fill: 'var(--chart-axis)' }}
                   tickLine={false}
-                  axisLine={{ stroke: '#e2e8f0' }}
+                  axisLine={{ stroke: 'var(--chart-border)' }}
                   interval={5}
                 />
                 <YAxis
-                  tick={{ fontSize: 11, fill: '#64748b' }}
+                  tick={{ fontSize: 11, fill: 'var(--chart-axis)' }}
                   tickLine={false}
-                  axisLine={{ stroke: '#e2e8f0' }}
+                  axisLine={{ stroke: 'var(--chart-border)' }}
                   tickFormatter={(v) => (v >= 1000 ? `${(v / 1000).toFixed(0)}k` : v)}
                 />
                 <Tooltip
@@ -412,7 +373,7 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
                       return (
                         <div className="bg-slate-900 text-white p-3 rounded-lg text-xs shadow-lg space-y-1">
                           <p className="font-semibold text-slate-400">{d.date}</p>
-                          <p className="font-bold text-sky-400 text-sm">
+                          <p className="font-bold text-white text-sm">
                             {Number(d.ev_stock).toLocaleString()} Cumulative EVs
                           </p>
                         </div>
@@ -421,11 +382,11 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
                     return null;
                   }}
                 />
-                <Area
+                <Area isAnimationActive={false}
                   type="monotone"
                   dataKey="ev_stock"
                   name="Cumulative EV Stock"
-                  stroke="#0284c7"
+                  stroke="var(--bar)"
                   strokeWidth={2.5}
                   fill="url(#stockGradient)"
                 />
@@ -438,11 +399,11 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
       {/* Two Column Details: Vehicle Category Split + Policy/Context */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Vehicle Category Segmentation */}
-        <div className="lg:col-span-7 bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+        <div className="lg:col-span-7 surface p-5 sm:p-6 space-y-4">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
-                <Layers className="w-4 h-4 text-emerald-600" />
+                <Layers className="w-4 h-4 text-brand-600" />
                 <span>Vehicle Category Mix Evolution (2W / 3W / 4W / Commercial)</span>
               </h3>
               <p className="text-xs text-slate-500">
@@ -458,15 +419,15 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
             {vehicleSplitChartData.length > 0 ? (
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={vehicleSplitChartData} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
-                  <XAxis dataKey="year" tick={{ fontSize: 11, fill: '#64748b' }} axisLine={{ stroke: '#e2e8f0' }} />
-                  <YAxis tick={{ fontSize: 11, fill: '#64748b' }} axisLine={{ stroke: '#e2e8f0' }} tickFormatter={(v) => (v >= 1000 ? `${(v / 1000).toFixed(0)}k` : v)} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="var(--chart-grid)" vertical={false} />
+                  <XAxis dataKey="year" tick={{ fontSize: 11, fill: 'var(--chart-axis)' }} axisLine={{ stroke: 'var(--chart-border)' }} />
+                  <YAxis tick={{ fontSize: 11, fill: 'var(--chart-axis)' }} axisLine={{ stroke: 'var(--chart-border)' }} tickFormatter={(v) => (v >= 1000 ? `${(v / 1000).toFixed(0)}k` : v)} />
                   <Tooltip />
                   <Legend />
-                  <Bar dataKey="2W (Personal)" stackId="a" fill="#10b981" />
-                  <Bar dataKey="3W (Auto/Cargo)" stackId="a" fill="#f59e0b" />
-                  <Bar dataKey="4W (Cars/Fleets)" stackId="a" fill="#3b82f6" />
-                  <Bar dataKey="Commercial" stackId="a" fill="#8b5cf6" />
+                  <Bar isAnimationActive={false} dataKey="2W (Personal)" stackId="a" fill="var(--bar-4)" />
+                  <Bar isAnimationActive={false} dataKey="3W (Auto/Cargo)" stackId="a" fill="var(--bar-3)" />
+                  <Bar isAnimationActive={false} dataKey="4W (Cars/Fleets)" stackId="a" fill="var(--bar-2)" />
+                  <Bar isAnimationActive={false} dataKey="Commercial" stackId="a" fill="var(--bar)" />
                 </BarChart>
               </ResponsiveContainer>
             ) : (
@@ -478,7 +439,7 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
         </div>
 
         {/* Policy, Supply & Environment Profile */}
-        <div className="lg:col-span-5 bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+        <div className="lg:col-span-5 surface p-5 sm:p-6 space-y-4">
           <h3 className="font-bold text-slate-900 text-sm">Contextual & Policy Grounding</h3>
 
           <div className="space-y-3 text-xs">
@@ -488,7 +449,7 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
                 <span
                   className={`px-2 py-0.5 rounded text-[10px] font-bold ${
                     cityFeatures?.policy_verified
-                      ? 'bg-emerald-100 text-emerald-800'
+                      ? 'bg-brand-100 text-brand-800'
                       : 'bg-amber-100 text-amber-800'
                   }`}
                 >
@@ -517,7 +478,7 @@ export const CityDetailView: React.FC<CityDetailViewProps> = ({
             <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
               <div className="flex justify-between items-center">
                 <span className="font-bold text-slate-700">M3 Tournament Fitting</span>
-                <span className="font-mono text-purple-700 font-bold">
+                <span className="font-mono text-slate-700 font-bold">
                   {cityForecast?.winner} (RMSE {cityForecast?.holdout_rmse_rel?.toFixed(3)})
                 </span>
               </div>

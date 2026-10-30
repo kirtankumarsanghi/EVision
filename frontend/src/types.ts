@@ -73,18 +73,29 @@ export interface CityFeatures {
   cpos_10km: number;
   share_fast_10km: number;
   ev_to_charger_ratio_10km: number;
+  /* Optional columns present in the processed feature table. */
+  stations_5km?: number;
+  connectors_5km?: number;
+  fast_5km?: number;
+  cpos_5km?: number;
+  max_kw_p90_5km?: number;
+  share_fast_5km?: number;
+  max_kw_p90_10km?: number;
+  ev_per_fast_10km?: number;
+  effective_public_demand_10km?: number;
   pop_2011: number;
   area_km2_2011: number;
   population_density: number;
   pop_estimate_2023: number;
   boundary_type: string;
   demographic_verified: boolean;
+  boundary_harmonised?: boolean | string;
   fuel_price_inr_per_litre: number;
   fuel_price_date: string;
   ev_policy_score: number;
   policy_name: string;
   policy_status: string;
-  policy_verified: boolean;
+  policy_verified: boolean | string;
   highway_corridor: number;
   tier: string;
   summer_max_temp_c: number;
@@ -219,6 +230,8 @@ export interface Manifest {
   model_rows_dropped: number;
   unobserved_by_city: Record<string, number>;
   unobserved_reason: string;
+  outliers_flagged?: number;
+  stock_regressions?: number;
 }
 
 export interface SeamRow {
@@ -226,15 +239,133 @@ export interface SeamRow {
   dec_2021?: number;
   jan_2022?: number;
   month_ratio?: number;
+  mean_2021?: number;
+  mean_2022?: number;
   level_ratio?: number;
-  ratio?: number;
-  is_flagged?: boolean;
+  seam_flag?: boolean;
 }
 
 export interface VehicleSplit {
   city: string;
   state_code: string;
   year: number;
-  bucket: '2W' | '3W' | '4W' | 'COMM';
+  bucket: '2W' | '3W' | '4W' | 'COMM' | 'OTHER';
   ev_registrations: number;
+}
+
+/* ------------------------------------------------------------------ *
+ * Requirements-first planner
+ * ------------------------------------------------------------------ */
+
+export type PlanMode = 'plan' | 'explore';
+export type PlanStage = 'wizard' | 'results';
+export type TabType =
+  | 'overview'
+  | 'map'
+  | 'hotspots'
+  | 'demand'
+  | 'city'
+  | 'forecast';
+export type CityClass = 'all' | 'metro' | 'tier2';
+export type CorridorPreference = 'any' | 'highway' | 'urban';
+export type SegmentFocus = 'mixed' | '2W' | '3W' | '4W';
+export type SupplyScope = '5km' | '10km' | 'circle';
+export type AllocationStrategy = 'balanced' | 'deficit' | 'growth' | 'volume';
+export type DeploymentHorizon = 6 | 12 | 24;
+
+export interface ScenarioInput {
+  company: string;
+  budgetCr: number;
+  targetUnits: number;
+  dcPct: number;
+  cityClass: CityClass;
+  states: string[];
+  corridor: CorridorPreference;
+  segment: SegmentFocus;
+  supplyScope: SupplyScope;
+  strategy: AllocationStrategy;
+  weightM1: number;
+  weightM2: number;
+  weightM3: number;
+  measuredSplitOnly: boolean;
+  stableForecastOnly: boolean;
+  harmonisedOnly: boolean;
+  minEvStock: number;
+  horizon: DeploymentHorizon;
+  topN: number;
+}
+
+export interface Weights {
+  m1: number;
+  m2: number;
+  m3: number;
+}
+
+export interface CityConfidence {
+  split: 'measured' | 'state' | 'national';
+  forecast: 'ok' | 'weak' | 'unstable';
+  boundary: 'harmonised' | 'estimated';
+  policy: 'verified' | 'provisional';
+}
+
+export interface CityAllocation {
+  rank: number;
+  city: string;
+  state_code: string;
+  cds: number;
+  recommendation: string;
+  zM1: number;
+  pHigh: number;
+  zM3: number;
+  contributions: { m1: number; m2: number; m3: number };
+  evStock: number;
+  demand: number;
+  stations: number;
+  growth: number;
+  projectedGrowth: number;
+  winner: string;
+  segmentShare: number | null;
+  segmentProxy: boolean;
+  tier: string;
+  highway: boolean;
+  policyStatus: string;
+  policyVerified: boolean;
+  confidence: CityConfidence;
+  units: number;
+  fastUnits: number;
+  acUnits: number;
+  sharePct: number;
+  capexCr: number;
+  reasons: string[];
+}
+
+export interface ScenarioTotals {
+  markets: number;
+  considered: number;
+  excluded: number;
+  units: number;
+  fastUnits: number;
+  acUnits: number;
+  capexCr: number;
+  evServed: number;
+  budgetCr: number;
+  budgetLimited: boolean;
+  requestedUnits: number;
+  affordableUnits: number;
+  avgGrowth: number;
+  coveragePct: number;
+}
+
+export interface ExcludedCity {
+  city: string;
+  reason: string;
+}
+
+export interface ScenarioResult {
+  input: ScenarioInput;
+  weights: Weights;
+  dcPct: number;
+  cities: CityAllocation[];
+  excluded: ExcludedCity[];
+  totals: ScenarioTotals;
 }

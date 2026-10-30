@@ -1,109 +1,187 @@
 import React from 'react';
-import { Zap, Activity, Database, CheckCircle2, AlertCircle, RefreshCw } from 'lucide-react';
+import { Compass, LayoutDashboard, Sun, Moon } from 'lucide-react';
 import { BackendStatus } from '../api';
+import { useTheme } from '../lib/theme';
+import { PlanMode, PlanStage, TabType } from '../types';
 
 interface HeaderProps {
+  mode: PlanMode;
+  onModeChange: (mode: PlanMode) => void;
+  activeTab: TabType;
+  onTabChange: (tab: TabType) => void;
+  planStage: PlanStage;
+  onPlanStageChange: (stage: PlanStage) => void;
+  hasResult: boolean;
   backendStatus: BackendStatus;
   isCheckingHealth: boolean;
   onRefreshHealth: () => void;
-  selectedCity: string;
-  onSelectCity: (city: string) => void;
-  cities: Array<{ city: string; state_code: string }>;
 }
 
+const EXPLORE_LINKS: { id: TabType; label: string }[] = [
+  { id: 'overview', label: 'Overview' },
+  { id: 'map', label: 'Map' },
+  { id: 'hotspots', label: 'Rankings' },
+  { id: 'demand', label: 'Demand gap' },
+  { id: 'city', label: 'City profile' },
+  { id: 'forecast', label: 'Forecasts' },
+];
+
+const LogoMark: React.FC = () => (
+  <svg viewBox="0 0 32 32" className="h-8 w-8 shrink-0" aria-hidden="true">
+    <path
+      d="M16 2.4 28 8.9v11.1L16 29.6 4 20V8.9Z"
+      className="fill-slate-900 dark:fill-slate-100"
+    />
+    <path
+      d="M17.8 7.4 10.9 16.9h4.2l-.7 7.1 6.9-10.1h-4.3l.8-6.5Z"
+      className="fill-[#e0915f] dark:fill-[#b85420]"
+    />
+  </svg>
+);
+
 export const Header: React.FC<HeaderProps> = ({
+  mode,
+  onModeChange,
+  activeTab,
+  onTabChange,
+  planStage,
+  onPlanStageChange,
+  hasResult,
   backendStatus,
   isCheckingHealth,
   onRefreshHealth,
-  selectedCity,
-  onSelectCity,
-  cities,
 }) => {
+  const { theme, toggle } = useTheme();
+
+  const linkClass = (active: boolean) =>
+    `relative flex h-14 shrink-0 items-center px-3 text-[13px] font-medium transition-colors ${
+      active ? 'text-slate-900' : 'text-slate-500 hover:text-slate-900'
+    }`;
+
+  const underline = 'absolute inset-x-3 bottom-0 h-[2px] rounded-full bg-[var(--bar)]';
+
+  const exploreLinks = (
+    <>
+      {EXPLORE_LINKS.map((link) => {
+        const active = activeTab === link.id;
+        return (
+          <button
+            key={link.id}
+            type="button"
+            onClick={() => onTabChange(link.id)}
+            aria-current={active ? 'page' : undefined}
+            className={linkClass(active)}
+          >
+            {link.label}
+            {active && <span className={underline} />}
+          </button>
+        );
+      })}
+    </>
+  );
+
+  const planLinks = (
+    <>
+      <button
+        type="button"
+        onClick={() => onPlanStageChange('wizard')}
+        aria-current={planStage === 'wizard' ? 'page' : undefined}
+        className={linkClass(planStage === 'wizard')}
+      >
+        Requirements
+        {planStage === 'wizard' && <span className={underline} />}
+      </button>
+      <button
+        type="button"
+        disabled={!hasResult}
+        onClick={() => onPlanStageChange('results')}
+        title={!hasResult ? 'Run the planner once to see a recommendation' : undefined}
+        className={`${linkClass(planStage === 'results')} ${!hasResult ? 'cursor-not-allowed opacity-35 hover:text-slate-500' : ''}`}
+      >
+        Recommendation
+        {planStage === 'results' && <span className={underline} />}
+      </button>
+    </>
+  );
+
   return (
-    <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo & title */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white shadow-md shadow-emerald-500/20">
-              <Zap className="w-6 h-6 fill-current" />
-            </div>
-            <div>
-              <div className="flex items-center space-x-2">
-                <span className="font-extrabold text-xl tracking-tight text-slate-900">EVision</span>
-                <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold border border-emerald-200">
-                  v0.2.0
-                </span>
-              </div>
-              <p className="text-xs text-slate-500 font-medium hidden sm:block">
-                Quantifying where India's next public EV chargers should go
-              </p>
-            </div>
-          </div>
+    <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/85 backdrop-blur-md dark:border-slate-800/60 dark:bg-slate-950/80">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-14 items-center gap-2">
+          <button
+            type="button"
+            onClick={() => onModeChange('explore')}
+            className="flex items-center gap-2.5 pr-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-md"
+            aria-label="EVision home"
+          >
+            <LogoMark />
+            <span className="font-display text-[21px] font-extrabold leading-none tracking-[-0.045em]">
+              <span className="text-slate-900 dark:text-white">EV</span>
+              <span className="font-medium text-slate-700 dark:text-slate-300">ision</span>
+            </span>
+          </button>
 
-          {/* Quick city selector & status indicator */}
-          <div className="flex items-center space-x-4">
-            {/* Quick city jumper */}
-            <div className="relative hidden md:block">
-              <select
-                value={selectedCity}
-                onChange={(e) => onSelectCity(e.target.value)}
-                className="text-xs font-semibold bg-slate-50 border border-slate-300 text-slate-700 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-              >
-                <option value="">Jump to city analysis...</option>
-                {cities.map((c) => (
-                  <option key={c.city} value={c.city}>
-                    {c.city} ({c.state_code})
-                  </option>
-                ))}
-              </select>
-            </div>
+          <nav className="ml-4 hidden h-14 items-center lg:flex" aria-label="Primary">
+            {mode === 'explore' ? exploreLinks : planLinks}
+          </nav>
 
-            {/* Coverage pill */}
-            <div className="hidden lg:flex items-center space-x-1.5 px-3 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">
-              <Database className="w-3.5 h-3.5 text-slate-500" />
-              <span>51 cities</span>
-              <span className="text-slate-400">·</span>
-              <span className="text-emerald-700 font-semibold">96.9% observed</span>
-            </div>
-
-            {/* Backend connection status */}
-            <div
-              className={`flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-medium border transition-all ${
-                backendStatus.online
-                  ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                  : 'bg-amber-50 text-amber-800 border-amber-200'
-              }`}
+          <div className="ml-auto flex items-center gap-1.5">
+            <button
+              type="button"
+              onClick={onRefreshHealth}
+              disabled={isCheckingHealth}
               title={
                 backendStatus.online
-                  ? 'FastAPI backend connected at port 8000'
-                  : 'FastAPI offline: using pre-built processed datasets'
+                  ? 'Live API connected — refreshing status'
+                  : 'Backend offline — using bundled snapshots'
               }
+              className="flex h-8 w-8 items-center justify-center rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
+              aria-label={backendStatus.online ? 'API online' : 'Using snapshots'}
             >
-              {backendStatus.online ? (
-                <>
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                  </span>
-                  <span className="font-semibold hidden sm:inline">API Online</span>
-                </>
-              ) : (
-                <>
-                  <AlertCircle className="w-3.5 h-3.5 text-amber-600" />
-                  <span className="font-semibold hidden sm:inline">Data Snapshots</span>
-                </>
-              )}
+              <span
+                className={`h-2 w-2 rounded-full ${
+                  backendStatus.online ? 'bg-[#4c6b8a]' : 'bg-[#c07a2c]'
+                } ${isCheckingHealth ? 'animate-pulse' : ''}`}
+              />
+            </button>
+
+            <button
+              type="button"
+              onClick={toggle}
+              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+              title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+              className="flex h-8 w-8 items-center justify-center rounded-md text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-100"
+            >
+              {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </button>
+
+            {mode === 'explore' ? (
               <button
-                onClick={onRefreshHealth}
-                disabled={isCheckingHealth}
-                className="hover:text-slate-900 transition-colors"
-                title="Refresh backend status"
+                type="button"
+                onClick={() => onModeChange('plan')}
+                className="ml-1 inline-flex items-center gap-1.5 rounded-md bg-slate-900 px-3.5 py-2 text-[12px] font-semibold text-white transition-colors hover:bg-slate-800"
               >
-                <RefreshCw className={`w-3 h-3 ${isCheckingHealth ? 'animate-spin' : ''}`} />
+                <Compass className="h-3.5 w-3.5" />
+                Plan a rollout
               </button>
-            </div>
+            ) : (
+              <button
+                type="button"
+                onClick={() => onModeChange('explore')}
+                className="ml-1 inline-flex items-center gap-1.5 rounded-md border border-slate-300 px-3.5 py-2 text-[12px] font-semibold text-slate-700 transition-colors hover:bg-slate-50 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
+              >
+                <LayoutDashboard className="h-3.5 w-3.5" />
+                Explore data
+              </button>
+            )}
           </div>
+        </div>
+
+        {/* Mobile navigation */}
+        <div className="-mx-4 flex overflow-x-auto border-t border-slate-100 px-4 sm:-mx-6 sm:px-6 lg:hidden dark:border-slate-800/60">
+          <nav className="flex h-10 items-center gap-1" aria-label="Sections">
+            {mode === 'explore' ? exploreLinks : planLinks}
+          </nav>
         </div>
       </div>
     </header>

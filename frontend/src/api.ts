@@ -5,12 +5,8 @@ import {
   DemandMetric,
   ForecastSummary,
   ForecastMonthlyPoint,
-  M1Coefficient,
-  M2Comparison,
-  M2Confusion,
   StatsResponse,
   Manifest,
-  SeamRow,
   VehicleSplit,
 } from './types';
 
@@ -20,18 +16,30 @@ import forecastsSnapshot from './data/snapshots/forecasts.json';
 import forecastsMonthlySnapshot from './data/snapshots/forecasts_monthly.json';
 import featuresSnapshot from './data/snapshots/features.json';
 import demandSnapshot from './data/snapshots/demand.json';
-import m1CoefSnapshot from './data/snapshots/m1_coefficients.json';
-import m2CompSnapshot from './data/snapshots/m2_comparison.json';
-import m2ConfSnapshot from './data/snapshots/m2_confusion.json';
 import manifestSnapshot from './data/snapshots/manifest.json';
-import seamSnapshot from './data/snapshots/seam.json';
 import vehicleSplitSnapshot from './data/snapshots/vehicle_split.json';
 import statsSnapshot from './data/snapshots/stats.json';
-import registrationsSnapshot from './data/snapshots/registrations.json';
 import citiesSnapshot from './data/snapshots/cities.json';
-import indiaMapData from './data/india_map_data.json';
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api';
+
+/* Heavy snapshots (registrations, map geometry) are loaded on demand so they do
+ * not sit in the initial bundle. */
+let registrationsCache: Record<string, CityRegistrationPoint[]> | null = null;
+async function loadRegistrations(): Promise<Record<string, CityRegistrationPoint[]>> {
+  if (!registrationsCache) {
+    const mod = await import('./data/snapshots/registrations.json');
+    registrationsCache = mod.default as unknown as Record<string, CityRegistrationPoint[]>;
+  }
+  return registrationsCache;
+}
+
+export interface IndiaMapData {
+  states: Array<{ name: string; path: string }>;
+  city_coords: Record<string, [number, number]>;
+}
+
+let mapCache: IndiaMapData | null = null;
 
 export interface BackendStatus {
   online: boolean;
@@ -87,10 +95,21 @@ export const api = {
   },
 
   async getCityRegistrations(city: string): Promise<{ data: CityRegistrationPoint[]; isLive: boolean }> {
-    const fallback = (registrationsSnapshot as Record<string, CityRegistrationPoint[]>)[city] || [];
-    const res = await safeFetch<any>(`/registrations/${encodeURIComponent(city)}`, { series: fallback });
-    const series = res.data.series || (Array.isArray(res.data) ? res.data : fallback);
-    return { data: series, isLive: res.isLive };
+    try {
+      const res = await fetch(`${API_BASE}/registrations/${encodeURIComponent(city)}`, {
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        const json = await res.json();
+        const series = json.series || (Array.isArray(json) ? json : []);
+        if (series.length > 0) return { data: series, isLive: true };
+      }
+    } catch {
+      /* fall through to snapshot */
+    }
+
+    const snapshot = await loadRegistrations();
+    return { data: snapshot[city] || [], isLive: false };
   },
 
   async getDemand(): Promise<{ data: DemandMetric[]; isLive: boolean }> {
@@ -132,32 +151,6 @@ export const api = {
     return { data: res.data, isLive: res.isLive };
   },
 
-  async getModelsSummary(): Promise<{
-    m1_coefficients: M1Coefficient[];
-    m2_comparison: M2Comparison[];
-    m2_confusion: M2Confusion[];
-    isLive: boolean;
-  }> {
-    const fallback = {
-      m1_coefficients: m1CoefSnapshot as unknown as M1Coefficient[],
-      m2_comparison: m2CompSnapshot as unknown as M2Comparison[],
-      m2_confusion: m2ConfSnapshot as unknown as M2Confusion[],
-    };
-    const res = await safeFetch<any>('/models/summary', fallback);
-    return {
-      m1_coefficients: res.data.m1_coefficients || fallback.m1_coefficients,
-      m2_comparison: res.data.m2_comparison || fallback.m2_comparison,
-      m2_confusion: res.data.m2_confusion || fallback.m2_confusion,
-      isLive: res.isLive,
-    };
-  },
-
-  async getSeam(): Promise<{ data: SeamRow[]; isLive: boolean }> {
-    const res = await safeFetch<any>('/seam', seamSnapshot as unknown as SeamRow[]);
-    const list = Array.isArray(res.data) ? res.data : res.data.rows || (seamSnapshot as unknown as SeamRow[]);
-    return { data: list, isLive: res.isLive };
-  },
-
   getVehicleSplit(city?: string): VehicleSplit[] {
     const data = vehicleSplitSnapshot as unknown as VehicleSplit[];
     if (city) {
@@ -166,7 +159,11 @@ export const api = {
     return data;
   },
 
-  getMapStaticData() {
-    return indiaMapData;
+  async getMapStaticData(): Promise<IndiaMapData> {
+    if (!mapCache) {
+      const mod = await import('./data/india_map_data.json');
+      mapCache = mod.default as unknown as IndiaMapData;
+    }
+    return mapCache;
   },
 };

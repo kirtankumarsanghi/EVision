@@ -10,7 +10,7 @@ statistical framework that ranks Indian cities by charging demand.
 EVision/
 ├── backend/     data, pipeline, API   <- active
 │   └── data/    all data lives here
-└── frontend/    React + Vite dashboard <- complete
+└── frontend/    requirements-first planner + evidence explorer
 ```
 
 ## Status
@@ -24,7 +24,7 @@ EVision/
 | FastAPI service | working |
 | M1 NegBin / M2 Logistic+LDA / M3 SARIMA | fitted; M3 covers all 51 cities |
 | Composite demand score | built (`cds_ranking.csv`, `cds_sensitivity.csv`) |
-| Frontend | **built with React 18, Vite, Tailwind & Recharts** |
+| Frontend | **requirements-first planner + evidence explorer (React 18, Vite, Tailwind, Recharts)** |
 
 **Universe:** `config/cities.yaml` defines 68 cities and every one has Vahan
 registrations, but chargers, census, and petrol cover only 51. The build
@@ -46,6 +46,18 @@ pip install -r requirements.txt
 python scripts/build_user_dataset.py     # builds the 51-city dataset
 python scripts/run_api.py
 ```
+
+```bash
+cd frontend
+npm install
+npm run dev              # http://localhost:5173
+npm run verify:scenario  # CDS parity + allocation invariants
+```
+
+The dashboard opens in **Plan rollout** mode: enter budget, charger target and
+requirements to get a ranked deployment brief. The analytical views live under
+**Explore the evidence**. It works without the API by falling back to bundled
+snapshots.
 
 Deliverables: [`backend/reports/final_report.md`](backend/reports/final_report.md) ·
 [`backend/reports/final_deck.pptx`](backend/reports/final_deck.pptx) ·

@@ -12,6 +12,7 @@ import {
   AlertTriangle,
 } from 'lucide-react';
 import { CityRanking, SplitMethod } from '../types';
+import { PageHeader, Tag, splitTone, tierTone } from './ui';
 
 interface HotspotsViewProps {
   hotspots: CityRanking[];
@@ -157,54 +158,50 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
   };
 
   return (
-    <div className="space-y-6 pb-12">
-      {/* Title & Actions Bar */}
-      <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <div className="flex items-center space-x-2">
-            <Trophy className="w-5 h-5 text-amber-500" />
-            <h2 className="text-xl font-extrabold text-slate-900 tracking-tight">
-              Charging Demand Score (CDS) Hotspot Ranking
-            </h2>
-          </div>
-          <p className="text-xs text-slate-500 mt-1">
-            Official ranking of 51 Indian cities. Formula:{' '}
-            <code className="text-slate-800 bg-slate-100 px-1.5 py-0.5 rounded font-bold">
-              0.4·z(M1 expected) + 0.3·P(high demand) + 0.3·z(M3 growth)
-            </code>
-          </p>
+    <div className="space-y-5 pb-12">
+      <PageHeader
+        eyebrow="Ranking · all 51 cities"
+        icon={Trophy}
+        title="Charging demand ranking"
+        description="Each city is scored with the published formula, then sorted. Open the simulator to see how the order shifts when the model weights change."
+        actions={
+          <>
+            <button
+              onClick={() => setShowSim(!showSim)}
+              className={`inline-flex items-center gap-1.5 rounded-xl border px-3 py-2 text-[11px] font-bold transition-all ${
+                showSim
+                  ? 'border-brand-300 bg-brand-50 text-brand-800'
+                  : 'border-slate-200 bg-white text-slate-700 hover:bg-slate-50'
+              }`}
+            >
+              <Sliders className="h-3.5 w-3.5 text-brand-600" />
+              Sensitivity simulator
+            </button>
+            <button
+              onClick={exportCSV}
+              className="inline-flex items-center gap-1.5 rounded-xl bg-slate-900 px-3 py-2 text-[11px] font-bold text-white shadow-sm transition-colors hover:bg-slate-800"
+            >
+              <Download className="h-3.5 w-3.5" />
+              Export CSV
+            </button>
+          </>
+        }
+      >
+        <div className="flex flex-wrap items-center gap-2 text-[11px] text-slate-500">
+          <span className="font-bold text-slate-700">Formula</span>
+          <code className="rounded-md bg-slate-100 px-2 py-1 font-mono text-[10.5px] font-semibold text-slate-700">
+            0.4·z(M1 expected) + 0.3·P(high demand) + 0.3·z(M3 growth)
+          </code>
         </div>
-
-        <div className="flex items-center space-x-3">
-          <button
-            onClick={() => setShowSim(!showSim)}
-            className={`flex items-center space-x-1.5 px-3 py-2 rounded-xl text-xs font-bold border transition-all ${
-              showSim
-                ? 'bg-emerald-50 text-emerald-800 border-emerald-300'
-                : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
-            }`}
-          >
-            <Sliders className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Sensitivity Simulator</span>
-          </button>
-
-          <button
-            onClick={exportCSV}
-            className="flex items-center space-x-1.5 px-3 py-2 rounded-xl text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white shadow-xs transition-all"
-          >
-            <Download className="w-3.5 h-3.5" />
-            <span>Export CSV</span>
-          </button>
-        </div>
-      </div>
+      </PageHeader>
 
       {/* Weight Sensitivity Simulator Panel */}
       {showSim && (
-        <div className="bg-emerald-50/60 rounded-2xl p-6 border border-emerald-200 shadow-xs space-y-4 animate-in fade-in duration-200">
+        <div className="bg-brand-50/60 rounded-2xl p-6 border border-brand-200 shadow-xs space-y-4 animate-in fade-in duration-200">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-sm font-extrabold text-slate-900 flex items-center space-x-2">
-                <Sliders className="w-4 h-4 text-emerald-600" />
+                <Sliders className="w-4 h-4 text-brand-600" />
                 <span>Live CDS Weight Sensitivity Simulator</span>
               </h3>
               <p className="text-xs text-slate-600 mt-0.5">
@@ -225,7 +222,7 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
             <div className="bg-white p-4 rounded-xl border border-slate-200 space-y-2">
               <div className="flex justify-between items-center text-xs">
                 <span className="font-bold text-slate-800">M1 Expected Monthly (Count)</span>
-                <span className="font-extrabold text-emerald-600">{weightM1.toFixed(2)}</span>
+                <span className="font-extrabold text-brand-600">{weightM1.toFixed(2)}</span>
               </div>
               <input
                 type="range"
@@ -234,7 +231,7 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
                 step="0.05"
                 value={weightM1}
                 onChange={(e) => setWeightM1(parseFloat(e.target.value))}
-                className="w-full accent-emerald-600 cursor-pointer"
+                className="w-full accent-brand-600 cursor-pointer"
               />
               <p className="text-[11px] text-slate-500">Weights market size and volume of monthly EV additions</p>
             </div>
@@ -243,7 +240,7 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
             <div className="bg-white p-4 rounded-xl border border-slate-200 space-y-2">
               <div className="flex justify-between items-center text-xs">
                 <span className="font-bold text-slate-800">M2 P(High Demand) (Classifier)</span>
-                <span className="font-extrabold text-emerald-600">{weightM2.toFixed(2)}</span>
+                <span className="font-extrabold text-brand-600">{weightM2.toFixed(2)}</span>
               </div>
               <input
                 type="range"
@@ -252,7 +249,7 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
                 step="0.05"
                 value={weightM2}
                 onChange={(e) => setWeightM2(parseFloat(e.target.value))}
-                className="w-full accent-emerald-600 cursor-pointer"
+                className="w-full accent-brand-600 cursor-pointer"
               />
               <p className="text-[11px] text-slate-500">Exogenous structural propensity (density, income, corridor)</p>
             </div>
@@ -261,7 +258,7 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
             <div className="bg-white p-4 rounded-xl border border-slate-200 space-y-2">
               <div className="flex justify-between items-center text-xs">
                 <span className="font-bold text-slate-800">M3 12m Growth (SARIMA/HW)</span>
-                <span className="font-extrabold text-emerald-600">{weightM3.toFixed(2)}</span>
+                <span className="font-extrabold text-brand-600">{weightM3.toFixed(2)}</span>
               </div>
               <input
                 type="range"
@@ -270,7 +267,7 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
                 step="0.05"
                 value={weightM3}
                 onChange={(e) => setWeightM3(parseFloat(e.target.value))}
-                className="w-full accent-emerald-600 cursor-pointer"
+                className="w-full accent-brand-600 cursor-pointer"
               />
               <p className="text-[11px] text-slate-500">Forward momentum and adoption speed over the next 12 months</p>
             </div>
@@ -287,7 +284,7 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
             placeholder="Search city or state code..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-9 pr-3 py-2 rounded-xl bg-white border border-slate-200 text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 font-medium"
+            className="w-full pl-9 pr-3 py-2 rounded-xl bg-white border border-slate-200 text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-500 font-medium"
           />
         </div>
 
@@ -295,7 +292,7 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
           <select
             value={tierFilter}
             onChange={(e) => setTierFilter(e.target.value)}
-            className="bg-white border border-slate-200 text-slate-700 font-semibold px-3 py-2 rounded-xl focus:outline-none focus:ring-1 focus:ring-emerald-500"
+            className="bg-white border border-slate-200 text-slate-700 font-semibold px-3 py-2 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-500"
           >
             <option value="all">All Recommendations</option>
             <option value="critical">Critical (CDS ≥ 1.5)</option>
@@ -307,7 +304,7 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
           <select
             value={splitFilter}
             onChange={(e) => setSplitFilter(e.target.value)}
-            className="bg-white border border-slate-200 text-slate-700 font-semibold px-3 py-2 rounded-xl focus:outline-none focus:ring-1 focus:ring-emerald-500"
+            className="bg-white border border-slate-200 text-slate-700 font-semibold px-3 py-2 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-500"
           >
             <option value="all">All Split Methods</option>
             <option value="measured">Measured (42 cities)</option>
@@ -318,7 +315,7 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
       </div>
 
       {/* Table Container */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      <div className="surface overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs border-collapse">
             <thead>
@@ -402,10 +399,6 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
             </thead>
             <tbody className="divide-y divide-slate-100">
               {sortedHotspots.map((city) => {
-                const isCritical = city.cds >= 1.5;
-                const isHigh = city.cds >= 0.75 && city.cds < 1.5;
-                const isModerate = city.cds >= 0 && city.cds < 0.75;
-
                 return (
                   <tr
                     key={city.city}
@@ -419,7 +412,7 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
                       #{city.rank}
                     </td>
                     <td className="py-3 px-4">
-                      <div className="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                      <div className="font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
                         {city.city}
                       </div>
                       <div className="text-[11px] text-slate-400">{city.state_code}</div>
@@ -438,7 +431,7 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
                     <td className="py-3 px-4 text-right font-mono font-bold">
                       <span
                         className={
-                          city.forecast_growth >= 0 ? 'text-emerald-700' : 'text-slate-600'
+                          city.forecast_growth >= 0 ? 'text-slate-900' : 'text-slate-600'
                         }
                       >
                         {(city.forecast_growth * 100).toFixed(0)}%
@@ -451,27 +444,15 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
                       {city.stations_10km}
                     </td>
                     <td className="py-3 px-4">
-                      <span
-                        className={`text-[11px] px-2.5 py-0.5 rounded-full inline-block ${
-                          isCritical
-                            ? 'tag-critical'
-                            : isHigh
-                            ? 'tag-high'
-                            : isModerate
-                            ? 'tag-moderate'
-                            : 'tag-low'
-                        }`}
-                      >
+                      <Tag tone={tierTone(city.cds)}>
                         {city.recommendation.split('—')[0].trim()}
-                      </span>
+                      </Tag>
                     </td>
                     <td className="py-3 px-4">
-                      <span className={`badge-${city.split_method}`}>
-                        {city.split_method}
-                      </span>
+                      <Tag tone={splitTone(city.split_method)}>{city.split_method}</Tag>
                     </td>
                     <td className="py-3 px-3 text-right">
-                      <span className="text-slate-400 group-hover:text-emerald-600 transition-colors">
+                      <span className="text-slate-300 transition-colors group-hover:text-brand-600">
                         <ChevronRight className="w-4 h-4 ml-auto" />
                       </span>
                     </td>
@@ -489,15 +470,15 @@ export const HotspotsView: React.FC<HotspotsViewProps> = ({
           </div>
           <div className="flex items-center space-x-3 text-[11px]">
             <span className="flex items-center space-x-1">
-              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span className="w-2 h-2 rounded-full bg-[#4c6b8a]"></span>
               <span>Measured 2W/3W/4W (42)</span>
             </span>
             <span className="flex items-center space-x-1">
-              <span className="w-2 h-2 rounded-full bg-amber-500"></span>
+              <span className="w-2 h-2 rounded-full bg-[#c07a2c]"></span>
               <span>State Proxy (6)</span>
             </span>
             <span className="flex items-center space-x-1">
-              <span className="w-2 h-2 rounded-full bg-rose-500"></span>
+              <span className="w-2 h-2 rounded-full bg-[#a63d33]"></span>
               <span>National Proxy (3)</span>
             </span>
           </div>

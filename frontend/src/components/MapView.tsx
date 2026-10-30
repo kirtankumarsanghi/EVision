@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   ZoomIn,
   ZoomOut,
@@ -12,7 +12,8 @@ import {
   Layers,
 } from 'lucide-react';
 import { CityRanking } from '../types';
-import { api } from '../api';
+import { api, IndiaMapData } from '../api';
+import { PageHeader, Tag, splitTone, tierTone } from './ui';
 
 interface MapViewProps {
   hotspots: CityRanking[];
@@ -25,9 +26,20 @@ export const MapView: React.FC<MapViewProps> = ({
   onSelectCity,
   onNavigateCityDetail,
 }) => {
-  const mapData = useMemo(() => api.getMapStaticData(), []);
+  const [mapData, setMapData] = useState<IndiaMapData | null>(null);
+  useEffect(() => {
+    let alive = true;
+    api.getMapStaticData().then((data) => {
+      if (alive) setMapData(data);
+    });
+    return () => {
+      alive = false;
+    };
+  }, []);
   const [zoom, setZoom] = useState<number>(1);
   const [pan, setPan] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [dragging, setDragging] = useState<boolean>(false);
+  const [dragOrigin, setDragOrigin] = useState<{ x: number; y: number } | null>(null);
   const [hoveredCity, setHoveredCity] = useState<CityRanking | null>(null);
   const [hoveredState, setHoveredState] = useState<string | null>(null);
   const [selectedCity, setSelectedCity] = useState<CityRanking | null>(hotspots[0] || null);
@@ -37,7 +49,8 @@ export const MapView: React.FC<MapViewProps> = ({
   const [showLabels, setShowLabels] = useState<boolean>(true);
 
   // Map coordinates projection
-  const { states, city_coords } = mapData;
+  const states = mapData?.states ?? [];
+  const city_coords = mapData?.city_coords ?? {};
   const WIDTH = 820;
   const HEIGHT = 900;
   const LON_MIN = 66.0;
@@ -105,25 +118,25 @@ export const MapView: React.FC<MapViewProps> = ({
 
   const getStateColor = (stateName: string) => {
     const code = stateCodeMap[stateName];
-    if (choroplethMode === 'off' || !code) return '#f1f5f9';
+    if (choroplethMode === 'off' || !code) return 'var(--map-base)';
 
     if (choroplethMode === 'policy') {
       const score = statePolicyScores[code] || 1;
-      if (score >= 3) return '#bae6fd'; // Sky blue - Score 3
-      if (score >= 2) return '#e0f2fe'; // Light sky - Score 2
-      return '#f8fafc'; // Neutral - Score 1
+      if (score >= 3) return 'var(--map-blue-strong)';
+      if (score >= 2) return 'var(--map-blue-mid)';
+      return 'var(--map-base-soft)';
     }
 
     if (choroplethMode === 'fleet') {
       const fleet = stateFleetTotals[code] || 0;
-      if (fleet === 0) return '#f8fafc';
+      if (fleet === 0) return 'var(--map-base-soft)';
       const ratio = fleet / maxStateFleet;
-      if (ratio > 0.6) return '#bbf7d0'; // High density green
-      if (ratio > 0.25) return '#dcfce7'; // Medium green
-      return '#f0fdf4'; // Light green
+      if (ratio > 0.6) return 'var(--map-strong)';
+      if (ratio > 0.25) return 'var(--map-mid)';
+      return 'var(--map-soft)';
     }
 
-    return '#f1f5f9';
+    return 'var(--map-base)';
   };
 
   const maxCds = useMemo(() => Math.max(...hotspots.map((c) => c.cds || 1)), [hotspots]);
@@ -135,10 +148,10 @@ export const MapView: React.FC<MapViewProps> = ({
 
   // Color determination for city bubbles
   const getCityColor = (cds: number) => {
-    if (cds >= 1.5) return '#dc2626'; // Critical - Red
-    if (cds >= 0.75) return '#ea580c'; // High - Orange
-    if (cds >= 0.0) return '#0284c7'; // Moderate - Blue
-    return '#64748b'; // Low - Slate
+    if (cds >= 1.5) return '#a63d33'; // Critical - Red
+    if (cds >= 0.75) return '#c07a2c'; // High - Orange
+    if (cds >= 0.0) return '#5f7d8c'; // Moderate - Blue
+    return '#8a8178'; // Low - Slate
   };
 
   // Filtered hotspots
@@ -179,21 +192,15 @@ export const MapView: React.FC<MapViewProps> = ({
   const activeFocus = hoveredCity || selectedCity || hotspots[0];
 
   return (
-    <div className="space-y-6 pb-12">
-      {/* Header & Controls bar */}
-      <div className="bg-white rounded-3xl p-5 sm:p-6 border border-slate-200 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <h2 className="text-xl font-extrabold text-slate-900 tracking-tight flex items-center space-x-2">
-            <MapPin className="w-5 h-5 text-emerald-600" />
-            <span>Interactive India Choropleth & Charging Demand Map</span>
-          </h2>
-          <p className="text-xs text-slate-500 mt-1">
-            51 monitored cities across 35 Indian states and union territories. Shaded state choropleth with priority hotspots.
-          </p>
-        </div>
-
+    <div className="space-y-5 pb-12">
+      <PageHeader
+        eyebrow="Map · 51 monitored cities"
+        icon={MapPin}
+        title="Where demand concentrates"
+        description="State shading shows adoption intensity or policy strength; bubbles show priority. Drag to pan, zoom with the controls, and click a city to inspect it."
+      >
         {/* Filter controls */}
-        <div className="flex flex-wrap items-center gap-2 text-xs">
+        <div className="flex flex-wrap items-center gap-2 text-[11px]">
           {/* Choropleth Layer Selector */}
           <div className="flex items-center space-x-1 bg-slate-100 p-1 rounded-xl">
             <span className="text-[11px] font-bold text-slate-500 px-2 flex items-center space-x-1">
@@ -204,7 +211,7 @@ export const MapView: React.FC<MapViewProps> = ({
               onClick={() => setChoroplethMode('fleet')}
               className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
                 choroplethMode === 'fleet'
-                  ? 'bg-emerald-600 text-white shadow-xs'
+                  ? 'bg-slate-900 text-white shadow-xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -214,7 +221,7 @@ export const MapView: React.FC<MapViewProps> = ({
               onClick={() => setChoroplethMode('policy')}
               className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
                 choroplethMode === 'policy'
-                  ? 'bg-sky-600 text-white shadow-xs'
+                  ? 'bg-[#5f7d8c] text-white shadow-xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -270,7 +277,7 @@ export const MapView: React.FC<MapViewProps> = ({
           <select
             value={tierFilter}
             onChange={(e) => setTierFilter(e.target.value)}
-            className="bg-slate-50 border border-slate-200 text-slate-700 font-semibold px-2.5 py-1.5 rounded-xl focus:outline-none focus:ring-1 focus:ring-emerald-500"
+            className="bg-slate-50 border border-slate-200 text-slate-700 font-semibold px-2.5 py-1.5 rounded-xl focus:outline-none focus:ring-1 focus:ring-brand-500"
           >
             <option value="all">All Tiers (51)</option>
             <option value="critical">Critical (≥ 1.5)</option>
@@ -285,17 +292,17 @@ export const MapView: React.FC<MapViewProps> = ({
               type="checkbox"
               checked={showLabels}
               onChange={(e) => setShowLabels(e.target.checked)}
-              className="rounded text-emerald-600 focus:ring-emerald-500"
+              className="rounded text-brand-600 focus:ring-brand-500"
             />
             <span>Labels</span>
           </label>
         </div>
-      </div>
+      </PageHeader>
 
       {/* Map + Detail sidebar layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* SVG Map Canvas */}
-        <div className="lg:col-span-8 bg-white rounded-3xl border border-slate-200 shadow-sm p-4 relative overflow-hidden">
+        <div className="lg:col-span-8 surface p-4 relative overflow-hidden">
           {/* Zoom controls float */}
           <div className="absolute top-6 left-6 z-10 flex flex-col space-y-1 bg-white/95 backdrop-blur-xs border border-slate-200 rounded-xl shadow-md p-1">
             <button
@@ -334,15 +341,15 @@ export const MapView: React.FC<MapViewProps> = ({
             {/* City Bubble scale */}
             <div className="space-y-1 border-b border-slate-100 pb-2">
               <div className="flex items-center space-x-2">
-                <span className="w-3 h-3 rounded-full bg-red-600"></span>
+                <span className="w-3 h-3 rounded-full bg-[#a63d33]"></span>
                 <span className="font-semibold text-slate-800">Critical (CDS ≥ 1.5)</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="w-3 h-3 rounded-full bg-orange-500"></span>
+                <span className="w-3 h-3 rounded-full bg-[#c07a2c]"></span>
                 <span className="font-semibold text-slate-800">High (0.75 – 1.5)</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="w-3 h-3 rounded-full bg-sky-600"></span>
+                <span className="w-3 h-3 rounded-full bg-[#5f7d8c]"></span>
                 <span>Moderate (0 – 0.75)</span>
               </div>
             </div>
@@ -354,13 +361,13 @@ export const MapView: React.FC<MapViewProps> = ({
                   <span
                     className={`w-3.5 h-3 rounded border ${
                       choroplethMode === 'fleet'
-                        ? 'bg-emerald-200 border-emerald-300'
-                        : 'bg-sky-200 border-sky-300'
+                        ? 'bg-[#ecd3b6] border-[#dfb98f]'
+                        : 'bg-[#e3e7ee] border-[#cbd5e3]'
                     }`}
                   ></span>
                   <span>
                     {choroplethMode === 'fleet'
-                      ? 'Darker green = higher state EV fleet'
+                      ? 'Stronger copper = higher state EV fleet'
                       : 'Blue shading = high policy incentive score'}
                   </span>
                 </div>
@@ -369,13 +376,35 @@ export const MapView: React.FC<MapViewProps> = ({
           </div>
 
           {/* SVG Map */}
-          <div className="w-full flex items-center justify-center overflow-hidden min-h-[580px]">
+          <div className="w-full flex items-center justify-center overflow-hidden min-h-[580px] relative">
+            {!mapData && (
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-xs text-slate-400">
+                <div className="h-6 w-6 rounded-full border-2 border-slate-200 border-t-brand-500 animate-spin" />
+                Loading map geometry…
+              </div>
+            )}
             <svg
               viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
               className="w-full max-h-[720px] transition-transform duration-200 ease-out cursor-grab active:cursor-grabbing"
               style={{
                 transform: `scale(${zoom}) translate(${pan.x}px, ${pan.y}px)`,
                 transformOrigin: 'center center',
+              }}
+              onMouseDown={(e) => {
+                setDragging(true);
+                setDragOrigin({ x: e.clientX - pan.x, y: e.clientY - pan.y });
+              }}
+              onMouseMove={(e) => {
+                if (!dragging || !dragOrigin) return;
+                setPan({ x: e.clientX - dragOrigin.x, y: e.clientY - dragOrigin.y });
+              }}
+              onMouseUp={() => {
+                setDragging(false);
+                setDragOrigin(null);
+              }}
+              onMouseLeave={() => {
+                setDragging(false);
+                setDragOrigin(null);
               }}
             >
               {/* State Choropleth Polygons */}
@@ -388,7 +417,7 @@ export const MapView: React.FC<MapViewProps> = ({
                       key={`${st.name}-${idx}`}
                       d={st.path}
                       fill={stateFill}
-                      stroke={isHoveredState ? '#0f172a' : '#cbd5e1'}
+                      stroke={isHoveredState ? 'var(--text)' : 'var(--map-stroke)'}
                       strokeWidth={isHoveredState ? '1.5' : '0.75'}
                       onMouseEnter={() => setHoveredState(st.name)}
                       onMouseLeave={() => setHoveredState(null)}
@@ -443,7 +472,7 @@ export const MapView: React.FC<MapViewProps> = ({
                         r={isHovered || isSelected ? r * 1.3 : r}
                         fill={color}
                         fillOpacity={isHovered || isSelected ? 0.95 : 0.8}
-                        stroke="#ffffff"
+                        stroke="var(--surface)"
                         strokeWidth={isSelected ? '2.5' : '1.2'}
                         className="transition-all duration-150 drop-shadow-sm"
                       />
@@ -455,7 +484,7 @@ export const MapView: React.FC<MapViewProps> = ({
                           y={cy - r - 3}
                           fontSize={isSelected || isHovered ? '11' : '8.5'}
                           fontWeight={isSelected || isHovered ? '800' : '700'}
-                          fill="#0f172a"
+                          fill="var(--text)"
                           textAnchor="middle"
                           className="select-none pointer-events-none drop-shadow-xs"
                         >
@@ -473,22 +502,14 @@ export const MapView: React.FC<MapViewProps> = ({
         {/* Selected City Details Panel */}
         <div className="lg:col-span-4 space-y-4">
           {activeFocus ? (
-            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-5">
+            <div className="surface p-6 space-y-5">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-extrabold px-2.5 py-1 rounded-md bg-slate-900 text-white">
                   Rank #{activeFocus.rank} of 51
                 </span>
-                <span
-                  className={`text-xs font-bold px-2.5 py-1 rounded-full ${
-                    activeFocus.cds >= 1.5
-                      ? 'tag-critical'
-                      : activeFocus.cds >= 0.75
-                      ? 'tag-high'
-                      : 'tag-moderate'
-                  }`}
-                >
+                <Tag tone={tierTone(activeFocus.cds)}>
                   {activeFocus.recommendation.split('—')[0].trim()}
-                </span>
+                </Tag>
               </div>
 
               <div>
@@ -496,7 +517,7 @@ export const MapView: React.FC<MapViewProps> = ({
                   {activeFocus.city}
                 </h3>
                 <p className="text-xs text-slate-500 font-medium">State: {activeFocus.state_code}</p>
-                <p className="text-xs text-slate-700 italic mt-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                <p className="mt-2 border-l-2 border-brand-400 pl-2.5 text-[11px] italic leading-relaxed text-slate-600">
                   {activeFocus.recommendation}
                 </p>
               </div>
@@ -525,7 +546,7 @@ export const MapView: React.FC<MapViewProps> = ({
                   <span className="text-slate-500">M3 12m Forward Growth</span>
                   <span
                     className={`font-bold font-mono ${
-                      activeFocus.forecast_growth >= 0 ? 'text-emerald-700' : 'text-rose-600'
+                      activeFocus.forecast_growth >= 0 ? 'text-slate-900' : 'text-rose-600'
                     }`}
                   >
                     {(activeFocus.forecast_growth * 100).toFixed(1)}% ({activeFocus.winner})
@@ -545,9 +566,7 @@ export const MapView: React.FC<MapViewProps> = ({
                 </div>
                 <div className="flex justify-between items-center py-1">
                   <span className="text-slate-500">Split Method</span>
-                  <span className={`badge-${activeFocus.split_method}`}>
-                    {activeFocus.split_method}
-                  </span>
+                  <Tag tone={splitTone(activeFocus.split_method)}>{activeFocus.split_method}</Tag>
                 </div>
               </div>
 
@@ -557,23 +576,23 @@ export const MapView: React.FC<MapViewProps> = ({
                   onSelectCity(activeFocus.city);
                   onNavigateCityDetail(activeFocus.city);
                 }}
-                className="w-full flex items-center justify-center space-x-2 py-3 px-4 rounded-xl bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs shadow-md transition-all group"
+                className="w-full flex items-center justify-center space-x-2 py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs shadow-md transition-all group"
               >
                 <span>Launch {activeFocus.city} Deep Dive</span>
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           ) : (
-            <div className="bg-white rounded-3xl p-8 border border-slate-200 text-center text-slate-500 text-xs">
+            <div className="surface p-8 text-center text-slate-500 text-xs">
               <Info className="w-6 h-6 mx-auto mb-2 text-slate-400" />
               Hover or click any city on the choropleth map to inspect its metrics.
             </div>
           )}
 
           {/* Siting Guidelines card */}
-          <div className="bg-emerald-50/60 rounded-3xl p-5 border border-emerald-200 text-xs space-y-2 text-slate-700">
-            <div className="flex items-center space-x-1.5 font-bold text-emerald-950">
-              <Zap className="w-4 h-4 text-emerald-600" />
+          <div className="rounded-2xl p-5 border border-brand-200 bg-brand-50/60 text-xs space-y-2 text-slate-700">
+            <div className="flex items-center space-x-1.5 font-bold text-brand-950">
+              <Zap className="w-4 h-4 text-brand-600" />
               <span>Siting Strategy for Major CPOs</span>
             </div>
             <p className="leading-relaxed">

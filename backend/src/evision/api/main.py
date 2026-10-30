@@ -256,6 +256,9 @@ def demand() -> dict:
             "split_method",
             "charger_scope",
             "has_chargers",
+            "stations_10km",
+            "fast_10km",
+            "ev_to_charger_ratio_10km",
         )
         if c in frame.columns
     ]
@@ -291,6 +294,8 @@ def forecasts_monthly(city: str | None = Query(default=None)) -> dict:
     frame = _require(monthly_path, "monthly forecasts", "scripts/run_models.py")
     if city:
         frame = frame[frame["city"].str.lower() == city.lower()]
+    frame = frame.copy()
+    frame["date"] = pd.to_datetime(frame["date"]).dt.strftime("%Y-%m-%d")
     return {"count": len(frame), "rows": frame.to_dict("records")}
 
 

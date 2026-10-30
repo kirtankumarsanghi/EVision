@@ -1,495 +1,398 @@
 import React from 'react';
 import {
-  TrendingUp,
-  MapPin,
-  Zap,
-  ShieldAlert,
   ArrowRight,
   BarChart3,
-  CheckCircle2,
-  AlertTriangle,
-  Layers,
-  HelpCircle,
-  Building2,
   Calculator,
-  Compass,
-  Sparkles,
+  CheckCircle2,
+  MapPin,
+  ShieldAlert,
+  TrendingUp,
+  Zap,
 } from 'lucide-react';
 import {
-  AreaChart,
   Area,
+  AreaChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
 } from 'recharts';
-import { CityRanking, StatsResponse } from '../types';
-import { TabType } from './Navigation';
+import { CityRanking, StatsResponse, TabType } from '../types';
+import { SectionTitle, StatGroup } from './ui';
+import { HeroScene } from './HeroScene';
 
 interface OverviewViewProps {
   hotspots: CityRanking[];
   stats: StatsResponse | null;
   onNavigateTab: (tab: TabType) => void;
   onSelectCity: (city: string) => void;
+  onOpenPlanner: () => void;
 }
+
+const tierDot = (cds: number) =>
+  cds >= 1.5
+    ? 'bg-[#a63d33]'
+    : cds >= 0.75
+    ? 'bg-[#c07a2c]'
+    : cds >= 0
+    ? 'bg-[#5f7d8c]'
+    : 'bg-[#8a8178]';
 
 export const OverviewView: React.FC<OverviewViewProps> = ({
   hotspots,
   stats,
   onNavigateTab,
   onSelectCity,
+  onOpenPlanner,
 }) => {
   const topFive = hotspots.slice(0, 5);
+  const topCity = topFive[0];
+
+  const fastestGrowth = React.useMemo(
+    () => [...hotspots].sort((a, b) => b.forecast_growth - a.forecast_growth)[0],
+    [hotspots]
+  );
+  const sharpestGap = React.useMemo(
+    () => [...hotspots].sort((a, b) => b.effective_public_demand - a.effective_public_demand)[0],
+    [hotspots]
+  );
 
   const nationalSeries = React.useMemo(() => {
     if (!stats?.national_monthly) return [];
-    return Object.entries(stats.national_monthly).map(([date, count]) => ({
-      date,
-      count,
-    }));
+    return Object.entries(stats.national_monthly).map(([date, count]) => ({ date, count }));
   }, [stats]);
 
-  const totalStockAcrossAnalysed = React.useMemo(() => {
-    return hotspots.reduce((acc, h) => acc + (h.ev_stock || 0), 0);
-  }, [hotspots]);
+  const totalStock = React.useMemo(
+    () => hotspots.reduce((acc, h) => acc + (h.ev_stock || 0), 0),
+    [hotspots]
+  );
+
+  const objectives: {
+    id: string;
+    title: string;
+    body: string;
+    tab?: TabType;
+    note?: string;
+  }[] = [
+    {
+      id: 'Obj 1',
+      title: 'Quantify public demand',
+      body: 'Weight demand by how much each vehicle class relies on public charging (0.15·2W, 0.70·3W, 1.00·4W, 0.60·commercial).',
+      tab: 'demand',
+    },
+    {
+      id: 'Obj 2',
+      title: 'Find adoption drivers',
+      body: 'Negative-binomial count model over income, density, policy and market size.',
+      note: 'Coefficients in final_report.md',
+    },
+    {
+      id: 'Obj 3',
+      title: 'Classify high demand',
+      body: 'Logistic regression and LDA using background factors only, with zero label leakage.',
+      note: 'Model comparison in final_report.md',
+    },
+    {
+      id: 'Obj 4',
+      title: 'Forecast 12 months',
+      body: 'SARIMA versus Holt-Winters on a holdout window, per city.',
+      tab: 'forecast',
+    },
+    {
+      id: 'Obj 5',
+      title: 'Rank the hotspots',
+      body: 'Combine the three models into one Charging Demand Score and rank all 51 cities.',
+      tab: 'hotspots',
+    },
+  ];
 
   return (
-    <div className="space-y-8 pb-12">
-      {/* Real-World Problem & Question Hero Section */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-950 text-white p-6 sm:p-10 shadow-2xl border border-slate-800">
-        <div className="relative z-10 max-w-4xl space-y-5">
-          {/* Tag */}
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-xs font-bold tracking-wide">
-            <Zap className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
-            <span>THE REAL-WORLD PROBLEM & SITING ENGINE</span>
-          </div>
-
-          {/* Heading */}
-          <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
-            India has over <span className="text-emerald-400">3,000,000 EVs</span> on the road,
-            but only about <span className="text-amber-400">12,000 public chargers</span>.
-          </h1>
-
-          {/* Problem Narrative & CPO Billions */}
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
-            Major Charge Point Operators (CPOs) like <b className="text-white">Tata Power</b>,{' '}
-            <b className="text-white">Ola Electric</b>, and <b className="text-white">Jio-bp</b> are
-            spending billions of rupees to build out nationwide charging networks. But every planner
-            faces one massive capital risk:
-          </p>
-
-          {/* The Million-Dollar Question Box */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-emerald-400/30 shadow-inner flex items-start space-x-3">
-            <span className="text-2xl">⚡</span>
-            <div>
-              <p className="text-base sm:text-lg font-bold text-emerald-200 italic">
-                “Where should we install the next 100,000 chargers to make sure they get used and
-                don't sit empty?”
-              </p>
-              <p className="text-xs text-slate-300 mt-1">
-                Avoiding stranded assets and unutilized infrastructure through empirical demand modeling.
-              </p>
+    <div className="space-y-6 pb-12">
+      {/* Editorial hero — text left, live 3D field right, no card around it */}
+      <section className="relative animate-fade-up border-b border-slate-200/70 pb-8">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-5">
+            <div className="eyebrow flex items-center gap-1.5">
+              <Zap className="h-3.5 w-3.5" />
+              EV charging siting
             </div>
-          </div>
 
-          {/* Our Solution Summary */}
-          <div className="pt-2 space-y-2">
-            <h2 className="text-sm font-extrabold uppercase tracking-wider text-emerald-400">
-              Our Solution
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              We built a statistical and machine learning system that analyzes <b>51 top Indian cities</b>.
-              By combining monthly EV sales history (2021–2026), existing charger supply, Census 2011 demographics,
-              petrol prices, and state policies, our system forecasts future EV growth and ranks cities
-              from <b>#1 (highest charging demand)</b> to <b>#51 (lowest charging demand)</b>.
+            <h1 className="mt-3 font-display text-[2.15rem] font-extrabold leading-[1.06] tracking-[-0.03em] text-slate-900 sm:text-[2.9rem]">
+              Where should India's next public chargers go?
+            </h1>
+
+            <p className="mt-4 max-w-xl text-[13.5px] leading-relaxed text-slate-600">
+              Charging demand is not directly observed, and a raw EV-per-charger ratio misleads:
+              two-wheelers mostly charge at home while autos and cars depend on public infrastructure.
+              EVision models demand across {hotspots.length} cities and ranks where new capacity is
+              genuinely needed.
             </p>
-          </div>
 
-          {/* Direct CTA Buttons */}
-          <div className="pt-4 flex flex-wrap gap-3">
-            <button
-              onClick={() => onNavigateTab('allocation')}
-              className="inline-flex items-center space-x-2 px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-black text-xs sm:text-sm shadow-lg shadow-emerald-500/25 transition-all"
-            >
-              <Calculator className="w-4 h-4" />
-              <span>Launch Next 100k Siting Planner</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-            <button
-              onClick={() => onNavigateTab('map')}
-              className="inline-flex items-center space-x-2 px-4 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/20 transition-all"
-            >
-              <MapPin className="w-4 h-4" />
-              <span>View Choropleth Map</span>
-            </button>
-            <button
-              onClick={() => onNavigateTab('hotspots')}
-              className="inline-flex items-center space-x-2 px-4 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/20 transition-all"
-            >
-              <BarChart3 className="w-4 h-4" />
-              <span>51-City Hotspot Ranking</span>
-            </button>
-          </div>
-        </div>
-
-        {/* Decorative background glow */}
-        <div className="absolute right-0 bottom-0 opacity-20 pointer-events-none transform translate-x-12 translate-y-12">
-          <div className="w-[500px] h-[500px] rounded-full bg-emerald-500 blur-3xl"></div>
-        </div>
-      </div>
-
-      {/* KPI Headline Metrics */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:border-slate-300 transition-all">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-              Analysed Fleet
-            </span>
-            <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-xs">
-              EV
-            </div>
-          </div>
-          <p className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
-            {totalStockAcrossAnalysed.toLocaleString()}
-          </p>
-          <p className="text-xs text-slate-500 mt-1 flex items-center">
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 mr-1 inline" />
-            Across 51 top Indian urban centers
-          </p>
-        </div>
-
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:border-slate-300 transition-all">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-              #1 Ranked Hub
-            </span>
-            <div className="w-8 h-8 rounded-lg bg-red-50 text-red-700 flex items-center justify-center font-bold text-xs">
-              #1
-            </div>
-          </div>
-          <p className="text-2xl sm:text-3xl font-extrabold text-red-600 mt-2">Delhi</p>
-          <p className="text-xs text-slate-500 mt-1">
-            CDS <span className="font-bold text-slate-800">1.706</span> · Critical priority
-          </p>
-        </div>
-
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:border-slate-300 transition-all">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-              Fastest 12m Growth
-            </span>
-            <div className="w-8 h-8 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center font-bold">
-              <TrendingUp className="w-4 h-4" />
-            </div>
-          </div>
-          <p className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Guwahati</p>
-          <p className="text-xs text-purple-700 font-semibold mt-1">
-            +234% 12m growth outlook (HW)
-          </p>
-        </div>
-
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:border-slate-300 transition-all">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-              Sharpest Charger Gap
-            </span>
-            <div className="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center font-bold">
-              <ShieldAlert className="w-4 h-4" />
-            </div>
-          </div>
-          <p className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Patna</p>
-          <p className="text-xs text-amber-800 font-semibold mt-1">
-            390 effective demand / station
-          </p>
-        </div>
-      </div>
-
-      {/* The 5 Core Objectives Interactive Grid */}
-      <div className="space-y-4">
-        <div>
-          <h2 className="text-xl font-extrabold text-slate-900 tracking-tight flex items-center space-x-2">
-            <Compass className="w-5 h-5 text-emerald-600" />
-            <span>The Five Core Analytical Objectives</span>
-          </h2>
-          <p className="text-xs text-slate-500 mt-0.5">
-            How EVision systematically answers where chargers must go through quantitative modeling.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-          {/* Objective 1 */}
-          <div
-            onClick={() => onNavigateTab('demand')}
-            className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-md hover:border-emerald-500 cursor-pointer transition-all group flex flex-col justify-between"
-          >
-            <div className="space-y-2">
-              <div className="w-8 h-8 rounded-xl bg-amber-50 text-amber-700 font-bold flex items-center justify-center text-xs">
-                Obj 1
-              </div>
-              <h3 className="font-extrabold text-sm text-slate-900 group-hover:text-emerald-600 transition-colors">
-                Quantify Effective Public Demand
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Formulate a weighted metric accounting for vehicle class charging behaviors (0.15·2W + 0.70·3W + 1.00·4W + 0.60·COMM) divided by comparable 10km supply.
-              </p>
-            </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-emerald-600 font-bold">
-              <span>View Gap Analysis</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </div>
-
-          {/* Objective 2 */}
-          <div
-            onClick={() => onNavigateTab('models')}
-            className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-md hover:border-emerald-500 cursor-pointer transition-all group flex flex-col justify-between"
-          >
-            <div className="space-y-2">
-              <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-700 font-bold flex items-center justify-center text-xs">
-                Obj 2
-              </div>
-              <h3 className="font-extrabold text-sm text-slate-900 group-hover:text-emerald-600 transition-colors">
-                Identify Adoption Drivers (Count Model)
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Model monthly registration volumes against socioeconomic, density, and policy predictors using Negative Binomial Regression (IRR 2.13 non-EV market).
-              </p>
-            </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-emerald-600 font-bold">
-              <span>View M1 Drivers</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </div>
-
-          {/* Objective 3 */}
-          <div
-            onClick={() => onNavigateTab('models')}
-            className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-md hover:border-emerald-500 cursor-pointer transition-all group flex flex-col justify-between"
-          >
-            <div className="space-y-2">
-              <div className="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-700 font-bold flex items-center justify-center text-xs">
-                Obj 3
-              </div>
-              <h3 className="font-extrabold text-sm text-slate-900 group-hover:text-emerald-600 transition-colors">
-                Classify High-Demand Zones
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Predict whether a city falls into "High" or "Low" demand buckets with 0.915 CV-AUC using Logistic Regression & LDA over exogenous demographic signals.
-              </p>
-            </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-emerald-600 font-bold">
-              <span>View M2 Classifier</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </div>
-
-          {/* Objective 4 */}
-          <div
-            onClick={() => onNavigateTab('forecast')}
-            className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-md hover:border-emerald-500 cursor-pointer transition-all group flex flex-col justify-between"
-          >
-            <div className="space-y-2">
-              <div className="w-8 h-8 rounded-xl bg-purple-50 text-purple-700 font-bold flex items-center justify-center text-xs">
-                Obj 4
-              </div>
-              <h3 className="font-extrabold text-sm text-slate-900 group-hover:text-emerald-600 transition-colors">
-                Forecast Growth Trajectories
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Forecast 12-month forward EV growth across all 51 cities using a rigorous tournament between SARIMA and Holt-Winters holdout evaluations.
-              </p>
-            </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-emerald-600 font-bold">
-              <span>View M3 Forecasts</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </div>
-
-          {/* Objective 5 */}
-          <div
-            onClick={() => onNavigateTab('hotspots')}
-            className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-md hover:border-emerald-500 cursor-pointer transition-all group flex flex-col justify-between"
-          >
-            <div className="space-y-2">
-              <div className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-700 font-bold flex items-center justify-center text-xs">
-                Obj 5
-              </div>
-              <h3 className="font-extrabold text-sm text-slate-900 group-hover:text-emerald-600 transition-colors">
-                Synthesize & Rank Hotspots (CDS)
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Combine count, classification, and forecast outputs into the composite Charging Demand Score (CDS) and visualize priority corridors on the map.
-              </p>
-            </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-emerald-600 font-bold">
-              <span>View CDS Rankings</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Top 5 Hotspot Cards */}
-      <div className="space-y-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-lg font-bold text-slate-900">Current Top 5 Priority Hotspots</h2>
-            <p className="text-xs text-slate-500">
-              Immediate deployment focus based on composite Charging Demand Score
+            <p className="mt-5 border-l-2 border-brand-500 pl-3 font-display text-[15px] italic leading-snug text-slate-800">
+              “Which cities can support new chargers today — and which are worth building for?”
             </p>
-          </div>
-          <button
-            onClick={() => onNavigateTab('hotspots')}
-            className="text-xs font-semibold text-emerald-600 hover:text-emerald-700 flex items-center space-x-1"
-          >
-            <span>View all 51 cities</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </button>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-          {topFive.map((city) => {
-            const isCritical = city.cds >= 1.5;
-            const isHigh = city.cds >= 0.75 && city.cds < 1.5;
-            return (
-              <div
-                key={city.city}
-                onClick={() => {
-                  onSelectCity(city.city);
-                  onNavigateTab('city');
-                }}
-                className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover:shadow-md hover:border-emerald-500 cursor-pointer transition-all group"
+            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
+              <button
+                onClick={onOpenPlanner}
+                className="inline-flex items-center gap-2 rounded-md bg-slate-900 px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-slate-800 sm:text-[13px]"
               >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-extrabold px-2 py-0.5 rounded-md bg-slate-100 text-slate-700">
-                    Rank #{city.rank}
+                <Calculator className="h-4 w-4" />
+                Build my deployment plan
+                <ArrowRight className="h-4 w-4" />
+              </button>
+              <button
+                onClick={() => onNavigateTab('hotspots')}
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 underline-offset-4 transition-colors hover:text-slate-900 hover:underline sm:text-[13px]"
+              >
+                <BarChart3 className="h-4 w-4" />
+                See the ranking
+              </button>
+              <button
+                onClick={() => onNavigateTab('map')}
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 underline-offset-4 transition-colors hover:text-slate-900 hover:underline sm:text-[13px]"
+              >
+                <MapPin className="h-4 w-4" />
+                Open the map
+              </button>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-center lg:col-span-7">
+            <HeroScene className="ml-auto max-w-[640px]" />
+            <div className="mt-2 flex flex-wrap items-center justify-between gap-2 border-t border-slate-200/70 pt-2 text-[10.5px] text-slate-400">
+              <span className="font-mono uppercase tracking-[0.14em]">Public charging · {hotspots.length} cities</span>
+              <span>Demand-ranked siting across India</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Headline numbers — one panel, four cells */}
+      <StatGroup
+        columns={4}
+        className="animate-fade-in"
+        items={[
+          {
+            label: 'Analysed fleet',
+            value: totalStock.toLocaleString(),
+            sub: `Across ${hotspots.length} urban centres`,
+            icon: CheckCircle2,
+            onClick: () => onNavigateTab('hotspots'),
+            hint: 'Open the full city ranking',
+          },
+          {
+            label: '#1 ranked hub',
+            value: topCity?.city ?? '—',
+            sub: topCity ? `CDS ${topCity.cds.toFixed(2)} · ${topCity.recommendation.split('—')[0].trim()}` : 'No data',
+            tone: 'text-slate-900',
+            icon: MapPin,
+            onClick: topCity ? () => onSelectCity(topCity.city) : undefined,
+            hint: 'Open this city profile',
+          },
+          {
+            label: 'Fastest 12-month growth',
+            value: fastestGrowth?.city ?? '—',
+            sub: fastestGrowth
+              ? `${fastestGrowth.forecast_growth >= 0 ? '+' : ''}${(fastestGrowth.forecast_growth * 100).toFixed(0)}% · ${fastestGrowth.winner}`
+              : 'No forecast',
+            tone: 'text-slate-900',
+            icon: TrendingUp,
+            onClick: () => onNavigateTab('forecast'),
+            hint: 'See the forecast tournament',
+          },
+          {
+            label: 'Sharpest charger gap',
+            value: sharpestGap?.city ?? '—',
+            sub: sharpestGap
+              ? `${Math.round(sharpestGap.effective_public_demand).toLocaleString()} demand / station`
+              : 'No data',
+            tone: 'text-slate-900',
+            icon: ShieldAlert,
+            onClick: () => onNavigateTab('demand'),
+            hint: 'See the demand and gap analysis',
+          },
+        ]}
+      />
+
+      {/* The five objectives — a single panel with a hairline grid */}
+      <section className="surface overflow-hidden animate-fade-in">
+        <div className="px-5 pb-3 pt-5 sm:px-6">
+          <SectionTitle
+            title="How the answer is built"
+            description="Five steps from raw registration data to a ranked siting recommendation."
+          />
+        </div>
+        <div className="grid gap-px bg-slate-200/70 sm:grid-cols-2 lg:grid-cols-5">
+          {objectives.map((objective, index) => {
+            const clickable = Boolean(objective.tab);
+            const content = (
+              <>
+                <div className="flex items-center justify-between">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-md bg-brand-50 text-[10px] font-extrabold text-brand-700 ring-1 ring-brand-100">
+                    {index + 1}
                   </span>
-                  <span
-                    className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded-full ${
-                      isCritical ? 'tag-critical' : isHigh ? 'tag-high' : 'tag-moderate'
-                    }`}
-                  >
-                    {isCritical ? 'Critical' : isHigh ? 'High' : 'Moderate'}
+                  <span className="font-mono text-[9.5px] font-bold uppercase tracking-wider text-slate-300">
+                    {objective.id}
                   </span>
                 </div>
-
-                <h3 className="font-extrabold text-base text-slate-900 group-hover:text-emerald-600 transition-colors">
-                  {city.city}
-                </h3>
-                <p className="text-xs text-slate-500 font-medium mb-3">{city.state_code}</p>
-
-                <div className="space-y-1.5 text-xs border-t border-slate-100 pt-2.5">
-                  <div className="flex justify-between">
-                    <span className="text-slate-500">CDS Score:</span>
-                    <span className="font-extrabold text-slate-900 font-mono">
-                      {city.cds.toFixed(3)}
+                <h3 className="mt-2 text-xs font-extrabold leading-snug text-slate-900">{objective.title}</h3>
+                <p className="mt-1 text-[11px] leading-relaxed text-slate-600">{objective.body}</p>
+                <div className="mt-2 flex items-center gap-1 text-[10.5px] font-bold">
+                  {clickable ? (
+                    <span className="text-brand-700">
+                      Open <ArrowRight className="inline h-3 w-3" />
                     </span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-500">12m Outlook:</span>
-                    <span
-                      className={`font-semibold ${
-                        city.forecast_growth >= 0 ? 'text-emerald-700' : 'text-slate-700'
-                      }`}
-                    >
-                      {(city.forecast_growth * 100).toFixed(0)}%
-                    </span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-500">Fleet Stock:</span>
-                    <span className="font-medium text-slate-700">
-                      {Math.round(city.ev_stock).toLocaleString()}
-                    </span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-500">Chargers (10km):</span>
-                    <span className="font-medium text-slate-700">{city.stations_10km} stns</span>
-                  </div>
+                  ) : (
+                    <span className="text-slate-400">{objective.note}</span>
+                  )}
                 </div>
+              </>
+            );
 
-                <div className="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between">
-                  <span className={`badge-${city.split_method}`}>{city.split_method}</span>
-                  <span className="text-[11px] text-emerald-600 font-bold group-hover:translate-x-0.5 transition-transform flex items-center">
-                    Analyze →
-                  </span>
-                </div>
+            return clickable ? (
+              <button
+                key={objective.id}
+                type="button"
+                onClick={() => onNavigateTab(objective.tab as TabType)}
+                className="group bg-white p-4 text-left transition-colors hover:bg-brand-50/40 focus:outline-none focus-visible:bg-brand-50/60"
+              >
+                {content}
+              </button>
+            ) : (
+              <div key={objective.id} className="bg-white p-4">
+                {content}
               </div>
             );
           })}
         </div>
-      </div>
+      </section>
 
-      {/* National Trend Chart */}
-      <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-          <div>
-            <h2 className="text-base font-bold text-slate-900">
-              National Monthly EV Registration Trajectory (2021–2026)
-            </h2>
-            <p className="text-xs text-slate-500">
-              Monitored across 51 major hubs (3,519 city-months · 96.9% observed empirical coverage)
-            </p>
-          </div>
+      {/* Top priorities — a ranked list, not five cards */}
+      <section className="surface overflow-hidden animate-fade-in">
+        <div className="flex flex-wrap items-end justify-between gap-3 px-5 pb-3 pt-5 sm:px-6">
+          <SectionTitle
+            title="Current top five priorities"
+            description="Highest Charging Demand Score today. Select a row to open the city profile."
+          />
+          <button
+            onClick={() => onNavigateTab('hotspots')}
+            className="inline-flex items-center gap-1 text-[11px] font-bold text-brand-700 hover:text-brand-800"
+          >
+            All {hotspots.length} cities <ArrowRight className="h-3.5 w-3.5" />
+          </button>
         </div>
 
-        <div className="h-64 sm:h-72 w-full pt-2">
+        <div className="divide-y divide-slate-100 border-t border-slate-100">
+          {topFive.map((city) => (
+            <button
+              key={city.city}
+              type="button"
+              onClick={() => onSelectCity(city.city)}
+              className="grid w-full grid-cols-12 items-center gap-2 px-5 py-3 text-left transition-colors hover:bg-slate-50 focus:outline-none focus-visible:bg-slate-50 sm:px-6"
+            >
+              <span className="col-span-2 font-mono text-xs font-extrabold text-slate-300 sm:col-span-1">
+                #{city.rank}
+              </span>
+              <span className="col-span-7 flex items-center gap-2 sm:col-span-4">
+                <span className={`h-2 w-2 shrink-0 rounded-full ${tierDot(city.cds)}`} />
+                <span className="text-sm font-bold text-slate-900">{city.city}</span>
+                <span className="text-[10px] font-semibold text-slate-400">{city.state_code}</span>
+              </span>
+              <span className="col-span-3 text-right sm:col-span-2">
+                <span className="block font-mono text-sm font-extrabold text-slate-900">
+                  {city.cds.toFixed(2)}
+                </span>
+                <span className="text-[9.5px] font-bold uppercase tracking-wider text-slate-400">CDS</span>
+              </span>
+              <span className="col-span-3 hidden text-right sm:block sm:col-span-2">
+                <span
+                  className={`block font-mono text-xs font-bold ${
+                    city.forecast_growth >= 0 ? 'text-slate-900' : 'text-rose-600'
+                  }`}
+                >
+                  {(city.forecast_growth * 100).toFixed(0)}%
+                </span>
+                <span className="text-[9.5px] uppercase tracking-wider text-slate-400">12m growth</span>
+              </span>
+              <span className="col-span-2 hidden text-right sm:block">
+                <span className="block font-mono text-xs font-semibold text-slate-700">
+                  {Math.round(city.ev_stock).toLocaleString()}
+                </span>
+                <span className="text-[9.5px] uppercase tracking-wider text-slate-400">fleet</span>
+              </span>
+              <span className="col-span-1 hidden justify-self-end text-slate-300 sm:flex">
+                <ArrowRight className="h-4 w-4" />
+              </span>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {/* National trend */}
+      <section className="surface animate-fade-in px-5 py-5 sm:px-6">
+        <SectionTitle
+          title="National monthly EV registrations"
+          description={`${hotspots.length} cities${
+            stats?.city_months ? ` · ${stats.city_months.toLocaleString()} observed city-months` : ''
+          } · 2021 to 2026`}
+        />
+        <div className="mt-3 h-56 w-full">
           {nationalSeries.length > 0 ? (
             <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={nationalSeries} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
+              <AreaChart data={nationalSeries} margin={{ top: 8, right: 8, left: -12, bottom: 0 }}>
                 <defs>
                   <linearGradient id="nationalGradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.3} />
-                    <stop offset="95%" stopColor="#10b981" stopOpacity={0.0} />
+                    <stop offset="5%" stopColor="var(--bar)" stopOpacity={0.28} />
+                    <stop offset="95%" stopColor="var(--bar)" stopOpacity={0} />
                   </linearGradient>
                 </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--chart-grid)" vertical={false} />
                 <XAxis
                   dataKey="date"
-                  tick={{ fontSize: 11, fill: '#64748b' }}
+                  tick={{ fontSize: 10, fill: 'var(--chart-axis)' }}
                   tickLine={false}
-                  axisLine={{ stroke: '#e2e8f0' }}
-                  interval={5}
+                  axisLine={{ stroke: 'var(--chart-border)' }}
+                  interval={6}
                 />
                 <YAxis
-                  tick={{ fontSize: 11, fill: '#64748b' }}
+                  tick={{ fontSize: 10, fill: 'var(--chart-axis)' }}
                   tickLine={false}
-                  axisLine={{ stroke: '#e2e8f0' }}
-                  tickFormatter={(v) => (v >= 1000 ? `${(v / 1000).toFixed(0)}k` : v)}
+                  axisLine={false}
+                  tickFormatter={(v) => (v >= 1000 ? `${Math.round(v / 1000)}k` : v)}
                 />
                 <Tooltip
                   content={({ active, payload }) => {
-                    if (active && payload && payload.length) {
-                      const d = payload[0].payload;
-                      return (
-                        <div className="bg-slate-900 text-white px-3 py-2 rounded-lg text-xs shadow-lg space-y-1">
-                          <p className="text-slate-400 font-medium">{d.date}</p>
-                          <p className="font-bold text-sm text-emerald-400">
-                            {Number(d.count).toLocaleString()} EVs registered
-                          </p>
-                        </div>
-                      );
-                    }
-                    return null;
+                    if (!active || !payload || !payload.length) return null;
+                    const point = payload[0].payload;
+                    return (
+                      <div className="rounded-lg bg-slate-900 px-3 py-2 text-[11px] text-white shadow-lg">
+                        <p className="font-medium text-slate-400">{point.date}</p>
+                        <p className="text-sm font-bold text-white">
+                          {Number(point.count).toLocaleString()} EVs registered
+                        </p>
+                      </div>
+                    );
                   }}
                 />
-                <Area
+                <Area isAnimationActive={false}
                   type="monotone"
                   dataKey="count"
-                  stroke="#059669"
-                  strokeWidth={2.5}
+                  stroke="var(--bar)"
+                  strokeWidth={2.4}
                   fillOpacity={1}
                   fill="url(#nationalGradient)"
                 />
               </AreaChart>
             </ResponsiveContainer>
           ) : (
-            <div className="flex items-center justify-center h-full text-slate-400 text-xs">
-              Loading national trend data...
+            <div className="flex h-full items-center justify-center text-xs text-slate-400">
+              Loading national trend…
             </div>
           )}
         </div>
-      </div>
+      </section>
     </div>
   );
 };

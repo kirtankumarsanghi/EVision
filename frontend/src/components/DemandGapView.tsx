@@ -21,23 +21,22 @@ import {
   ZAxis,
   Cell,
 } from 'recharts';
-import { DemandMetric, CityFeatures } from '../types';
+import { DemandMetric } from '../types';
+import { PageHeader } from './ui';
+import { BarList } from './BarList';
 
 interface DemandGapViewProps {
   demandData: DemandMetric[];
-  featuresData: CityFeatures[];
   onSelectCity: (city: string) => void;
   onNavigateCityDetail: (city: string) => void;
 }
 
 export const DemandGapView: React.FC<DemandGapViewProps> = ({
   demandData,
-  featuresData,
   onSelectCity,
   onNavigateCityDetail,
 }) => {
   const [activeTab, setActiveTab] = useState<'ranking' | 'scatter'>('ranking');
-  const [metricScope, setMetricScope] = useState<'fixed10km' | 'circle'>('fixed10km');
 
   // Top supply-constrained cities (highest effective demand per station)
   const topConstrained = useMemo(() => {
@@ -58,87 +57,73 @@ export const DemandGapView: React.FC<DemandGapViewProps> = ({
   }, [demandData]);
 
   return (
-    <div className="space-y-6 pb-12">
-      {/* Title & Introduction */}
-      <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div>
-            <div className="inline-flex items-center space-x-2 px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-xs font-bold mb-2">
-              <ShieldAlert className="w-3.5 h-3.5 text-amber-600" />
-              <span>Objective 1 — Siting Gap Metric</span>
-            </div>
-            <h2 className="text-xl font-extrabold text-slate-900 tracking-tight">
-              Effective Public Demand & Infrastructure Gap Analysis
-            </h2>
-            <p className="text-xs text-slate-500 mt-1">
-              Quantifying unobserved public charging demand by segmenting vehicle fleet charging behaviors.
-            </p>
-          </div>
-
-          <div className="flex items-center space-x-2">
+    <div className="space-y-5 pb-12">
+      <PageHeader
+        eyebrow="Objective 1 · Siting gap"
+        icon={ShieldAlert}
+        title="Demand vs supply gap"
+        description="Public demand is weighted by how much each vehicle class relies on shared charging, then divided by the chargers already available within the comparison radius."
+        actions={
+          <div className="inline-flex rounded-xl bg-slate-100 p-0.5">
             <button
               onClick={() => setActiveTab('ranking')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+              className={`rounded-lg px-3 py-1.5 text-[11px] font-bold transition-all ${
                 activeTab === 'ranking'
-                  ? 'bg-slate-900 text-white'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                  ? 'bg-white text-slate-900 shadow-sm'
+                  : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              Top Gap Shortlist
+              Top gap shortlist
             </button>
             <button
               onClick={() => setActiveTab('scatter')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+              className={`rounded-lg px-3 py-1.5 text-[11px] font-bold transition-all ${
                 activeTab === 'scatter'
-                  ? 'bg-slate-900 text-white'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                  ? 'bg-white text-slate-900 shadow-sm'
+                  : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              Supply vs Fleet Matrix
+              Supply vs fleet
             </button>
           </div>
-        </div>
-
-        {/* Methodology explanation card */}
-        <div className="bg-slate-50 rounded-xl p-4 border border-slate-200 grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
-          <div className="space-y-1">
-            <span className="font-bold text-slate-800 flex items-center space-x-1">
-              <Zap className="w-3.5 h-3.5 text-emerald-600" />
-              <span>Weighting Formulation</span>
+        }
+      >
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-slate-200/70">
+          <div className="space-y-1.5 lg:pl-4 lg:first:pl-0">
+            <span className="flex items-center gap-1 text-[10.5px] font-bold uppercase tracking-wider text-slate-500">
+              <Zap className="h-3.5 w-3.5 text-brand-600" />
+              Weighting
             </span>
-            <code className="block bg-white p-2 rounded border border-slate-200 text-[11px] font-mono text-slate-800">
-              weighted_stock = 0.15·2W + 0.70·3W + 1.00·4W + 0.60·COMM
+            <code className="block rounded-lg bg-slate-50 px-2 py-1.5 font-mono text-[10.5px] text-slate-800 ring-1 ring-slate-200/70">
+              0.15·2W + 0.70·3W + 1.00·4W + 0.60·COMM
             </code>
           </div>
-
-          <div className="space-y-1">
-            <span className="font-bold text-slate-800">2W Factor (0.15)</span>
-            <p className="text-slate-600 text-[11px] leading-relaxed">
-              Two-wheeler owners overwhelmingly charge at home or workplace 15A sockets; negligible public DC fast charger load.
+          <div className="space-y-1 lg:pl-4">
+            <span className="text-[10.5px] font-bold uppercase tracking-wider text-slate-500">2W · 0.15</span>
+            <p className="text-[11px] leading-relaxed text-slate-600">
+              Two-wheelers charge mostly at home, so they add little public fast-charger load.
             </p>
           </div>
-
-          <div className="space-y-1">
-            <span className="font-bold text-slate-800">3W Factor (0.70)</span>
-            <p className="text-slate-600 text-[11px] leading-relaxed">
-              Auto-rickshaws and cargo 3-wheelers operate on long shifts and frequently top up during midday breaks.
+          <div className="space-y-1 lg:pl-4">
+            <span className="text-[10.5px] font-bold uppercase tracking-wider text-slate-500">3W · 0.70</span>
+            <p className="text-[11px] leading-relaxed text-slate-600">
+              Autos and cargo three-wheelers run long shifts and top up publicly through the day.
             </p>
           </div>
-
-          <div className="space-y-1">
-            <span className="font-bold text-slate-800">4W & Commercial (1.00 / 0.60)</span>
-            <p className="text-slate-600 text-[11px] leading-relaxed">
-              Private 4Ws and commercial passenger fleets require high-power public fast chargers (CCS2) for range reliability.
+          <div className="space-y-1 lg:pl-4">
+            <span className="text-[10.5px] font-bold uppercase tracking-wider text-slate-500">4W & commercial · 1.00 / 0.60</span>
+            <p className="text-[11px] leading-relaxed text-slate-600">
+              Cars and commercial fleets depend on high-power public charging for range.
             </p>
           </div>
         </div>
-      </div>
+      </PageHeader>
 
       {/* Main View Area */}
       {activeTab === 'ranking' ? (
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Constrained Cities Bar Chart */}
-          <div className="lg:col-span-7 bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+          <div className="lg:col-span-7 surface p-5 sm:p-6 space-y-4">
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="font-bold text-slate-900 text-sm">
@@ -150,69 +135,23 @@ export const DemandGapView: React.FC<DemandGapViewProps> = ({
               </div>
             </div>
 
-            <div className="h-96 w-full pt-2">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart
-                  data={topConstrained}
-                  layout="vertical"
-                  margin={{ top: 5, right: 30, left: 30, bottom: 5 }}
-                >
-                  <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#f1f5f9" />
-                  <XAxis
-                    type="number"
-                    tick={{ fontSize: 11, fill: '#64748b' }}
-                    axisLine={{ stroke: '#e2e8f0' }}
-                    tickLine={false}
-                  />
-                  <YAxis
-                    dataKey="city"
-                    type="category"
-                    tick={{ fontSize: 11, fill: '#334155', fontWeight: 600 }}
-                    axisLine={{ stroke: '#e2e8f0' }}
-                    tickLine={false}
-                    width={80}
-                  />
-                  <Tooltip
-                    content={({ active, payload }) => {
-                      if (active && payload && payload.length) {
-                        const d = payload[0].payload as DemandMetric;
-                        return (
-                          <div className="bg-slate-900 text-white p-3 rounded-lg text-xs shadow-lg space-y-1">
-                            <p className="font-bold text-sm text-amber-400">{d.city}</p>
-                            <p>
-                              Effective Demand:{' '}
-                              <b>{Math.round(d.effective_public_demand).toLocaleString()}</b>
-                            </p>
-                            <p>
-                              Stations within radius: <b>{d.stations_within_radius}</b>
-                            </p>
-                            <p>
-                              Weighted EV Stock:{' '}
-                              <b>{Math.round(d.weighted_ev_stock).toLocaleString()}</b>
-                            </p>
-                          </div>
-                        );
-                      }
-                      return null;
-                    }}
-                  />
-                  <Bar
-                    dataKey="effective_public_demand"
-                    fill="#f59e0b"
-                    radius={[0, 4, 4, 0]}
-                    onClick={(entry) => {
-                      onSelectCity(entry.city);
-                      onNavigateCityDetail(entry.city);
-                    }}
-                    className="cursor-pointer hover:opacity-80 transition-opacity"
-                  />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
+            <BarList
+              items={topConstrained.slice(0, 12).map((city) => ({
+                key: city.city,
+                label: city.city,
+                value: city.effective_public_demand,
+                display: `${Math.round(city.effective_public_demand).toLocaleString()}`,
+                hint: `${city.stations_within_radius} public stations`,
+              }))}
+              onSelect={(key) => onNavigateCityDetail(key)}
+            />
+            <p className="text-[10.5px] text-slate-400">
+              Effective public demand per station. Click a row to open the city profile.
+            </p>
           </div>
 
           {/* Side Shortlist Table */}
-          <div className="lg:col-span-5 bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+          <div className="lg:col-span-5 surface p-5 sm:p-6 space-y-4">
             <h3 className="font-bold text-slate-900 text-sm">Acute Deficit Hotspots</h3>
             <p className="text-xs text-slate-500">
               In these cities, high demand per charger is driven by an extremely small denominator (stations).
@@ -231,7 +170,7 @@ export const DemandGapView: React.FC<DemandGapViewProps> = ({
                   <div className="flex items-center space-x-3">
                     <span className="w-5 text-xs font-bold text-slate-400">#{i + 1}</span>
                     <div>
-                      <div className="font-bold text-xs text-slate-900 group-hover:text-emerald-600 transition-colors">
+                      <div className="font-bold text-xs text-slate-900 group-hover:text-brand-600 transition-colors">
                         {c.city}
                       </div>
                       <div className="text-[11px] text-slate-500">
@@ -241,7 +180,7 @@ export const DemandGapView: React.FC<DemandGapViewProps> = ({
                   </div>
 
                   <div className="text-right">
-                    <div className="font-extrabold text-xs text-amber-700 font-mono">
+                    <div className="font-extrabold text-xs text-slate-800 font-mono">
                       {c.effective_public_demand.toFixed(1)}
                     </div>
                     <span className={`badge-${c.split_method} text-[10px]`}>
@@ -255,7 +194,7 @@ export const DemandGapView: React.FC<DemandGapViewProps> = ({
         </div>
       ) : (
         /* Scatter Matrix: Supply vs Fleet */
-        <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+        <div className="surface p-5 sm:p-6 space-y-4">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="font-bold text-slate-900 text-sm">
@@ -270,21 +209,21 @@ export const DemandGapView: React.FC<DemandGapViewProps> = ({
           <div className="h-96 w-full pt-2">
             <ResponsiveContainer width="100%" height="100%">
               <ScatterChart margin={{ top: 20, right: 30, bottom: 20, left: 30 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--chart-grid)" />
                 <XAxis
                   type="number"
                   dataKey="weighted_stock"
                   name="Weighted EV Fleet"
-                  tick={{ fontSize: 11, fill: '#64748b' }}
+                  tick={{ fontSize: 11, fill: 'var(--chart-axis)' }}
                   tickFormatter={(v) => (v >= 1000 ? `${(v / 1000).toFixed(0)}k` : v)}
-                  label={{ value: 'Weighted EV Fleet (0.15·2W + 0.70·3W + 1.00·4W)', position: 'insideBottom', offset: -10, fontSize: 11, fill: '#64748b' }}
+                  label={{ value: 'Weighted EV Fleet (0.15·2W + 0.70·3W + 1.00·4W)', position: 'insideBottom', offset: -10, fontSize: 11, fill: 'var(--chart-axis)' }}
                 />
                 <YAxis
                   type="number"
                   dataKey="stations"
                   name="Public Stations"
-                  tick={{ fontSize: 11, fill: '#64748b' }}
-                  label={{ value: 'Public Stations', angle: -90, position: 'insideLeft', offset: -15, fontSize: 11, fill: '#64748b' }}
+                  tick={{ fontSize: 11, fill: 'var(--chart-axis)' }}
+                  label={{ value: 'Public Stations', angle: -90, position: 'insideLeft', offset: -15, fontSize: 11, fill: 'var(--chart-axis)' }}
                 />
                 <ZAxis type="number" dataKey="demand_ratio" range={[50, 450]} />
                 <Tooltip
@@ -294,7 +233,7 @@ export const DemandGapView: React.FC<DemandGapViewProps> = ({
                       const d = payload[0].payload;
                       return (
                         <div className="bg-slate-900 text-white p-3 rounded-lg text-xs shadow-lg space-y-1">
-                          <p className="font-bold text-sm text-emerald-400">{d.city}</p>
+                          <p className="font-bold text-sm text-brand-400">{d.city}</p>
                           <p>
                             Weighted EV Fleet: <b>{d.weighted_stock.toLocaleString()}</b>
                           </p>
@@ -310,9 +249,9 @@ export const DemandGapView: React.FC<DemandGapViewProps> = ({
                     return null;
                   }}
                 />
-                <Scatter
+                <Scatter isAnimationActive={false}
                   data={scatterData}
-                  fill="#0ea5e9"
+                  fill="var(--bar-3)"
                   onClick={(entry) => {
                     onSelectCity(entry.city);
                     onNavigateCityDetail(entry.city);
@@ -324,10 +263,10 @@ export const DemandGapView: React.FC<DemandGapViewProps> = ({
                       key={`cell-${index}`}
                       fill={
                         entry.demand_ratio > 200
-                          ? '#dc2626'
+                          ? 'var(--bar)'
                           : entry.demand_ratio > 100
-                          ? '#ea580c'
-                          : '#0284c7'
+                          ? 'var(--bar-2)'
+                          : 'var(--bar-3)'
                       }
                       fillOpacity={0.8}
                     />
