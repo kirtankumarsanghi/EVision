@@ -10,7 +10,7 @@ statistical framework that ranks Indian cities by charging demand.
 EVision/
 ├── backend/     data, pipeline, API   <- active
 │   └── data/    all data lives here
-└── frontend/    dashboard             <- placeholder
+└── frontend/    React + Vite dashboard <- complete
 ```
 
 ## Status
@@ -24,7 +24,7 @@ EVision/
 | FastAPI service | working |
 | M1 NegBin / M2 Logistic+LDA / M3 SARIMA | fitted; M3 covers all 51 cities |
 | Composite demand score | built (`cds_ranking.csv`, `cds_sensitivity.csv`) |
-| Frontend | not started |
+| Frontend | **built with React 18, Vite, Tailwind & Recharts** |
 
 **Universe:** `config/cities.yaml` defines 68 cities and every one has Vahan
 registrations, but chargers, census, and petrol cover only 51. The build

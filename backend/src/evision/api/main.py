@@ -282,3 +282,43 @@ def hotspots(top: int = Query(default=15, le=51)) -> dict:
         "formula": "0.4*z(M1 expected monthly) + 0.3*P(high demand) + 0.3*z(M3 growth)",
         "rows": ranked.to_dict("records"),
     }
+
+
+@app.get("/forecasts/monthly")
+def forecasts_monthly(city: str | None = Query(default=None)) -> dict:
+    """Per-city 12-month forward forecast curve (monthly)."""
+    monthly_path = PROCESSED_DIR / "model_m3_forecasts.csv"
+    frame = _require(monthly_path, "monthly forecasts", "scripts/run_models.py")
+    if city:
+        frame = frame[frame["city"].str.lower() == city.lower()]
+    return {"count": len(frame), "rows": frame.to_dict("records")}
+
+
+@app.get("/models/summary")
+def models_summary() -> dict:
+    """Statistical summary of M1 (NegBin drivers) and M2 (exogenous classifier)."""
+    from ..config import BACKEND_ROOT
+
+    m1_path = PROCESSED_DIR / "model_m1_coefficients.csv"
+    m2_comp_path = PROCESSED_DIR / "model_m2_comparison.csv"
+    m2_conf_path = PROCESSED_DIR / "model_m2_confusion.csv"
+    m1 = pd.read_csv(m1_path).to_dict("records") if m1_path.exists() else []
+    m2_comp = pd.read_csv(m2_comp_path).to_dict("records") if m2_comp_path.exists() else []
+    m2_conf = pd.read_csv(m2_conf_path).to_dict("records") if m2_conf_path.exists() else []
+    return {
+        "m1_coefficients": m1,
+        "m2_comparison": m2_comp,
+        "m2_confusion": m2_conf,
+    }
+
+
+@app.get("/seam")
+def seam() -> dict:
+    """2021->2022 source boundary diagnostics for cities with large ratio steps."""
+    from ..config import BACKEND_ROOT
+
+    seam_path = BACKEND_ROOT / "reports" / "seam_2021_2022.csv"
+    if not seam_path.exists():
+        return {"count": 0, "rows": []}
+    frame = pd.read_csv(seam_path)
+    return {"count": len(frame), "rows": frame.to_dict("records")}

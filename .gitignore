@@ -37,3 +37,11 @@ Thumbs.db
 # Raw scraper response cache (140MB+ of regenerable XML/HTML responses)
 backend/data/raw/
 backend/data/interim/
+
+# Frontend dependencies & build artifacts
+node_modules/
+*/node_modules/
+dist/
+*/dist/
+.vite/
+*/.vite/
